@@ -1,0 +1,19 @@
+:root {
+  --bg-white: #FFFFFF;
+  --bg-light: #F8FAFC;
+  --bg-subtle: #F1F5F9;
+  --text-navy: #0F172A;
+  --text-body: #334155;
+  --text-muted: #64748B;
+  --brand-navy: #0F172A;
+  --brand-navy-card: #1E293B;
+  --brand-gold: #D97706;
+  --brand-gold-hover: #B45309;
+  --brand-cyan: #0EA5E9;
+  --brand-cyan-light: #38BDF8;
+  --border-light: #E2E8F0;
+  --font-heading: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --shadow-card: 0 4px 20px -2px rgba(15, 23, 42, 0.06);
+  --shadow-card-hover: 0 16px 36px -4px rgba(15, 23, 42, 0.14);
+}

@@ -1,0 +1,1 @@
+import React from 'react'; import PageLayout from '../../../components/layout/PageLayout'; const FinancialLiteracyPage = () => <PageLayout title='Financial Literacy is Empowerment'><div className='clean-card'><p style={{color:'var(--fyc-text-muted)'}}>Empowering stay-at-home mothers and young entrepreneurs.</p></div></PageLayout>; export default FinancialLiteracyPage;

@@ -1,0 +1,1 @@
+import React from 'react'; import PageLayout from '../../../components/layout/PageLayout'; const ParticipantsPage = () => <PageLayout title='Participant Network'><div className='clean-card'><p style={{color:'var(--fyc-text-muted)'}}>Connecting 10,000+ students and alumni.</p></div></PageLayout>; export default ParticipantsPage;

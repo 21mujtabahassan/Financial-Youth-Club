@@ -1,0 +1,1 @@
+import React from 'react'; import PageLayout from '../../../components/layout/PageLayout'; const WebinarsPage = () => <PageLayout title='Webinars & Live AMAs'><div className='clean-card'><p style={{color:'var(--fyc-text-muted)'}}>Explore recorded and upcoming virtual sessions.</p></div></PageLayout>; export default WebinarsPage;

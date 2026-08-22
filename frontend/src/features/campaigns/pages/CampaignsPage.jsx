@@ -1,0 +1,1 @@
+import React from 'react'; import PageLayout from '../../../components/layout/PageLayout'; const CampaignsPage = () => <PageLayout title='Special Campaigns'><div className='clean-card'><p style={{color:'var(--fyc-text-muted)'}}>The Pink Tax Drive & Wintern 2025.</p></div></PageLayout>; export default CampaignsPage;

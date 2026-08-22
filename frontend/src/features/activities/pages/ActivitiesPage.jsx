@@ -1,0 +1,1 @@
+import React from 'react'; import PageLayout from '../../../components/layout/PageLayout'; const ActivitiesPage = () => <PageLayout title='Activities & Community Drives'><div className='clean-card'><p style={{color:'var(--fyc-text-muted)'}}>Over 90+ hosted workshops worldwide.</p></div></PageLayout>; export default ActivitiesPage;
