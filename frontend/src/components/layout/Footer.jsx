@@ -173,26 +173,31 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Column 4: Contact */}
+          {/* Column 4: Contact & Social Links */}
           <div>
             <h4 style={{ color: '#FFFFFF', fontSize: '0.82rem', fontWeight: 700, letterSpacing: '0.04em', textTransform: 'uppercase', marginBottom: '0.75rem' }}>
-              Global Contact
+              Global Contact & Community
             </h4>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.55rem', color: '#94A3B8', fontSize: '0.8rem', fontWeight: 400 }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem' }}>
+              <a href="mailto:contact@financialyouthclub.org" style={{ color: '#94A3B8', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.45rem' }}>
                 <Mail size={14} color="#38BDF8" />
                 <span>contact@financialyouthclub.org</span>
-              </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem' }}>
+              </a>
+              <a href="https://linktr.ee/financialyouthclub" target="_blank" rel="noreferrer" style={{ color: '#38BDF8', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.45rem', fontWeight: 600 }}>
                 <Globe size={14} color="#38BDF8" />
                 <span>linktr.ee/financialyouthclub</span>
-              </div>
+              </a>
+              <a href="https://chat.whatsapp.com/HzUA3qjzlweGWUhhOJtraC" target="_blank" rel="noreferrer" style={{ color: '#10B981', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.45rem', fontWeight: 600 }}>
+                <Send size={14} color="#10B981" />
+                <span>Join WhatsApp Community</span>
+              </a>
               <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.45rem', lineHeight: 1.4 }}>
                 <MapPin size={14} color="#38BDF8" style={{ flexShrink: 0, marginTop: '0.15rem' }} />
                 <span>Outreach HQ across UK, USA, UAE & Pakistan</span>
               </div>
             </div>
           </div>
+
 
         </div>
 

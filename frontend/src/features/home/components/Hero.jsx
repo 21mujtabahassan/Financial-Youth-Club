@@ -69,8 +69,10 @@ const Hero = () => {
 
             {/* Action Button Styles (#be600 Primary Amber/Orange & #26300c Secondary Navy Outline) */}
             <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', width: '100%' }}>
-              <Link
-                to="/programs"
+              <a
+                href="https://forms.gle/onzeGaNhv4eywexr9"
+                target="_blank"
+                rel="noreferrer"
                 style={{
                   background: '#D97706',
                   color: '#FFFFFF',
@@ -87,7 +89,7 @@ const Hero = () => {
                 }}
               >
                 Apply for Summer Program 2026 <ArrowRight size={18} />
-              </Link>
+              </a>
 
               <Link
                 to="/founders"
@@ -109,6 +111,7 @@ const Hero = () => {
                 Become a Mentor
               </Link>
             </div>
+
 
           </div>
 

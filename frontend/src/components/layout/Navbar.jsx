@@ -90,8 +90,10 @@ const Navbar = () => {
 
         {/* Single Primary Header CTA Button */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }} className="desktop-only">
-          <Link
-            to="/programs"
+          <a
+            href="https://chat.whatsapp.com/HzUA3qjzlweGWUhhOJtraC"
+            target="_blank"
+            rel="noreferrer"
             style={{
               background: '#0F172A',
               color: '#FFFFFF',
@@ -106,7 +108,7 @@ const Navbar = () => {
             }}
           >
             JOIN US
-          </Link>
+          </a>
         </div>
 
         {/* Mobile Toggle */}
@@ -153,8 +155,10 @@ const Navbar = () => {
             </Link>
           ))}
           <div style={{ marginTop: '0.5rem' }}>
-            <Link
-              to="/programs"
+            <a
+              href="https://chat.whatsapp.com/HzUA3qjzlweGWUhhOJtraC"
+              target="_blank"
+              rel="noreferrer"
               onClick={() => setMobileOpen(false)}
               style={{
                 display: 'block',
@@ -169,10 +173,11 @@ const Navbar = () => {
               }}
             >
               JOIN US
-            </Link>
+            </a>
           </div>
         </div>
       )}
+
 
       <style>{`
         @media (max-width: 960px) {
