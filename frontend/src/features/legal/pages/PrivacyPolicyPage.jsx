@@ -102,7 +102,7 @@ const PrivacyPolicyPage = () => {
             If you have questions regarding this Privacy Policy or wish to request data deletion, please contact our administrative team:
           </p>
           <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', padding: '1rem 1.25rem', borderRadius: '10px', fontWeight: 700, color: '#0F172A', fontSize: '0.9rem' }}>
-            📧 Contact Email: privacy@financialyouthclub.org
+            📧 Contact Email: <a href="mailto:financialyouthclub@gmail.com" style={{ color: '#0EA5E9', textDecoration: 'none' }}>financialyouthclub@gmail.com</a>
           </div>
         </div>
 

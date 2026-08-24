@@ -3,63 +3,17 @@ import { Link } from 'react-router-dom'
 import { Sparkles, Globe, Heart, Award, CheckCircle2, ArrowRight, ShieldCheck, Users, Radio, Briefcase, ExternalLink, X, BookOpen, GraduationCap, Building2 } from 'lucide-react'
 import AnimatedCounter from '../../../components/common/AnimatedCounter'
 
-// Real guest speakers data extracted from user's authentic screenshots
-const guestSpeakersList = [
-  {
-    name: 'Sabrina Manero',
-    role: 'Incoming Analyst at Goldman Sachs',
-    school: 'Duke University (Neuroscience & Economics)',
-    company: 'Goldman Sachs / OMERS PE',
-    topic: 'Breaking into Goldman Sachs: Internship Experience & Recruitment Process',
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80',
-    details: 'Former PE Intern at OMERS & Investment Research Intern at Summit Ridge Water. Shares actionable strategies on securing top investment banking internships.'
-  },
-  {
-    name: 'Jeevan Deep',
-    role: 'Finance Professional at J.P. Morgan Chase',
-    school: 'University of Mannheim (CFA Level II Candidate)',
-    company: 'J.P. Morgan Chase',
-    topic: 'Building a Global Career in Finance',
-    image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80',
-    details: 'Experienced across investment management, ESG research, and financial consulting. Guides international students on breaking into global bulge-bracket banks.'
-  },
-  {
-    name: 'Caroline Gao',
-    role: 'Former Corporate Development at Coca-Cola',
-    school: 'Harvard University (Government & Economics)',
-    company: 'Harvard / Coca-Cola / Bain',
-    topic: 'Corporate Journey from Harvard to Consulting',
-    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80',
-    details: 'US Presidential Scholar & Coca-Cola Scholar. Associate Director at Harvard Undergraduate Consulting Group. Speaker on global strategy and career building.'
-  },
-  {
-    name: 'Jason Lum',
-    role: 'Founder & MD at JHL Consulting Group',
-    school: 'Former M&A Banker @ CIBC Capital Markets',
-    company: 'Morgan Stanley / Deloitte Alum',
-    topic: 'Breaking into Investment Banking & Global Finance Careers',
-    image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80',
-    details: 'Helped 300+ students secure offers at Morgan Stanley, Deloitte, McKinsey, and top global institutions. Former Angel Investor and PE Analyst.'
-  },
-  {
-    name: 'Sana Imran',
-    role: 'Management Consulting Associate at PwC',
-    school: 'UC Berkeley (BSc Economics & Data Science)',
-    company: 'PwC / Fortune 500 Consultant',
-    topic: 'A Day in the Life of a PwC Consultant',
-    image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=400&q=80',
-    details: 'Helped Fortune 500 clients solve complex problems using AI, machine learning, and data-driven corporate strategy.'
-  },
-  {
-    name: 'Iskandar Vanblarcum',
-    role: 'VP Business Development & Global Head at OKX',
-    school: 'Former Managing Director @ Barclays',
-    company: 'Barclays / OKX Global',
-    topic: 'Traditional Finance vs. Decentralized Finance (DeFi)',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80',
-    details: '20+ years executive experience across institutional sales, Wall Street banking, and leading digital asset exchanges.'
-  }
-]
+import { guestSpeakers } from '../../speakers/data/speakersData'
+
+const guestSpeakersList = guestSpeakers.map(s => ({
+  name: s.name,
+  role: s.role,
+  school: s.uni,
+  company: s.org,
+  topic: s.topic,
+  image: s.image,
+  details: s.bio
+}))
 
 const AboutUsSection = () => {
   const [activeTab, setActiveTab] = useState('mission')

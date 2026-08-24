@@ -1,13 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Building2, GraduationCap, ArrowRight } from 'lucide-react'
+import { guestSpeakers } from '../../speakers/data/speakersData'
 
 const FeaturedSpeakers = () => {
-  const speakers = [
-    { name: "Mahad Mirza", role: "Business Analyst", org: "Sherman Securities", uni: "University of Bristol", topic: "Stocks & Investments Comprehensive Analysis" },
-    { name: "Jimmy Zhang", role: "Investment Analyst", org: "ZhenFund / Hearst", uni: "LSE Board Director", topic: "How AI Startups Get Funded in Venture Capital" },
-    { name: "Muhammad Usman", role: "Assistant Manager", org: "KPMG (4.5+ yrs)", uni: "External Audit & Assurance", topic: "From Financial Statements to Strategic Decisions" }
-  ]
+  // Select top featured speakers
+  const featured = guestSpeakers.slice(0, 6)
 
   return (
     <section className="container" style={{ padding: '3.5rem 1.5rem' }}>
@@ -20,15 +18,33 @@ const FeaturedSpeakers = () => {
       </div>
 
       <div className="grid-3">
-        {speakers.map((s, i) => (
-          <div key={i} className="clean-card">
-            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' }}>
-              <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'linear-gradient(135deg, #0EA5E9, #A855F7)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, color: '#fff' }}>
-                {s.name.charAt(0)}
+        {featured.map((s) => (
+          <div key={s.id} className="clean-card">
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
+              <div style={{ 
+                width: '48px', 
+                height: '48px', 
+                borderRadius: '50%', 
+                overflow: 'hidden',
+                border: '2px solid var(--fyc-cyan)',
+                background: 'linear-gradient(135deg, #0EA5E9, #A855F7)',
+                display: 'flex',
+                alignItems: 'center',
+                justify: 'center'
+              }}>
+                <img 
+                  src={s.image} 
+                  alt={s.name} 
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    e.target.parentNode.innerText = s.name.charAt(0);
+                  }}
+                />
               </div>
               <span className="pill-badge" style={{ fontSize: '0.72rem' }}>Speaker</span>
             </div>
-            <h3 style={{ fontFamily: 'var(--font-display)', color: '#fff', fontSize: '1.2rem', marginBottom: '0.35rem' }}>{s.name}</h3>
+            <h3 style={{ fontFamily: 'var(--font-display)', color: '#fff', fontSize: '1.15rem', marginBottom: '0.35rem' }}>{s.name}</h3>
             <div style={{ color: 'var(--fyc-cyan)', fontSize: '0.85rem', fontWeight: 600, marginBottom: '0.4rem', display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
               <Building2 size={13} /> {s.role} at {s.org}
             </div>
@@ -43,10 +59,11 @@ const FeaturedSpeakers = () => {
       </div>
 
       <div style={{ textAlign: 'center', marginTop: '2.25rem' }}>
-        <Link to="/speakers" className="btn-outline">Explore All 12+ Guest Speakers <ArrowRight size={15}/></Link>
+        <Link to="/speakers" className="btn-outline">Explore All 14 Guest Speakers <ArrowRight size={15}/></Link>
       </div>
     </section>
   )
 }
 
 export default FeaturedSpeakers
+

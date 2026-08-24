@@ -357,7 +357,7 @@ const ProgramsPage = () => {
                 All FYC workshops, mentorship sessions, and Summer Program tracks are 100% free of cost.
               </p>
               <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', flexWrap: 'wrap' }}>
-                <a href="mailto:contact@financialyouthclub.org" className="btn-gold" style={{ padding: '0.75rem 1.75rem', fontSize: '0.88rem' }}>
+                <a href="mailto:financialyouthclub@gmail.com" className="btn-gold" style={{ padding: '0.75rem 1.75rem', fontSize: '0.88rem' }}>
                   Apply for Admission <ArrowRight size={16} />
                 </a>
                 <button onClick={() => setSelectedProgram(null)} className="btn-navy" style={{ padding: '0.75rem 1.75rem', fontSize: '0.88rem' }}>
