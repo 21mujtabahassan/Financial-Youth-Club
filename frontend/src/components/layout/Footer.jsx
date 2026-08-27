@@ -220,22 +220,30 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} <strong style={{ color: '#94A3B8', fontWeight: 600 }}>Financial Youth Club (FYC)</strong>. All rights reserved.
           </div>
 
-          {/* VorexCore Watermark Badge */}
-          <div style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '0.5rem',
-            background: 'rgba(15, 23, 42, 0.9)',
-            border: '1px solid rgba(56, 189, 248, 0.3)',
-            padding: '0.35rem 0.85rem',
-            borderRadius: '9999px',
-            boxShadow: '0 2px 10px rgba(0,0,0,0.3)'
-          }}>
+          {/* VorexCore Watermark Badge (Live Instagram Link) */}
+          <a
+            href="https://www.instagram.com/vorexcoresolutions/"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Visit VorexCore Solutions Instagram"
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.55rem',
+              background: 'rgba(15, 23, 42, 0.9)',
+              border: '1px solid rgba(56, 189, 248, 0.4)',
+              padding: '0.35rem 0.85rem',
+              borderRadius: '9999px',
+              boxShadow: '0 2px 10px rgba(56, 189, 248, 0.2)',
+              textDecoration: 'none',
+              cursor: 'pointer'
+            }}
+          >
             <img src="/images/vorexcore_logo.png" alt="VorexCore Solutions" style={{ width: '16px', height: '16px', borderRadius: '3px', objectFit: 'cover' }} />
             <span style={{ fontSize: '0.72rem', fontWeight: 700, color: '#94A3B8' }}>
-              Engineered by <strong style={{ background: 'linear-gradient(135deg, #38BDF8 0%, #A855F7 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontWeight: 900 }}>VOREXCORE SOLUTIONS</strong>
+              Engineered by <strong style={{ background: 'linear-gradient(135deg, #38BDF8 0%, #A855F7 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontWeight: 900 }}>VOREXCORE SOLUTIONS</strong> ↗
             </span>
-          </div>
+          </a>
 
           <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
             <Link to="/privacy-policy" style={{ color: '#94A3B8', textDecoration: 'none', fontWeight: 500 }}>

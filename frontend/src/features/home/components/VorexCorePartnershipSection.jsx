@@ -147,10 +147,32 @@ const VorexCorePartnershipSection = () => {
                 color: '#94A3B8',
                 fontSize: '0.82rem',
                 lineHeight: 1.5,
-                margin: 0
+                marginBottom: '1rem'
               }}>
                 Engineering FYC's modern digital infrastructure, web apps & global learning platforms.
               </p>
+
+              {/* Instagram Link Button */}
+              <a
+                href="https://www.instagram.com/vorexcoresolutions/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.4rem',
+                  background: 'linear-gradient(135deg, #0EA5E9, #8B5CF6)',
+                  color: '#FFFFFF',
+                  padding: '0.4rem 0.85rem',
+                  borderRadius: '9999px',
+                  fontSize: '0.75rem',
+                  fontWeight: 800,
+                  textDecoration: 'none',
+                  boxShadow: '0 4px 12px rgba(14, 165, 233, 0.35)'
+                }}
+              >
+                Visit Instagram <ExternalLink size={12} />
+              </a>
             </div>
 
             {/* KPMG & DELOITTE */}

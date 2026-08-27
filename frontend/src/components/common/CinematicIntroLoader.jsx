@@ -57,7 +57,7 @@ const CinematicIntroLoader = () => {
         }}
       />
 
-      {/* Main Swirling & Gradually Growing Logo (Starts Small -> 1 Round -> Gentle Zoom Out) */}
+      {/* Main Swirling FYC Logo (Only the logo spins) */}
       <div
         style={{
           display: 'flex',
@@ -65,10 +65,11 @@ const CinematicIntroLoader = () => {
           alignItems: 'center',
           justifyContent: 'center',
           animation: 'fycSingleRoundSwirl 2.2s cubic-bezier(0.25, 1, 0.4, 1) forwards',
-          transformOrigin: 'center center'
+          transformOrigin: 'center center',
+          zIndex: 5
         }}
       >
-        <div style={{ position: 'relative', width: '160px', height: '160px', marginBottom: '1rem' }}>
+        <div style={{ position: 'relative', width: '160px', height: '160px' }}>
           <img
             src="/images/fyc_official_logo.png"
             alt="Financial Youth Club Official Logo"
@@ -80,23 +81,39 @@ const CinematicIntroLoader = () => {
             }}
           />
         </div>
+      </div>
 
-        {/* Powered by VorexCore Solutions Tag */}
-        <div style={{
+      {/* STATIC Curved VorexCore Arc (Fixed & Non-Moving around the Globe) */}
+      <div
+        style={{
+          position: 'absolute',
+          width: '360px',
+          height: '360px',
+          pointerEvents: 'none',
+          zIndex: 10,
           display: 'flex',
           alignItems: 'center',
-          gap: '0.6rem',
-          background: 'rgba(15, 23, 42, 0.85)',
-          border: '1px solid rgba(56, 189, 248, 0.35)',
-          padding: '0.45rem 1rem',
-          borderRadius: '9999px',
-          boxShadow: '0 4px 20px rgba(0, 0, 0, 0.4)'
-        }}>
-          <img src="/images/vorexcore_logo.png" alt="VorexCore Solutions" style={{ width: '20px', height: '20px', borderRadius: '4px', objectFit: 'cover' }} />
-          <span style={{ fontSize: '0.78rem', fontWeight: 800, color: '#94A3B8', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
-            POWERED BY <strong style={{ background: 'linear-gradient(135deg, #38BDF8 0%, #A855F7 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>VOREXCORE SOLUTIONS</strong>
-          </span>
-        </div>
+          justifyContent: 'center',
+          animation: 'fycStaticArcFade 2.2s ease-in-out forwards'
+        }}
+      >
+        <svg width="360" height="360" viewBox="0 0 360 360" style={{ overflow: 'visible' }}>
+          <defs>
+            <linearGradient id="vorexStaticTextGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="#38BDF8" />
+              <stop offset="50%" stopColor="#A855F7" />
+              <stop offset="100%" stopColor="#38BDF8" />
+            </linearGradient>
+            <path id="vorexStaticArc" d="M 60,180 A 120,120 0 0,0 300,180" />
+          </defs>
+
+          {/* Curved Text Path */}
+          <text fill="url(#vorexStaticTextGrad)" fontSize="11" fontWeight="900" letterSpacing="3" textAnchor="middle">
+            <textPath href="#vorexStaticArc" startOffset="50%">
+              • POWERED BY VOREXCORE SOLUTIONS •
+            </textPath>
+          </text>
+        </svg>
       </div>
 
       <style>{`
@@ -139,6 +156,25 @@ const CinematicIntroLoader = () => {
           100% {
             opacity: 0;
             transform: rotate(360deg) scale(1.5);
+          }
+        }
+
+        @keyframes fycStaticArcFade {
+          0% {
+            opacity: 0;
+            transform: scale(0.85);
+          }
+          25% {
+            opacity: 1;
+            transform: scale(1);
+          }
+          85% {
+            opacity: 1;
+            transform: scale(1);
+          }
+          100% {
+            opacity: 0;
+            transform: scale(1.05);
           }
         }
 
