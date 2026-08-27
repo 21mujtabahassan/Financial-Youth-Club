@@ -40,5 +40,19 @@ export const guestSpeakers = [
       'Practical outreach techniques to land high-ticket clients consistently.'
     ],
     bio: 'Wardah Muzammil holds a BSc in Economics from NUST and an MBA in Marketing from Bahria University. As a LinkedIn Business Coach, she teaches students, freelancers, and professionals how to build a powerful personal brand, optimize profiles, execute practical cold outreach, and land freelance clients consistently.'
+  },
+  {
+    id: 'jason-lum',
+    name: 'Jason Lum',
+    role: 'Founder & MD at JHL Consulting Group',
+    topic: 'Breaking into Investment Banking & Global Finance Careers',
+    image: '/images/speakers/jason-lum.png',
+    highlights: [
+      'Founder & Managing Director of JHL Consulting Group Inc.',
+      'Helped 300+ students secure roles at firms including Morgan Stanley, Deloitte, and leading global companies.',
+      'Former Investment Banking (M&A) Summer Analyst at CIBC Capital Markets.',
+      'Former Private Equity Analyst, Angel Investor & Board Director at Ottawa Real Estate Investors Organization.'
+    ],
+    bio: 'Jason Lum is the Founder & Managing Director of JHL Consulting Group Inc. Having worked as an Investment Banking (M&A) Summer Analyst at CIBC Capital Markets and Private Equity Analyst, he has mentored over 300+ students to land competitive offers at Morgan Stanley, Deloitte, McKinsey, and leading global financial institutions.'
   }
 ]
