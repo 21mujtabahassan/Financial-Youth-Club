@@ -9,16 +9,20 @@ const AdminLoginPage = () => {
   const [error, setError] = useState('')
   const navigate = useNavigate()
 
+  const ALLOWED_ADMIN_EMAIL = '21mujtabahassan@gmail.com'
+  const ALLOWED_ADMIN_PASSCODE = 'fycadmin2026'
+
   const handleLogin = (e) => {
     e.preventDefault()
     
-    // Simple secure admin check (accepts admin@fyc.org or admin credentials)
-    if (password === 'fycadmin2026' || password === 'admin') {
+    const formattedEmail = email.trim().toLowerCase()
+    
+    if (formattedEmail === ALLOWED_ADMIN_EMAIL && password === ALLOWED_ADMIN_PASSCODE) {
       sessionStorage.setItem('fyc_admin_authenticated', 'true')
-      sessionStorage.setItem('fyc_admin_email', email || 'admin@financialyouthclub.org')
+      sessionStorage.setItem('fyc_admin_email', formattedEmail)
       navigate('/admin/blogs')
     } else {
-      setError('Invalid admin credentials. Please enter the correct admin passcode.')
+      setError('Access Denied: Unrecognized admin email or passcode.')
     }
   }
 
@@ -61,7 +65,7 @@ const AdminLoginPage = () => {
               </label>
               <input
                 type="email"
-                placeholder="admin@financialyouthclub.org"
+                placeholder="21mujtabahassan@gmail.com"
                 value={email}
                 onChange={e => setEmail(e.target.value)}
                 required
@@ -97,9 +101,6 @@ const AdminLoginPage = () => {
                   outline: 'none'
                 }}
               />
-              <span style={{ fontSize: '0.72rem', color: '#94A3B8', marginTop: '0.25rem', display: 'block' }}>
-                Default passcode: <code>fycadmin2026</code>
-              </span>
             </div>
 
             <button
