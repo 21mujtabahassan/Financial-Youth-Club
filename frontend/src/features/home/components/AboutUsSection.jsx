@@ -61,7 +61,7 @@ const AboutUsSection = () => {
             <Sparkles size={14} color="#0EA5E9" /> ABOUT FINANCIAL YOUTH CLUB
           </span>
 
-          <h2 style={{
+          <h2 className="about-heading" style={{
             fontFamily: 'var(--font-heading)',
             color: '#0F172A',
             fontSize: '2.3rem',
@@ -82,10 +82,10 @@ const AboutUsSection = () => {
         {/* Pro Impact Metrics Bar with Animated Counter */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(5, 1fr)',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))',
           gap: '1rem',
           marginBottom: '3rem'
-        }} className="grid-4">
+        }} className="about-metrics-bar">
           <div className="pop-stat">
             <div style={{ fontSize: '1.75rem', fontWeight: 900, color: '#0EA5E9' }}>
               <AnimatedCounter end={35} suffix="+" />
@@ -290,6 +290,15 @@ const AboutUsSection = () => {
 
       </div>
 
+      <style>{`
+        @media (max-width: 640px) {
+          .about-heading { font-size: 1.55rem !important; }
+          .about-metrics-bar {
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 0.75rem !important;
+          }
+        }
+      `}</style>
     </section>
   )
 }

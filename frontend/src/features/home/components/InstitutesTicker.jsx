@@ -192,9 +192,9 @@ const InstitutesTicker = () => {
   const list = [...institutes, ...institutes]
 
   return (
-    <section style={{ padding: '3.5rem 0', background: 'var(--bg-light)', borderBottom: '1px solid var(--border-light)' }}>
-      <div className="container" style={{ textAlign: 'center', marginBottom: '1.75rem' }}>
-        <h3 style={{ fontFamily: 'var(--font-heading)', color: 'var(--text-muted)', fontSize: '0.88rem', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+    <section style={{ padding: '3rem 0', background: 'var(--bg-light)', borderBottom: '1px solid var(--border-light)', overflow: 'hidden' }}>
+      <div className="container" style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
+        <h3 className="ticker-heading" style={{ fontFamily: 'var(--font-heading)', color: 'var(--text-muted)', fontSize: '0.88rem', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
           Mentors Representing Leading Global Organizations & Universities
         </h3>
       </div>
@@ -202,22 +202,35 @@ const InstitutesTicker = () => {
       <div className="marquee-wrapper">
         <div className="marquee-track" style={{ animationDuration: '34s' }}>
           {list.map((item, idx) => (
-            <div key={idx} className="pop-card" style={{
+            <div key={idx} className="pop-card institute-card" style={{
               display: 'flex', alignItems: 'center', gap: '0.85rem',
-              padding: '0.75rem 1.5rem', borderRadius: '14px',
+              padding: '0.75rem 1.35rem', borderRadius: '14px',
               border: '1px solid var(--border-light)', background: '#FFFFFF',
               fontSize: '0.92rem', fontWeight: 700, color: 'var(--text-navy)',
               boxShadow: '0 4px 14px rgba(15, 23, 42, 0.05)',
-              minWidth: '210px'
+              minWidth: '190px',
+              flexShrink: 0
             }}>
               <div style={{ flexShrink: 0 }}>
                 {item.svg}
               </div>
-              <span>{item.name}</span>
+              <span style={{ whiteSpace: 'nowrap' }}>{item.name}</span>
             </div>
           ))}
         </div>
       </div>
+
+      <style>{`
+        @media (max-width: 640px) {
+          .ticker-heading { font-size: 0.76rem !important; }
+          .institute-card {
+            padding: 0.55rem 1rem !important;
+            min-width: 160px !important;
+            font-size: 0.82rem !important;
+            border-radius: 10px !important;
+          }
+        }
+      `}</style>
     </section>
   )
 }

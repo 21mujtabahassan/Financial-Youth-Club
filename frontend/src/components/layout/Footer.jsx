@@ -261,6 +261,17 @@ const Footer = () => {
         </div>
 
       </div>
+
+      <style>{`
+        @media (max-width: 640px) {
+          .footer-newsletter-header { text-align: center; }
+          .footer-bottom-bar {
+            flex-direction: column !important;
+            text-align: center !important;
+            gap: 0.85rem !important;
+          }
+        }
+      `}</style>
     </footer>
   )
 }

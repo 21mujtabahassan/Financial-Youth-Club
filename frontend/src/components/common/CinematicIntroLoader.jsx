@@ -4,21 +4,22 @@ const CinematicIntroLoader = () => {
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
-    // Check if intro has already been shown in this browser session
+    // Check session storage
     const hasSeenIntro = sessionStorage.getItem('fyc_intro_seen')
     
     if (!hasSeenIntro) {
       setIsVisible(true)
 
-      // Unmount splash overlay and set session flag at 6.8s (includes 5s full display hold)
+      // Auto dismiss intro overlay (2.4s on mobile, 4.2s on desktop)
+      const isMobile = window.innerWidth <= 640
+      const duration = isMobile ? 2400 : 4200
+
       const endTimer = setTimeout(() => {
         setIsVisible(false)
         sessionStorage.setItem('fyc_intro_seen', 'true')
-      }, 6800)
+      }, duration)
 
-      return () => {
-        clearTimeout(endTimer)
-      }
+      return () => clearTimeout(endTimer)
     }
   }, [])
 
@@ -26,6 +27,7 @@ const CinematicIntroLoader = () => {
 
   return (
     <div
+      className="fyc-intro-overlay"
       style={{
         position: 'fixed',
         top: 0,
@@ -39,11 +41,10 @@ const CinematicIntroLoader = () => {
         alignItems: 'center',
         justifyContent: 'center',
         overflow: 'hidden',
-        animation: 'fycOverlayFadeOut 6.8s ease-in-out forwards',
+        animation: 'fycOverlayFadeOut 3.8s ease-in-out forwards',
         pointerEvents: 'none'
       }}
     >
-      {/* Single Flex Container for Globe + Compact Aura + Crystal Glass Tag */}
       <div
         style={{
           position: 'relative',
@@ -54,8 +55,9 @@ const CinematicIntroLoader = () => {
           zIndex: 5
         }}
       >
-        {/* Compact Golden Gradient Aura (Stays tight behind the globe) */}
+        {/* Compact Golden Gradient Aura */}
         <div
+          className="intro-aura"
           style={{
             position: 'absolute',
             top: '40%',
@@ -66,20 +68,25 @@ const CinematicIntroLoader = () => {
             borderRadius: '50%',
             background: 'conic-gradient(from 0deg, #D97706, #F59E0B, #FBBF24, #FEF08A, #F59E0B, #D97706)',
             filter: 'blur(16px)',
-            animation: 'fycGoldenSingleRoundAura 6.8s ease-in-out forwards',
+            animation: 'fycGoldenSingleRoundAura 3.8s ease-in-out forwards',
             pointerEvents: 'none'
           }}
         />
 
-        {/* Main Swirling FYC Logo */}
+        {/* Main Swirling Circular FYC Logo */}
         <div
+          className="intro-logo-box"
           style={{
             position: 'relative',
             width: '160px',
             height: '160px',
-            animation: 'fycSingleRoundSwirl 6.8s cubic-bezier(0.25, 1, 0.4, 1) forwards',
+            borderRadius: '50%',
+            overflow: 'hidden',
+            clipPath: 'circle(49% at 50% 50%)',
+            animation: 'fycSingleRoundSwirl 3.8s cubic-bezier(0.25, 1, 0.4, 1) forwards',
             transformOrigin: 'center center',
-            zIndex: 5
+            zIndex: 5,
+            boxShadow: '0 0 30px rgba(245, 158, 11, 0.8)'
           }}
         >
           <img
@@ -88,14 +95,17 @@ const CinematicIntroLoader = () => {
             style={{
               width: '100%',
               height: '100%',
-              objectFit: 'contain',
-              filter: 'drop-shadow(0 0 25px rgba(245, 158, 11, 0.95)) drop-shadow(0 0 50px rgba(217, 119, 6, 0.8))'
+              objectFit: 'cover',
+              borderRadius: '50%',
+              clipPath: 'circle(49% at 50% 50%)',
+              display: 'block'
             }}
           />
         </div>
 
-        {/* CRYSTAL GLASS VOREXCORE BADGE (Positioned Statically Beneath Globe, Clear of Gradient) */}
+        {/* Crystal Glass Powered Badge */}
         <div
+          className="intro-badge"
           style={{
             marginTop: '2rem',
             position: 'relative',
@@ -110,7 +120,7 @@ const CinematicIntroLoader = () => {
             padding: '0.55rem 1.35rem',
             borderRadius: '9999px',
             boxShadow: '0 8px 32px rgba(0, 0, 0, 0.6), 0 0 20px rgba(56, 189, 248, 0.25)',
-            animation: 'fycCrystalGlassFade 6.8s ease-in-out forwards'
+            animation: 'fycCrystalGlassFade 3.8s ease-in-out forwards'
           }}
         >
           <img
@@ -130,15 +140,11 @@ const CinematicIntroLoader = () => {
             opacity: 0;
             transform: rotate(0deg) scale(0.08);
           }
-          10% {
-            opacity: 1;
-            transform: rotate(300deg) scale(1.08);
-          }
           15% {
             opacity: 1;
             transform: rotate(360deg) scale(1);
           }
-          88% {
+          85% {
             opacity: 1;
             transform: rotate(360deg) scale(1);
           }
@@ -153,11 +159,11 @@ const CinematicIntroLoader = () => {
             opacity: 0;
             transform: rotate(0deg) scale(0.1);
           }
-          12% {
+          15% {
             opacity: 0.95;
             transform: rotate(90deg) scale(1.15);
           }
-          88% {
+          85% {
             opacity: 0.95;
             transform: rotate(360deg) scale(1.15);
           }
@@ -172,11 +178,11 @@ const CinematicIntroLoader = () => {
             opacity: 0;
             transform: translateY(12px) scale(0.92);
           }
-          14% {
+          15% {
             opacity: 1;
             transform: translateY(0) scale(1);
           }
-          88% {
+          85% {
             opacity: 1;
             transform: translateY(0) scale(1);
           }
@@ -187,14 +193,30 @@ const CinematicIntroLoader = () => {
         }
 
         @keyframes fycOverlayFadeOut {
-          0% {
-            opacity: 1;
+          0% { opacity: 1; }
+          85% { opacity: 1; }
+          100% { opacity: 0; }
+        }
+
+        @media (max-width: 640px) {
+          .fyc-intro-overlay {
+            animation-duration: 2.4s !important;
           }
-          88% {
-            opacity: 1;
+          .intro-logo-box {
+            width: 130px !important;
+            height: 130px !important;
+            animation-duration: 2.4s !important;
           }
-          100% {
-            opacity: 0;
+          .intro-aura {
+            width: 140px !important;
+            height: 140px !important;
+            animation-duration: 2.4s !important;
+          }
+          .intro-badge {
+            margin-top: 1.5rem !important;
+            padding: 0.45rem 1rem !important;
+            font-size: 0.72rem !important;
+            animation-duration: 2.4s !important;
           }
         }
       `}</style>

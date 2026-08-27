@@ -128,10 +128,10 @@ const CollaborationsMarquee = () => {
   const list = [...partners, ...partners]
 
   return (
-    <section style={{ padding: '4rem 0', background: '#FFFFFF', borderBottom: '1px solid var(--border-light)' }}>
-      <div className="container" style={{ textAlign: 'center', marginBottom: '2.25rem' }}>
-        <span className="pill-badge" style={{ marginBottom: '0.5rem' }}>Strategic Alliance</span>
-        <h2 style={{ fontFamily: 'var(--font-heading)', color: 'var(--text-navy)', fontSize: '2rem', fontWeight: 800 }}>
+    <section style={{ padding: '3.5rem 0', background: '#FFFFFF', borderBottom: '1px solid var(--border-light)', overflow: 'hidden' }}>
+      <div className="container" style={{ textAlign: 'center', marginBottom: '2rem' }}>
+        <span className="pill-badge" style={{ marginBottom: '0.5rem', display: 'inline-block' }}>Strategic Alliance</span>
+        <h2 className="collab-heading" style={{ fontFamily: 'var(--font-heading)', color: 'var(--text-navy)', fontSize: '2rem', fontWeight: 800 }}>
           International Collaborators & Partner Organizations
         </h2>
       </div>
@@ -139,27 +139,38 @@ const CollaborationsMarquee = () => {
       <div className="marquee-wrapper">
         <div className="marquee-track">
           {list.map((item, idx) => (
-            <div key={idx} className="white-card pop-card" style={{
+            <div key={idx} className="white-card pop-card collab-card" style={{
               display: 'flex',
               alignItems: 'center',
-              gap: '1.1rem',
-              minWidth: '320px',
-              padding: '1.25rem 1.6rem',
-              boxShadow: '0 4px 15px rgba(0,0,0,0.04)'
+              gap: '1rem',
+              minWidth: '280px',
+              padding: '1rem 1.4rem',
+              boxShadow: '0 4px 15px rgba(0,0,0,0.04)',
+              flexShrink: 0
             }}>
               <div style={{ flexShrink: 0 }}>
                 {item.svgLogo}
               </div>
-              <div>
-                <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, color: 'var(--text-navy)', fontSize: '1.05rem' }}>
+              <div style={{ minWidth: 0 }}>
+                <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, color: 'var(--text-navy)', fontSize: '1rem', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
                   {item.name}
                 </div>
-                <div style={{ color: 'var(--text-muted)', fontSize: '0.78rem' }}>{item.desc}</div>
+                <div style={{ color: 'var(--text-muted)', fontSize: '0.78rem', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{item.desc}</div>
               </div>
             </div>
           ))}
         </div>
       </div>
+
+      <style>{`
+        @media (max-width: 640px) {
+          .collab-heading { font-size: 1.45rem !important; }
+          .collab-card {
+            min-width: 230px !important;
+            padding: 0.75rem 1rem !important;
+          }
+        }
+      `}</style>
     </section>
   )
 }

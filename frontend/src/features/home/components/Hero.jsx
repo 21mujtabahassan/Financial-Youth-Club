@@ -4,22 +4,22 @@ import { Globe, ArrowRight } from 'lucide-react'
 
 const Hero = () => {
   return (
-    <section style={{
+    <section className="hero-section" style={{
       position: 'relative',
       background: 'linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%)',
       color: '#0F172A',
-      padding: '4.5rem 0 5.5rem 0',
+      padding: '4rem 0 4.5rem 0',
       overflow: 'hidden'
     }}>
       <div className="container">
         
-        {/* 2-Column Split Hero Layout - Matching Design Reference Sheet */}
+        {/* 2-Column Split Hero Layout */}
         <div style={{
           display: 'grid',
           gridTemplateColumns: '1fr 1fr',
-          gap: '3rem',
+          gap: '2.5rem',
           alignItems: 'center'
-        }} className="grid-2">
+        }} className="grid-2 hero-grid">
           
           {/* Left Column: Typography & Button Styles */}
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
@@ -34,18 +34,18 @@ const Hero = () => {
               color: '#0284C7',
               padding: '0.4rem 1.1rem',
               borderRadius: '9999px',
-              fontSize: '0.82rem',
+              fontSize: '0.8rem',
               fontWeight: 800,
-              marginBottom: '1.5rem',
+              marginBottom: '1.25rem',
               letterSpacing: '0.03em'
             }}>
               <Globe size={15} color="#0284C7" /> REGISTERED NGO • 35+ COUNTRIES WORLDWIDE
             </div>
 
             {/* Headline */}
-            <h1 style={{
+            <h1 className="hero-title" style={{
               fontFamily: 'var(--font-heading)',
-              fontSize: '3.1rem',
+              fontSize: '3rem',
               fontWeight: 900,
               color: '#0F172A',
               margin: '0 0 1.25rem 0',
@@ -56,33 +56,35 @@ const Hero = () => {
             </h1>
 
             {/* Subheadline */}
-            <p style={{
+            <p className="hero-sub" style={{
               color: '#475569',
               fontSize: '1.1rem',
               lineHeight: 1.65,
-              margin: '0 0 2.25rem 0',
+              margin: '0 0 2rem 0',
               maxWidth: '560px',
               fontWeight: 400
             }}>
               Connecting students with world-class mentors from <strong>J.P. Morgan, Goldman Sachs, Harvard, and LSE</strong>.
             </p>
 
-            {/* Action Button Styles (#be600 Primary Amber/Orange & #26300c Secondary Navy Outline) */}
-            <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', width: '100%' }}>
+            {/* Action Buttons */}
+            <div className="hero-btn-group" style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', width: '100%' }}>
               <a
                 href="https://forms.gle/onzeGaNhv4eywexr9"
                 target="_blank"
                 rel="noreferrer"
+                className="mobile-full-btn"
                 style={{
                   background: '#D97706',
                   color: '#FFFFFF',
-                  padding: '0.95rem 1.75rem',
+                  padding: '0.9rem 1.6rem',
                   borderRadius: '10px',
                   fontWeight: 800,
-                  fontSize: '0.92rem',
+                  fontSize: '0.9rem',
                   textDecoration: 'none',
                   display: 'inline-flex',
                   alignItems: 'center',
+                  justifyContent: 'center',
                   gap: '0.5rem',
                   boxShadow: '0 4px 18px rgba(217, 119, 6, 0.25)',
                   transition: 'all 0.25s ease'
@@ -93,14 +95,15 @@ const Hero = () => {
 
               <Link
                 to="/founders"
+                className="mobile-full-btn"
                 style={{
                   background: '#FFFFFF',
                   color: '#0F172A',
                   border: '1.5px solid #0F172A',
-                  padding: '0.95rem 1.75rem',
+                  padding: '0.9rem 1.6rem',
                   borderRadius: '10px',
                   fontWeight: 800,
-                  fontSize: '0.92rem',
+                  fontSize: '0.9rem',
                   textDecoration: 'none',
                   display: 'inline-flex',
                   alignItems: 'center',
@@ -112,14 +115,13 @@ const Hero = () => {
               </Link>
             </div>
 
-
           </div>
 
-          {/* Right Column: Hero Reference Image (Full Height 100% Fit) */}
+          {/* Right Column: Hero Reference Image */}
           <div style={{ position: 'relative', width: '100%' }}>
-            <div style={{
+            <div className="hero-img-wrapper" style={{
               width: '100%',
-              height: '460px',
+              height: '440px',
               borderRadius: '16px',
               overflow: 'hidden',
               border: '1px solid #E2E8F0',
@@ -141,6 +143,21 @@ const Hero = () => {
         </div>
 
       </div>
+
+      <style>{`
+        @media (max-width: 960px) {
+          .hero-section { padding: 2.5rem 0 3.5rem 0 !important; }
+          .hero-title { font-size: 2.1rem !important; }
+          .hero-img-wrapper { height: 320px !important; }
+        }
+        @media (max-width: 640px) {
+          .hero-title { font-size: 1.8rem !important; }
+          .hero-sub { font-size: 0.95rem !important; margin-bottom: 1.5rem !important; }
+          .hero-img-wrapper { height: 240px !important; }
+          .hero-btn-group { flex-direction: column !important; gap: 0.75rem !important; }
+          .mobile-full-btn { width: 100% !important; text-align: center !important; }
+        }
+      `}</style>
     </section>
   )
 }

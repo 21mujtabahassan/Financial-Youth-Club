@@ -63,7 +63,7 @@ const GlobalImpactMap = () => {
             IMPACT COUNTERS
           </h2>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1rem', marginBottom: '1.75rem' }}>
+          <div className="impact-counters-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1rem', marginBottom: '1.75rem' }}>
             <div>
               <div style={{ fontFamily: 'var(--font-heading)', fontSize: '2.2rem', fontWeight: 800, color: 'var(--text-navy)', lineHeight: 1 }}>20+</div>
               <div style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--text-navy)', marginTop: '0.35rem', textTransform: 'uppercase' }}>COUNTRIES</div>
@@ -90,16 +90,25 @@ const GlobalImpactMap = () => {
           </p>
 
           <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-            <Link to="/programs" className="btn-gold" style={{ minWidth: '190px' }}>
+            <Link to="/programs" className="btn-gold mobile-full-btn" style={{ minWidth: '170px' }}>
               JOIN AS STUDENT
             </Link>
-            <Link to="/founders" className="btn-navy" style={{ minWidth: '190px' }}>
+            <Link to="/founders" className="btn-navy mobile-full-btn" style={{ minWidth: '170px' }}>
               BECOME A MENTOR
             </Link>
           </div>
         </div>
 
       </div>
+
+      <style>{`
+        @media (max-width: 640px) {
+          .impact-counters-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 1.25rem 0.75rem !important;
+          }
+        }
+      `}</style>
     </section>
   )
 }

@@ -372,7 +372,7 @@ const FoundersVision = () => {
 
 
             <div style={{ textAlign: 'center' }}>
-              <button onClick={() => setSelectedFounder(null)} className="btn-navy" style={{ padding: '0.7rem 1.75rem', fontSize: '0.88rem' }}>
+              <button onClick={() => setSelectedFounder(null)} className="btn-navy" style={{ padding: '0.7rem 1.75rem', fontSize: '0.88rem', width: '100%', maxWidth: '240px' }}>
                 Close Bio Reader
               </button>
             </div>
@@ -381,6 +381,14 @@ const FoundersVision = () => {
         </div>
       )}
 
+      <style>{`
+        @media (max-width: 640px) {
+          .founders-title { font-size: 1.75rem !important; }
+          .founder-card-body { padding: 1.5rem 1rem 1.75rem 1rem !important; }
+          .founder-modal-header { flex-direction: column !important; text-align: center !important; }
+          .founder-modal-img { margin: 0 auto 0.75rem auto !important; }
+        }
+      `}</style>
     </section>
   )
 }

@@ -34,21 +34,27 @@ const Navbar = () => {
       }}>
         
         {/* Brand Logo - Official Extracted FYC Logo */}
-        <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '0.85rem', textDecoration: 'none' }}>
+        <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', textDecoration: 'none', minWidth: 0 }}>
           <img
             src="/images/fyc_official_logo.png"
             alt="Financial Youth Club Official Logo"
-            style={{ width: '44px', height: '44px', objectFit: 'contain' }}
+            style={{ width: '40px', height: '40px', objectFit: 'contain', flexShrink: 0 }}
           />
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <span style={{
-              fontFamily: 'var(--font-heading)',
-              fontWeight: 900,
-              color: '#0F172A',
-              fontSize: '1.25rem',
-              letterSpacing: '-0.02em',
-              lineHeight: 1.1
-            }}>
+          <div style={{ display: 'flex', flexDirection: 'column', minWidth: 0 }}>
+            <span 
+              className="nav-brand-title"
+              style={{
+                fontFamily: 'var(--font-heading)',
+                fontWeight: 900,
+                color: '#0F172A',
+                fontSize: '1.2rem',
+                letterSpacing: '-0.02em',
+                lineHeight: 1.15,
+                whiteSpace: 'nowrap',
+                overflow: 'hidden',
+                textOverflow: 'ellipsis'
+              }}
+            >
               Financial Youth Club
             </span>
           </div>
@@ -121,9 +127,11 @@ const Navbar = () => {
             border: 'none',
             color: '#0F172A',
             cursor: 'pointer',
-            padding: '0.5rem'
+            padding: '0.5rem',
+            borderRadius: '6px'
           }}
           className="mobile-toggle"
+          aria-label="Toggle Navigation Menu"
         >
           {mobileOpen ? <X size={26} /> : <Menu size={26} />}
         </button>
@@ -138,23 +146,30 @@ const Navbar = () => {
           padding: '1.25rem 1.5rem',
           display: 'flex',
           flexDirection: 'column',
-          gap: '1rem'
+          gap: '1rem',
+          boxShadow: '0 10px 25px rgba(0,0,0,0.08)',
+          animation: 'fadeIn 0.2s ease-out'
         }}>
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              to={link.to}
-              onClick={() => setMobileOpen(false)}
-              style={{
-                color: '#0F172A',
-                textDecoration: 'none',
-                fontSize: '1rem',
-                fontWeight: 700
-              }}
-            >
-              {link.name}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = path === link.to
+            return (
+              <Link
+                key={link.name}
+                to={link.to}
+                onClick={() => setMobileOpen(false)}
+                style={{
+                  color: isActive ? '#0EA5E9' : '#0F172A',
+                  textDecoration: 'none',
+                  fontSize: '1rem',
+                  fontWeight: isActive ? 800 : 700,
+                  padding: '0.4rem 0',
+                  borderBottom: '1px solid #F1F5F9'
+                }}
+              >
+                {link.name}
+              </Link>
+            )
+          })}
           <div style={{ marginTop: '0.5rem' }}>
             <a
               href="https://chat.whatsapp.com/HzUA3qjzlweGWUhhOJtraC"
@@ -170,7 +185,8 @@ const Navbar = () => {
                 borderRadius: '8px',
                 fontWeight: 800,
                 fontSize: '0.9rem',
-                textDecoration: 'none'
+                textDecoration: 'none',
+                boxShadow: '0 4px 14px rgba(15,23,42,0.2)'
               }}
             >
               JOIN US
@@ -179,11 +195,15 @@ const Navbar = () => {
         </div>
       )}
 
-
       <style>{`
         @media (max-width: 960px) {
           .desktop-only { display: none !important; }
           .mobile-toggle { display: block !important; }
+        }
+        @media (max-width: 480px) {
+          .nav-brand-title {
+            font-size: 1.02rem !important;
+          }
         }
       `}</style>
     </header>

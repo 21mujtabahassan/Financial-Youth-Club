@@ -2,6 +2,7 @@
 html, body {
   overflow-x: hidden;
   width: 100%;
+  -webkit-overflow-scrolling: touch;
 }
 body {
   font-family: var(--font-body);
@@ -15,6 +16,7 @@ body {
   max-width: 1240px;
   margin: 0 auto;
   padding: 0 1.5rem;
+  width: 100%;
 }
 
 .bg-grid-pattern {
@@ -151,7 +153,8 @@ body {
   overflow: hidden;
   width: 100%;
   position: relative;
-  padding: 1rem 0;
+  padding: 0.75rem 0;
+  touch-action: pan-y;
 }
 
 .marquee-wrapper::before, .marquee-wrapper::after {
@@ -159,7 +162,7 @@ body {
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 80px;
+  width: 60px;
   z-index: 2;
   pointer-events: none;
 }
@@ -176,7 +179,7 @@ body {
 
 .marquee-track {
   display: inline-flex;
-  gap: 1.75rem;
+  gap: 1.25rem;
   animation: continuousMarquee 28s linear infinite;
   will-change: transform;
 }
@@ -209,11 +212,22 @@ body {
   .grid-2 { grid-template-columns: 1fr !important; gap: 1.25rem !important; }
   .grid-3 { grid-template-columns: 1fr !important; gap: 1.25rem !important; }
   .grid-4 { grid-template-columns: 1fr !important; gap: 1rem !important; }
+  
+  .marquee-wrapper::before, .marquee-wrapper::after {
+    width: 25px !important;
+  }
+  .marquee-track {
+    gap: 0.85rem !important;
+    animation-duration: 22s !important;
+  }
+
   .modal-content {
-    padding: 1.25rem !important;
+    padding: 1.25rem 1rem !important;
     width: 95% !important;
     max-height: 85vh !important;
+    border-radius: 16px !important;
   }
+  
   .orbit-wheel-wrapper {
     transform: scale(0.58) !important;
     transform-origin: center center !important;
@@ -233,6 +247,14 @@ body {
   }
 }
 
+@media (max-width: 480px) {
+  .container { padding: 0 0.85rem !important; }
+  .btn-gold, .btn-navy {
+    width: 100%;
+    padding: 0.85rem 1.25rem;
+    font-size: 0.82rem;
+  }
+}
 
 /* Dropping Boxes Animation for Programs Page */
 @keyframes dropIn {
@@ -267,8 +289,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.5rem;
+  padding: 1rem;
   animation: fadeIn 0.25s ease-out;
+  overflow-y: auto;
 }
 
 @keyframes fadeIn {
@@ -288,6 +311,7 @@ body {
   padding: 2.25rem;
   position: relative;
   animation: dropIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  -webkit-overflow-scrolling: touch;
 }
 
 /* Orbit Wheel Keyframes */
@@ -300,3 +324,4 @@ body {
   from { transform: rotate(0deg); }
   to { transform: rotate(-360deg); }
 }
+

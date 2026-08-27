@@ -54,9 +54,9 @@ const GuestSpeakersSection = () => {
         {/* Guest Speakers Grid */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: speakers.length === 1 ? 'minmax(320px, 680px)' : 'repeat(auto-fit, minmax(320px, 1fr))',
+          gridTemplateColumns: speakers.length === 1 ? 'minmax(270px, 680px)' : 'repeat(auto-fit, minmax(270px, 1fr))',
           justifyContent: 'center',
-          gap: '2rem',
+          gap: '1.75rem',
           margin: '0 auto'
         }}>
           {speakers.map((speaker) => (
@@ -212,6 +212,11 @@ const GuestSpeakersSection = () => {
         </div>
       )}
 
+      <style>{`
+        @media (max-width: 640px) {
+          .speaker-heading { font-size: 1.55rem !important; }
+        }
+      `}</style>
     </section>
   )
 }

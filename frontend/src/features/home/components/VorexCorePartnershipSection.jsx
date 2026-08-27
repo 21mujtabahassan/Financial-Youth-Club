@@ -7,7 +7,8 @@ const VorexCorePartnershipSection = () => {
       <div className="container">
         
         {/* Main Card Container (Matching User's Reference Screenshot) */}
-        <div style={{
+        {/* Main Card Container (Matching User's Reference Screenshot) */}
+        <div className="partnership-card-container" style={{
           maxWidth: '920px',
           margin: '0 auto',
           background: '#FFFFFF',
@@ -45,7 +46,7 @@ const VorexCorePartnershipSection = () => {
           </div>
 
           {/* Main Headline */}
-          <h2 style={{
+          <h2 className="partnership-headline" style={{
             fontFamily: 'var(--font-heading)',
             color: '#0F172A',
             fontSize: '2rem',
@@ -290,6 +291,19 @@ const VorexCorePartnershipSection = () => {
         </div>
 
       </div>
+
+      <style>{`
+        @media (max-width: 640px) {
+          .partnership-card-container {
+            padding: 1.75rem 1rem !important;
+            border-radius: 16px !important;
+          }
+          .partnership-headline {
+            font-size: 1.35rem !important;
+            margin-bottom: 1.5rem !important;
+          }
+        }
+      `}</style>
     </section>
   )
 }
