@@ -1,4 +1,5 @@
 import React from 'react'
+import CinematicIntroLoader from '../../../components/common/CinematicIntroLoader'
 import Hero from '../components/Hero'
 import HeroFeaturesGrid from '../components/HeroFeaturesGrid'
 import AboutUsSection from '../components/AboutUsSection'
@@ -11,6 +12,7 @@ import WorkHistoryTimeline from '../components/WorkHistoryTimeline'
 const HomePage = () => {
   return (
     <main>
+      <CinematicIntroLoader />
       <Hero />
       <HeroFeaturesGrid />
       <AboutUsSection />
