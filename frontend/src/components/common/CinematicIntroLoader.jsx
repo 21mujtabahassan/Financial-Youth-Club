@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 
 const CinematicIntroLoader = () => {
   const [isVisible, setIsVisible] = useState(false)
-  const [isSwirling, setIsSwirling] = useState(false)
 
   useEffect(() => {
     // Check if intro has already been shown in this browser session
@@ -11,19 +10,13 @@ const CinematicIntroLoader = () => {
     if (!hasSeenIntro) {
       setIsVisible(true)
 
-      // Trigger swirl & continuous zoom sequence
-      const animationTimer = setTimeout(() => {
-        setIsSwirling(true)
-      }, 50)
-
-      // Finish animation & unmount overlay at 2.4s
+      // Unmount splash overlay and set session flag at 2.2s
       const endTimer = setTimeout(() => {
         setIsVisible(false)
         sessionStorage.setItem('fyc_intro_seen', 'true')
-      }, 2450)
+      }, 2200)
 
       return () => {
-        clearTimeout(animationTimer)
         clearTimeout(endTimer)
       }
     }
@@ -46,7 +39,7 @@ const CinematicIntroLoader = () => {
         alignItems: 'center',
         justifyContent: 'center',
         overflow: 'hidden',
-        opacity: isSwirling ? 1 : 0,
+        animation: 'fycOverlayFadeOut 2.2s ease-in-out forwards',
         pointerEvents: 'none'
       }}
     >
@@ -54,42 +47,28 @@ const CinematicIntroLoader = () => {
       <div
         style={{
           position: 'absolute',
-          width: '380px',
-          height: '380px',
+          width: '280px',
+          height: '280px',
           borderRadius: '50%',
           background: 'conic-gradient(from 0deg, #F59E0B, #FBBF24, #FEF08A, #38BDF8, #F59E0B)',
-          filter: 'blur(35px)',
-          opacity: 0.85,
-          animation: 'fycGoldenSwirlAura 2.4s cubic-bezier(0.25, 1, 0.5, 1) forwards',
+          filter: 'blur(30px)',
+          animation: 'fycGoldenSingleRoundAura 2.2s ease-in-out forwards',
           pointerEvents: 'none'
         }}
       />
 
-      {/* Secondary Bright Golden Flare Ring */}
-      <div
-        style={{
-          position: 'absolute',
-          width: '260px',
-          height: '260px',
-          borderRadius: '50%',
-          boxShadow: '0 0 80px 30px rgba(245, 158, 11, 0.75), 0 0 140px 60px rgba(251, 191, 36, 0.4)',
-          animation: 'fycGoldenPulse 2.4s cubic-bezier(0.25, 1, 0.5, 1) forwards',
-          pointerEvents: 'none'
-        }}
-      />
-
-      {/* Main Swirling & Continuously Zooming Logo */}
+      {/* Main Swirling & Gradually Growing Logo (Starts Small -> 1 Round -> Gentle Zoom Out) */}
       <div
         style={{
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          animation: 'fycSwirlZoomLogo 2.4s cubic-bezier(0.22, 1, 0.36, 1) forwards',
+          animation: 'fycSingleRoundSwirl 2.2s cubic-bezier(0.25, 1, 0.4, 1) forwards',
           transformOrigin: 'center center'
         }}
       >
-        <div style={{ position: 'relative', width: '150px', height: '150px' }}>
+        <div style={{ position: 'relative', width: '160px', height: '160px' }}>
           <img
             src="/images/fyc_official_logo.png"
             alt="Financial Youth Club Official Logo"
@@ -97,75 +76,64 @@ const CinematicIntroLoader = () => {
               width: '100%',
               height: '100%',
               objectFit: 'contain',
-              filter: 'drop-shadow(0 0 30px rgba(245, 158, 11, 0.9)) drop-shadow(0 0 60px rgba(14, 165, 233, 0.6))'
+              filter: 'drop-shadow(0 0 25px rgba(245, 158, 11, 0.95)) drop-shadow(0 0 50px rgba(14, 165, 233, 0.7))'
             }}
           />
         </div>
       </div>
 
       <style>{`
-        @keyframes fycSwirlZoomLogo {
+        @keyframes fycSingleRoundSwirl {
           0% {
             opacity: 0;
-            transform: rotate(0deg) scale(0.2);
+            transform: rotate(0deg) scale(0.08);
           }
-          20% {
+          15% {
             opacity: 1;
-            transform: rotate(240deg) scale(0.9);
-          }
-          50% {
-            opacity: 1;
-            transform: rotate(540deg) scale(2.2);
-          }
-          80% {
-            opacity: 0.95;
-            transform: rotate(900deg) scale(12);
-          }
-          95% {
-            opacity: 0.3;
-            transform: rotate(1050deg) scale(32);
-          }
-          100% {
-            opacity: 0;
-            transform: rotate(1120deg) scale(48);
-          }
-        }
-
-        @keyframes fycGoldenSwirlAura {
-          0% {
-            opacity: 0;
-            transform: rotate(0deg) scale(0.3);
-          }
-          25% {
-            opacity: 0.9;
-            transform: rotate(360deg) scale(1);
+            transform: rotate(50deg) scale(0.25);
           }
           75% {
-            opacity: 0.95;
-            transform: rotate(1080deg) scale(6);
+            opacity: 1;
+            transform: rotate(320deg) scale(1.15);
+          }
+          90% {
+            opacity: 1;
+            transform: rotate(360deg) scale(1.25);
           }
           100% {
             opacity: 0;
-            transform: rotate(1440deg) scale(25);
+            transform: rotate(360deg) scale(1.3);
           }
         }
 
-        @keyframes fycGoldenPulse {
+        @keyframes fycGoldenSingleRoundAura {
           0% {
             opacity: 0;
-            transform: scale(0.2);
+            transform: rotate(0deg) scale(0.1);
           }
-          30% {
-            opacity: 1;
-            transform: scale(1);
+          20% {
+            opacity: 0.9;
+            transform: rotate(70deg) scale(0.3);
           }
           80% {
-            opacity: 0.8;
-            transform: scale(8);
+            opacity: 0.95;
+            transform: rotate(360deg) scale(1.4);
           }
           100% {
             opacity: 0;
-            transform: scale(20);
+            transform: rotate(360deg) scale(1.5);
+          }
+        }
+
+        @keyframes fycOverlayFadeOut {
+          0% {
+            opacity: 1;
+          }
+          80% {
+            opacity: 1;
+          }
+          100% {
+            opacity: 0;
           }
         }
       `}</style>
