@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 
 const CinematicIntroLoader = () => {
   const [isVisible, setIsVisible] = useState(false)
-  const [isZooming, setIsZooming] = useState(false)
+  const [isSwirling, setIsSwirling] = useState(false)
 
   useEffect(() => {
     // Check if intro has already been shown in this browser session
@@ -10,20 +10,20 @@ const CinematicIntroLoader = () => {
     
     if (!hasSeenIntro) {
       setIsVisible(true)
-      
-      // Start zoom-through effect at 1.4s
-      const zoomTimer = setTimeout(() => {
-        setIsZooming(true)
-      }, 1400)
 
-      // Unmount splash screen and set session storage flag at 2.1s
+      // Trigger swirl & continuous zoom sequence
+      const animationTimer = setTimeout(() => {
+        setIsSwirling(true)
+      }, 50)
+
+      // Finish animation & unmount overlay at 2.4s
       const endTimer = setTimeout(() => {
         setIsVisible(false)
         sessionStorage.setItem('fyc_intro_seen', 'true')
-      }, 2100)
+      }, 2450)
 
       return () => {
-        clearTimeout(zoomTimer)
+        clearTimeout(animationTimer)
         clearTimeout(endTimer)
       }
     }
@@ -40,104 +40,132 @@ const CinematicIntroLoader = () => {
         width: '100vw',
         height: '100vh',
         zIndex: 999999,
-        background: '#090D16',
+        background: 'radial-gradient(circle at center, #0F172A 0%, #0A0F1D 60%, #050811 100%)',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
         overflow: 'hidden',
-        opacity: isZooming ? 0 : 1,
-        transition: isZooming ? 'opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1)' : 'none',
-        pointerEvents: isZooming ? 'none' : 'all'
+        opacity: isSwirling ? 1 : 0,
+        pointerEvents: 'none'
       }}
     >
-      {/* Background Radial Glow */}
+      {/* Prominent Bright Golden Gradient Aura Trail */}
       <div
         style={{
           position: 'absolute',
-          width: '500px',
-          height: '500px',
+          width: '380px',
+          height: '380px',
           borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(14, 165, 233, 0.25) 0%, rgba(217, 119, 6, 0.12) 40%, rgba(9, 13, 22, 0) 70%)',
-          animation: 'fycPulseGlow 2s ease-in-out infinite alternate',
+          background: 'conic-gradient(from 0deg, #F59E0B, #FBBF24, #FEF08A, #38BDF8, #F59E0B)',
+          filter: 'blur(35px)',
+          opacity: 0.85,
+          animation: 'fycGoldenSwirlAura 2.4s cubic-bezier(0.25, 1, 0.5, 1) forwards',
           pointerEvents: 'none'
         }}
       />
 
-      {/* Main Logo Container with Zoom Keyframes */}
+      {/* Secondary Bright Golden Flare Ring */}
+      <div
+        style={{
+          position: 'absolute',
+          width: '260px',
+          height: '260px',
+          borderRadius: '50%',
+          boxShadow: '0 0 80px 30px rgba(245, 158, 11, 0.75), 0 0 140px 60px rgba(251, 191, 36, 0.4)',
+          animation: 'fycGoldenPulse 2.4s cubic-bezier(0.25, 1, 0.5, 1) forwards',
+          pointerEvents: 'none'
+        }}
+      />
+
+      {/* Main Swirling & Continuously Zooming Logo */}
       <div
         style={{
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          transform: isZooming ? 'scale(24)' : 'scale(1)',
-          transition: isZooming ? 'transform 0.75s cubic-bezier(0.7, 0, 0.3, 1)' : 'none',
-          animation: isZooming ? 'none' : 'fycLogoEntry 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+          animation: 'fycSwirlZoomLogo 2.4s cubic-bezier(0.22, 1, 0.36, 1) forwards',
           transformOrigin: 'center center'
         }}
       >
-        <div style={{ position: 'relative', width: '130px', height: '130px', marginBottom: '1.25rem' }}>
+        <div style={{ position: 'relative', width: '150px', height: '150px' }}>
           <img
             src="/images/fyc_official_logo.png"
-            alt="Financial Youth Club Logo"
+            alt="Financial Youth Club Official Logo"
             style={{
               width: '100%',
               height: '100%',
               objectFit: 'contain',
-              filter: 'drop-shadow(0 8px 24px rgba(14, 165, 233, 0.4))'
+              filter: 'drop-shadow(0 0 30px rgba(245, 158, 11, 0.9)) drop-shadow(0 0 60px rgba(14, 165, 233, 0.6))'
             }}
           />
-        </div>
-
-        <div style={{ textAlign: 'center', opacity: isZooming ? 0 : 1, transition: 'opacity 0.2s ease' }}>
-          <h1 style={{
-            fontFamily: 'var(--font-heading, sans-serif)',
-            fontSize: '1.65rem',
-            fontWeight: 900,
-            color: '#FFFFFF',
-            letterSpacing: '0.08em',
-            textTransform: 'uppercase',
-            margin: '0 0 0.4rem 0',
-            background: 'linear-gradient(135deg, #FFFFFF 0%, #38BDF8 100%)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent'
-          }}>
-            Financial Youth Club
-          </h1>
-          <p style={{
-            color: '#94A3B8',
-            fontSize: '0.85rem',
-            fontWeight: 600,
-            letterSpacing: '0.12em',
-            textTransform: 'uppercase',
-            margin: 0
-          }}>
-            Empowering Youth Globally
-          </p>
         </div>
       </div>
 
       <style>{`
-        @keyframes fycLogoEntry {
+        @keyframes fycSwirlZoomLogo {
           0% {
             opacity: 0;
-            transform: scale(0.65);
+            transform: rotate(0deg) scale(0.2);
+          }
+          20% {
+            opacity: 1;
+            transform: rotate(240deg) scale(0.9);
+          }
+          50% {
+            opacity: 1;
+            transform: rotate(540deg) scale(2.2);
+          }
+          80% {
+            opacity: 0.95;
+            transform: rotate(900deg) scale(12);
+          }
+          95% {
+            opacity: 0.3;
+            transform: rotate(1050deg) scale(32);
           }
           100% {
-            opacity: 1;
-            transform: scale(1);
+            opacity: 0;
+            transform: rotate(1120deg) scale(48);
           }
         }
 
-        @keyframes fycPulseGlow {
+        @keyframes fycGoldenSwirlAura {
           0% {
-            transform: scale(0.85);
-            opacity: 0.6;
+            opacity: 0;
+            transform: rotate(0deg) scale(0.3);
+          }
+          25% {
+            opacity: 0.9;
+            transform: rotate(360deg) scale(1);
+          }
+          75% {
+            opacity: 0.95;
+            transform: rotate(1080deg) scale(6);
           }
           100% {
-            transform: scale(1.15);
+            opacity: 0;
+            transform: rotate(1440deg) scale(25);
+          }
+        }
+
+        @keyframes fycGoldenPulse {
+          0% {
+            opacity: 0;
+            transform: scale(0.2);
+          }
+          30% {
             opacity: 1;
+            transform: scale(1);
+          }
+          80% {
+            opacity: 0.8;
+            transform: scale(8);
+          }
+          100% {
+            opacity: 0;
+            transform: scale(20);
           }
         }
       `}</style>
