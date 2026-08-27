@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import PageLayout from '../../../components/layout/PageLayout'
 import { Lock, KeyRound, ShieldAlert, CheckCircle2 } from 'lucide-react'
+import { adminAuthService } from '../services/adminAuthService'
 
 const AdminLoginPage = () => {
   const [email, setEmail] = useState('')
@@ -9,20 +10,19 @@ const AdminLoginPage = () => {
   const [error, setError] = useState('')
   const navigate = useNavigate()
 
-  const ALLOWED_ADMIN_EMAIL = '21mujtabahassan@gmail.com'
-  const ALLOWED_ADMIN_PASSCODE = 'fycadmin2026'
-
   const handleLogin = (e) => {
     e.preventDefault()
     
-    const formattedEmail = email.trim().toLowerCase()
+    const result = adminAuthService.authenticate(email, password)
     
-    if (formattedEmail === ALLOWED_ADMIN_EMAIL && password === ALLOWED_ADMIN_PASSCODE) {
+    if (result.success) {
       sessionStorage.setItem('fyc_admin_authenticated', 'true')
-      sessionStorage.setItem('fyc_admin_email', formattedEmail)
+      sessionStorage.setItem('fyc_admin_email', result.admin.email)
+      sessionStorage.setItem('fyc_admin_name', result.admin.name)
+      sessionStorage.setItem('fyc_admin_role', result.admin.role)
       navigate('/admin/blogs')
     } else {
-      setError('Access Denied: Unrecognized admin email or passcode.')
+      setError(result.error)
     }
   }
 
