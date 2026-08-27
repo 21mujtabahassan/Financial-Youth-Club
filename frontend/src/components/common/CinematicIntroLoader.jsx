@@ -10,11 +10,11 @@ const CinematicIntroLoader = () => {
     if (!hasSeenIntro) {
       setIsVisible(true)
 
-      // Unmount splash overlay and set session flag at 3.8s (includes 2s full display hold)
+      // Unmount splash overlay and set session flag at 6.8s (includes 5s full display hold)
       const endTimer = setTimeout(() => {
         setIsVisible(false)
         sessionStorage.setItem('fyc_intro_seen', 'true')
-      }, 3800)
+      }, 6800)
 
       return () => {
         clearTimeout(endTimer)
@@ -39,7 +39,7 @@ const CinematicIntroLoader = () => {
         alignItems: 'center',
         justifyContent: 'center',
         overflow: 'hidden',
-        animation: 'fycOverlayFadeOut 3.8s ease-in-out forwards',
+        animation: 'fycOverlayFadeOut 6.8s ease-in-out forwards',
         pointerEvents: 'none'
       }}
     >
@@ -66,7 +66,7 @@ const CinematicIntroLoader = () => {
             borderRadius: '50%',
             background: 'conic-gradient(from 0deg, #D97706, #F59E0B, #FBBF24, #FEF08A, #F59E0B, #D97706)',
             filter: 'blur(16px)',
-            animation: 'fycGoldenSingleRoundAura 3.8s ease-in-out forwards',
+            animation: 'fycGoldenSingleRoundAura 6.8s ease-in-out forwards',
             pointerEvents: 'none'
           }}
         />
@@ -77,7 +77,7 @@ const CinematicIntroLoader = () => {
             position: 'relative',
             width: '160px',
             height: '160px',
-            animation: 'fycSingleRoundSwirl 3.8s cubic-bezier(0.25, 1, 0.4, 1) forwards',
+            animation: 'fycSingleRoundSwirl 6.8s cubic-bezier(0.25, 1, 0.4, 1) forwards',
             transformOrigin: 'center center',
             zIndex: 5
           }}
@@ -110,7 +110,7 @@ const CinematicIntroLoader = () => {
             padding: '0.55rem 1.35rem',
             borderRadius: '9999px',
             boxShadow: '0 8px 32px rgba(0, 0, 0, 0.6), 0 0 20px rgba(56, 189, 248, 0.25)',
-            animation: 'fycCrystalGlassFade 3.8s ease-in-out forwards'
+            animation: 'fycCrystalGlassFade 6.8s ease-in-out forwards'
           }}
         >
           <img
@@ -130,15 +130,15 @@ const CinematicIntroLoader = () => {
             opacity: 0;
             transform: rotate(0deg) scale(0.08);
           }
-          18% {
+          10% {
             opacity: 1;
             transform: rotate(300deg) scale(1.08);
           }
-          26% {
+          15% {
             opacity: 1;
             transform: rotate(360deg) scale(1);
           }
-          82% {
+          88% {
             opacity: 1;
             transform: rotate(360deg) scale(1);
           }
@@ -153,11 +153,11 @@ const CinematicIntroLoader = () => {
             opacity: 0;
             transform: rotate(0deg) scale(0.1);
           }
-          20% {
+          12% {
             opacity: 0.95;
             transform: rotate(90deg) scale(1.15);
           }
-          82% {
+          88% {
             opacity: 0.95;
             transform: rotate(360deg) scale(1.15);
           }
@@ -172,11 +172,11 @@ const CinematicIntroLoader = () => {
             opacity: 0;
             transform: translateY(12px) scale(0.92);
           }
-          24% {
+          14% {
             opacity: 1;
             transform: translateY(0) scale(1);
           }
-          82% {
+          88% {
             opacity: 1;
             transform: translateY(0) scale(1);
           }
@@ -190,7 +190,7 @@ const CinematicIntroLoader = () => {
           0% {
             opacity: 1;
           }
-          82% {
+          88% {
             opacity: 1;
           }
           100% {
