@@ -4,7 +4,7 @@ import { Calendar, Sparkles } from 'lucide-react'
 const WorkHistoryTimeline = () => {
   const milestones = [
     { year: "2024", title: "NGO Foundation & Launch", desc: "Founded by Adan Shahzad & Hooria Riasat to democratize financial literacy globally." },
-    { year: "2025", title: "Girls for Change & Pink Tax Campaign", desc: "Launched international campaign on economic price transparency and female financial empowerment." },
+    { year: "2025", title: "Price Transparency & Mother Empowerment", desc: "Launched initiative on economic price transparency and stay-at-home mother financial empowerment." },
     { year: "2025", title: "90+ Global Workshops & 21+ Collaborations", desc: "Partnered with ECONFLOW and USA Economics Olympiad (USAEO) reaching 35+ countries." },
     { year: "2026", title: "FYC Summer Program 2026", desc: "Selective 4-week virtual immersion accepting 150 candidates from 5,000+ global applicants." }
   ]

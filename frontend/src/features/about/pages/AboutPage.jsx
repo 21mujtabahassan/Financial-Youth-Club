@@ -55,10 +55,10 @@ const AboutPage = () => {
             <div style={{ width: '44px', height: '44px', borderRadius: '12px', background: '#FEF3C7', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               <Award color="#D97706" size={24} />
             </div>
-            <h2 style={{ fontFamily: 'var(--font-heading)', color: '#0F172A', fontSize: '1.5rem', fontWeight: 800 }}>Girls for Change & Pink Tax</h2>
+            <h2 style={{ fontFamily: 'var(--font-heading)', color: '#0F172A', fontSize: '1.5rem', fontWeight: 800 }}>Financial Autonomy & Inclusion</h2>
           </div>
           <p style={{ color: '#475569', lineHeight: 1.7, fontSize: '0.98rem' }}>
-            Spearheaded by Co-Founder <strong>Hooria Riasat</strong> (Audit Associate @ Deloitte/KPMG), Girls for Change fights gendered price markups ("For Her $6.29 vs. For Him $5.49"), advocates for economic price transparency, and empowers mothers with financial autonomy.
+            Co-Led by <strong>Hooria Riasat</strong> (Audit Associate @ Deloitte/KPMG), our community drives advocate for financial price transparency, budgeting tools for stay-at-home mothers, and early financial literacy for young women.
           </p>
         </div>
       </div>

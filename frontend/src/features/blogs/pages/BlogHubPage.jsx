@@ -8,7 +8,7 @@ const categories = [
   'All',
   'Financial Literacy',
   'M&A & Career Guides',
-  'Pink Tax / Girls for Change',
+  'Financial Inclusion & Equality',
   'Webinar Recaps'
 ]
 

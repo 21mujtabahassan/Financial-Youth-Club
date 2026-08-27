@@ -12,8 +12,8 @@ const HeroFeaturesGrid = () => {
     },
     {
       icon: <Heart color="#EC4899" size={28} />,
-      title: 'Girls For Change',
-      description: 'Advocating for economic price transparency & Pink Tax campaign.',
+      title: 'Financial Inclusion',
+      description: 'Budgeting & financial independence drives for stay-at-home mothers & youth.',
       bg: '#FDF2F8',
       borderColor: '#FBCFE8'
     },

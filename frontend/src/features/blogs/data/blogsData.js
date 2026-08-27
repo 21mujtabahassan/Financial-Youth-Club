@@ -112,9 +112,9 @@ export const initialBlogs = [
   <p style="color: #475569; margin-bottom: 0;">Automate monthly contributions to diversified low-cost index funds to harness the power of compound interest and bridge the gender wealth gap.</p>
 </div>
     `,
-    category: 'Pink Tax / Girls for Change',
+    category: 'Financial Inclusion & Equality',
     author: 'Hooria Riasat',
-    authorRole: 'Co-Founder, Girls for Change • Audit Associate',
+    authorRole: 'Co-Founder, FYC • Audit Associate',
     date: 'August 15, 2026',
     readTime: '9 min read',
     coverImage: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1200&q=80',

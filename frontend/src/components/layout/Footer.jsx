@@ -167,7 +167,7 @@ const Footer = () => {
               Key Initiatives
             </h4>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.45rem' }}>
-              <li><Link to="/campaigns" style={{ color: '#94A3B8', textDecoration: 'none', fontSize: '0.8rem', fontWeight: 400 }}>Girls for Change & Pink Tax</Link></li>
+              <li><Link to="/programs" style={{ color: '#94A3B8', textDecoration: 'none', fontSize: '0.8rem', fontWeight: 400 }}>Financial Inclusion Drives</Link></li>
               <li><Link to="/financial-literacy" style={{ color: '#94A3B8', textDecoration: 'none', fontSize: '0.8rem', fontWeight: 400 }}>Financial Literacy Drives</Link></li>
               <li><Link to="/collaborations" style={{ color: '#94A3B8', textDecoration: 'none', fontSize: '0.8rem', fontWeight: 400 }}>USA Economics Olympiad</Link></li>
               <li><Link to="/activities" style={{ color: '#94A3B8', textDecoration: 'none', fontSize: '0.8rem', fontWeight: 400 }}>Case Study Bootcamps</Link></li>

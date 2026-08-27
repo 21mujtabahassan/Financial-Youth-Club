@@ -218,7 +218,6 @@ const AboutUsSection = () => {
           <div style={{ display: 'flex', gap: '0.75rem', justifyContent: 'center', marginBottom: '2rem', flexWrap: 'wrap' }}>
             {[
               { id: 'mission', label: 'Mission & Purpose', color: '#0F172A' },
-              { id: 'pinktax', label: 'Girls for Change & Pink Tax', color: '#DB2777' },
               { id: 'media', label: 'Media & Strategic Alliances', color: '#7C3AED' }
             ].map(tab => (
               <button
@@ -241,100 +240,6 @@ const AboutUsSection = () => {
               </button>
             ))}
           </div>
-
-
-          {/* TAB 1: MISSION & PURPOSE */}
-          {activeTab === 'mission' && (
-            <div className="grid-2" style={{ alignItems: 'center' }}>
-              <div>
-                <span style={{ color: '#0EA5E9', fontWeight: 800, fontSize: '0.82rem', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
-                  PURPOSE-DRIVEN NGO
-                </span>
-                <h3 style={{ fontFamily: 'var(--font-heading)', color: '#0F172A', fontSize: '1.6rem', fontWeight: 900, margin: '0.4rem 0 0.85rem 0' }}>
-                  Eliminating Economic Barriers for Students & Women
-                </h3>
-                <p style={{ color: '#475569', fontSize: '0.95rem', lineHeight: 1.65, marginBottom: '1rem' }}>
-                  Financial Youth Club is a registered non-profit organization dedicated to breaking down financial literacy barriers. We connect ambitious youth, stay-at-home mothers, and female entrepreneurs with industry leaders from <strong>J.P. Morgan, Goldman Sachs, Harvard, and LSE</strong>.
-                </p>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', marginBottom: '1.25rem' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#0F172A', fontSize: '0.88rem' }}>
-                    <CheckCircle2 color="#0EA5E9" size={16} /> 100% Free Workshops, Webinars & Bootcamps
-                  </div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#0F172A', fontSize: '0.88rem' }}>
-                    <CheckCircle2 color="#0EA5E9" size={16} /> Materials translated into Urdu, Hindi, Spanish, and Chinese
-                  </div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#0F172A', fontSize: '0.88rem' }}>
-                    <CheckCircle2 color="#0EA5E9" size={16} /> Partnered with ECONFLOW & USA Economics Olympiad (USAEO)
-                  </div>
-                </div>
-                <Link to="/about" className="btn-gold" style={{ padding: '0.65rem 1.4rem', fontSize: '0.82rem' }}>
-                  Explore Full About Page <ArrowRight size={15} />
-                </Link>
-              </div>
-
-              <div className="white-card pop-card">
-                <h4 style={{ color: '#0EA5E9', fontSize: '1.1rem', fontWeight: 800, marginBottom: '0.85rem' }}>Recruiting Active Student Roles</h4>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-                  <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', padding: '0.75rem', borderRadius: '8px' }}>
-                    <div style={{ fontWeight: 800, color: '#0F172A', fontSize: '0.88rem' }}>💼 FYC Consultants Track</div>
-                    <div style={{ fontSize: '0.78rem', color: '#64748B' }}>Advise on investment strategy, client engagement, market & sector analysis.</div>
-                  </div>
-                  <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', padding: '0.75rem', borderRadius: '8px' }}>
-                    <div style={{ fontWeight: 800, color: '#0F172A', fontSize: '0.88rem' }}>📈 Financial Markets Research Analysts</div>
-                    <div style={{ fontSize: '0.78rem', color: '#64748B' }}>Research global markets, analyze macroeconomic trends & publish reports.</div>
-                  </div>
-                  <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', padding: '0.75rem', borderRadius: '8px' }}>
-                    <div style={{ fontWeight: 800, color: '#0F172A', fontSize: '0.88rem' }}>🎙️ Guest Speakers & Industry Practitioners</div>
-                    <div style={{ fontSize: '0.78rem', color: '#64748B' }}>Deliver keynote webinars and share unique market & career forecasts.</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
-
-          {/* TAB 2: GIRLS FOR CHANGE & PINK TAX */}
-          {activeTab === 'pinktax' && (
-            <div className="grid-2" style={{ alignItems: 'center' }}>
-              <div>
-                <span style={{ color: '#DB2777', fontWeight: 800, fontSize: '0.82rem', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
-                  GENDER ECONOMIC EQUALITY
-                </span>
-                <h3 style={{ fontFamily: 'var(--font-heading)', color: '#0F172A', fontSize: '1.6rem', fontWeight: 900, margin: '0.4rem 0 0.85rem 0' }}>
-                  Understanding The Pink Tax Campaign
-                </h3>
-                <p style={{ color: '#475569', fontSize: '0.95rem', lineHeight: 1.65, marginBottom: '1rem' }}>
-                  "Same product. Same purpose. So why does hers cost more?" Led by Co-Founder <strong>Hooria Riasat</strong> (Audit Associate at Deloitte/KPMG), Girls for Change tackles gendered price markups (e.g. <em>For Her $6.29 vs. For Him $5.49</em>) and advocates for price transparency and female financial autonomy.
-                </p>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', marginBottom: '1.25rem' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#0F172A', fontSize: '0.88rem' }}>
-                    <CheckCircle2 color="#DB2777" size={16} /> Economic Price Transparency & Advocacy Campaigns
-                  </div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#0F172A', fontSize: '0.88rem' }}>
-                    <CheckCircle2 color="#DB2777" size={16} /> Budgeting & Financial Independence Bootcamps for Stay-at-Home Mothers
-                  </div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#0F172A', fontSize: '0.88rem' }}>
-                    <CheckCircle2 color="#DB2777" size={16} /> Women in Finance & Audit Circles
-                  </div>
-                </div>
-                <Link to="/campaigns" className="btn-gold" style={{ background: '#DB2777', padding: '0.65rem 1.4rem', fontSize: '0.82rem' }}>
-                  Explore Campaign <ArrowRight size={15} />
-                </Link>
-              </div>
-
-              <div className="framed-portrait pop-card" style={{ padding: '1rem', textAlign: 'center', background: '#FFF5F8' }}>
-                <img
-                  src="/images/founders/hooria_riasat.jpg"
-                  alt="Hooria Riasat - Founder Girls for Change"
-                  style={{ width: '100%', height: '220px', objectFit: 'contain', borderRadius: '6px' }}
-                />
-                <div style={{ padding: '0.75rem 0 0 0', borderTop: '1px solid #FBCFE8' }}>
-                  <div style={{ fontWeight: 900, color: '#0F172A', fontSize: '1.1rem' }}>HOORIA RIASAT</div>
-                  <div style={{ color: '#DB2777', fontWeight: 800, fontSize: '0.82rem' }}>Founder, Girls for Change • Audit Associate</div>
-                  <div style={{ color: '#64748B', fontSize: '0.78rem', marginTop: '0.25rem' }}>"Same product. Same purpose. So why does hers cost more?"</div>
-                </div>
-              </div>
-            </div>
-          )}
 
           {/* TAB 4: MEDIA & STRATEGIC ALLIANCES */}
           {activeTab === 'media' && (

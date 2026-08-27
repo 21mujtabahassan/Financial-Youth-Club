@@ -72,7 +72,7 @@ Unlike traditional online courses, FYC Summer Program pairs students directly wi
 ### Highlights of the UK Chapter:
 - **Spring Insight & Internship Prep**: Detailed breakdowns of UK investment banking application timelines, online tests, and assessment centers.
 - **Commercial Awareness Webinars**: Weekly discussions on European central bank policy, macroeconomic trends, and market movements.
-- **Women in Finance Roundtable**: Partnered with Girls for Change to promote female representation in UK audit, asset management, and trading.`,
+- **Women in Finance Roundtable**: Dedicated sessions promoting female representation in UK audit, asset management, and trading.`,
     stats: ['500+ Mentees', '25+ Guest Lecturers', 'London & Oxbridge Network', '100% Free Access']
   },
 
@@ -116,29 +116,6 @@ Unlike traditional online courses, FYC Summer Program pairs students directly wi
 - **Fintech Trends in the GCC**: Real-time payments, open banking, and crypto regulation in the UAE.
 - **Gen-Z Wealth Management**: Smart budgeting for young professionals entering the GCC workforce.`,
     stats: ['Dubai & GCC Reach', '15+ Regional Events', 'DIFC Speaker Panel', 'Arabic & English Tracks']
-  },
-
-  {
-    id: 'girls-change-campaign',
-    region: 'virtual',
-    title: 'Girls for Change: Pink Tax & Price Transparency Campaign',
-    category: 'Special Economic Advocacy',
-    image: '/images/founders/hooria_riasat.jpg',
-    shortDesc: 'A global campaign advocating for gender economic equality, price transparency, and female financial independence.',
-    duration: 'Global Year-Round Campaign',
-    mentors: 'Hooria Riasat & Deloitte/KPMG Audit Associates',
-    blogTitle: 'Dismantling the Pink Tax: Why Price Transparency Matters for Gender Economic Equality',
-    blogAuthor: 'Hooria Riasat (Founder, Girls for Change)',
-    blogDate: 'Campaign Highlight',
-    blogContent: `Did you know that products marketed toward women often cost up to 13% more than identical items marketed toward men? This subtle markup, known as the "Pink Tax", places an unfair financial burden on women worldwide.
-
-Spearheaded by Co-Founder Hooria Riasat, **Girls for Change** is FYC’s flagship advocacy initiative tackling gendered economic inequality.
-
-### Campaign Goals & Achievements:
-1. **Price Transparency Research**: Publishing educational reports showing retail price disparities in personal care and clothing.
-2. **Financial Literacy for Mothers**: Hosting workshops specifically tailored for stay-at-home mothers to achieve personal financial autonomy.
-3. **Corporate Mentorship Circles**: Connecting young female graduates with audit associates, CFOs, and female tech leaders.`,
-    stats: ['10,000+ Women Reached', 'Global Campaign', 'Price Transparency Advocate', '100% Free Workshops']
   }
 ]
 

@@ -39,34 +39,34 @@ const FoundersVision = () => {
 
   const hooriaData = {
     name: "HOORIA RIASAT",
-    roleTag: "GIRLS FOR CHANGE FOUNDER:",
-    subTitle: "Female Economic Equality & Audit Advocacy",
-    badge: "FEMALE ECONOMIC EQUALITY & AUDIT ADVOCACY",
+    roleTag: "CO-FOUNDER & AUDIT ADVOCATE:",
+    subTitle: "Co-Founder, FYC & Audit Associate",
+    badge: "FINANCIAL AUTONOMY & AUDIT ADVOCACY",
     image: "/images/founders/hooria_riasat.jpg",
     accentColor: "#DB2777",
     btnColor: "linear-gradient(135deg, #DB2777 0%, #BE185D 100%)",
     btnGlow: "rgba(219, 39, 119, 0.4)",
     bgLight: "#FFF1F2",
     borderLight: "#FECDD3",
-    quote: "Same product. Same purpose. So why does hers cost more? Through Girls for Change, we dismantle the Pink Tax, and give stay-at-home mothers financial tools to achieve economic autonomy.",
+    quote: "Financial inclusion requires economic price transparency and giving stay-at-home mothers practical tools to achieve financial autonomy.",
     checkPoints: [
-      "Understanding the Pink Tax",
+      "Economic Price Transparency",
       "CA & Audit Specialized Understanding",
       "Financial Literacy for Stay-at-Home Mothers"
     ],
     journeyPoints: [
       "Chartered Accountant Finalist & Audit Associate at Deloitte / KPMG",
-      "Spearheaded international 'Understanding The Pink Tax' campaign ($6.29 vs $5.49)",
+      "Spearheaded financial price transparency initiatives",
       "Delivered 90+ grassroots financial literacy sessions for stay-at-home mothers & young women",
       "Keynote speaker on 'Can Auditors Catch Every Fraud? Fraud Detection & Internal Controls'"
     ],
     mediaFeatures: [
-      { title: "Girls for Change Pink Tax Campaign", desc: "International Advocacy on Price Transparency" },
+      { title: "Price Transparency Initiative", desc: "Advocacy on Economic Price Equality" },
       { title: "Women in Finance Roundtable", desc: "Promoting Female Representation in Banking & Audit" },
       { title: "Stay-at-Home Mothers Bootcamp", desc: "Practical Household Budgeting & Economic Autonomy" },
       { title: "Fraud Detection Masterclass", desc: "Audit Reports, IFRS Standards & Corporate Governance" }
     ],
-    alliances: ["Deloitte", "KPMG", "Girls for Change", "Rise & Rights", "ACCA Global"]
+    alliances: ["Deloitte", "KPMG", "Rise & Rights", "ACCA Global"]
   }
 
   return (

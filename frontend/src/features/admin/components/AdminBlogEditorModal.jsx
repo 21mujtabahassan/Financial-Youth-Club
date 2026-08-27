@@ -4,7 +4,7 @@ import { X, Sparkles, Image, Check, AlertCircle } from 'lucide-react'
 const categories = [
   'Financial Literacy',
   'M&A & Career Guides',
-  'Pink Tax / Girls for Change',
+  'Financial Inclusion & Equality',
   'Webinar Recaps'
 ]
 
