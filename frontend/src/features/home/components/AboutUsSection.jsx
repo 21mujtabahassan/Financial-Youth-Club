@@ -3,21 +3,8 @@ import { Link } from 'react-router-dom'
 import { Sparkles, Globe, Heart, Award, CheckCircle2, ArrowRight, ShieldCheck, Users, Radio, Briefcase, ExternalLink, X, BookOpen, GraduationCap, Building2 } from 'lucide-react'
 import AnimatedCounter from '../../../components/common/AnimatedCounter'
 
-import { guestSpeakers } from '../../speakers/data/speakersData'
-
-const guestSpeakersList = guestSpeakers.map(s => ({
-  name: s.name,
-  role: s.role,
-  school: s.uni,
-  company: s.org,
-  topic: s.topic,
-  image: s.image,
-  details: s.bio
-}))
-
 const AboutUsSection = () => {
   const [activeTab, setActiveTab] = useState('mission')
-  const [selectedSpeaker, setSelectedSpeaker] = useState(null)
 
   const topEmployers = [
     'J.P. Morgan', 'Goldman Sachs', 'Bain & Company', 'Deloitte', 'PwC', 'KPMG',
@@ -232,7 +219,6 @@ const AboutUsSection = () => {
             {[
               { id: 'mission', label: 'Mission & Purpose', color: '#0F172A' },
               { id: 'pinktax', label: 'Girls for Change & Pink Tax', color: '#DB2777' },
-              { id: 'speakers', label: 'Guest Speakers & Mentors', color: '#D97706' },
               { id: 'media', label: 'Media & Strategic Alliances', color: '#7C3AED' }
             ].map(tab => (
               <button
@@ -350,40 +336,6 @@ const AboutUsSection = () => {
             </div>
           )}
 
-          {/* TAB 3: GUEST SPEAKERS & MENTORS */}
-          {activeTab === 'speakers' && (
-            <div>
-              <div style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
-                <span style={{ color: '#D97706', fontWeight: 800, fontSize: '0.82rem', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
-                  35+ INDUSTRY LEADERS & ACADEMIC SCHOLARS
-                </span>
-                <h3 style={{ fontFamily: 'var(--font-heading)', color: '#0F172A', fontSize: '1.5rem', fontWeight: 900, marginTop: '0.25rem' }}>
-                  Learn Live from Global Finance Experts
-                </h3>
-              </div>
-
-              {/* Guest Speakers Grid */}
-              <div className="grid-4" style={{ gap: '1rem', marginBottom: '1.5rem' }}>
-                {guestSpeakersList.map((spk, i) => (
-                  <div
-                    key={i}
-                    className="white-card pop-card"
-                    onClick={() => setSelectedSpeaker(spk)}
-                    style={{ padding: '1rem', textAlign: 'center', cursor: 'pointer' }}
-                  >
-                    <div style={{ width: '64px', height: '64px', borderRadius: '50%', overflow: 'hidden', margin: '0 auto 0.75rem auto', border: '2px solid #0EA5E9' }}>
-                      <img src={spk.image} alt={spk.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                    </div>
-                    <div style={{ fontWeight: 900, color: '#0F172A', fontSize: '0.95rem' }}>{spk.name}</div>
-                    <div style={{ color: '#0EA5E9', fontWeight: 800, fontSize: '0.75rem', margin: '0.2rem 0' }}>{spk.role}</div>
-                    <div style={{ color: '#64748B', fontSize: '0.72rem' }}>{spk.school}</div>
-                    <div style={{ color: '#D97706', fontWeight: 700, fontSize: '0.72rem', marginTop: '0.5rem' }}>Click for Bio & Topic →</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
           {/* TAB 4: MEDIA & STRATEGIC ALLIANCES */}
           {activeTab === 'media' && (
             <div className="grid-2" style={{ alignItems: 'center' }}>
@@ -432,56 +384,6 @@ const AboutUsSection = () => {
         </div>
 
       </div>
-
-      {/* Speaker Bio Modal Reader */}
-      {selectedSpeaker && (
-        <div className="modal-overlay" onClick={() => setSelectedSpeaker(null)}>
-          <div className="modal-content" onClick={e => e.stopPropagation()}>
-            <button
-              onClick={() => setSelectedSpeaker(null)}
-              style={{
-                position: 'absolute', top: '1.25rem', right: '1.25rem',
-                background: '#F1F5F9', border: 'none', borderRadius: '50%',
-                width: '36px', height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center',
-                cursor: 'pointer', color: '#0F172A'
-              }}
-            >
-              <X size={20} />
-            </button>
-
-            <div style={{ display: 'flex', gap: '1.25rem', alignItems: 'center', marginBottom: '1.5rem' }}>
-              <div style={{ width: '80px', height: '80px', borderRadius: '50%', overflow: 'hidden', border: '3px solid #0EA5E9' }}>
-                <img src={selectedSpeaker.image} alt={selectedSpeaker.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-              </div>
-              <div>
-                <span style={{ background: '#0EA5E9', color: '#FFF', fontSize: '0.7rem', fontWeight: 800, padding: '0.2rem 0.6rem', borderRadius: '9999px' }}>
-                  FYC Guest Speaker
-                </span>
-                <h3 style={{ fontFamily: 'var(--font-heading)', color: '#0F172A', fontSize: '1.4rem', fontWeight: 900, marginTop: '0.25rem' }}>
-                  {selectedSpeaker.name}
-                </h3>
-                <div style={{ color: '#0284C7', fontWeight: 800, fontSize: '0.88rem' }}>{selectedSpeaker.role}</div>
-                <div style={{ color: '#64748B', fontSize: '0.8rem' }}>{selectedSpeaker.school}</div>
-              </div>
-            </div>
-
-            <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', padding: '1rem', borderRadius: '10px', marginBottom: '1.25rem' }}>
-              <div style={{ fontSize: '0.75rem', fontWeight: 800, color: '#D97706', textTransform: 'uppercase' }}>Keynote Workshop Topic:</div>
-              <div style={{ fontSize: '1.05rem', fontWeight: 800, color: '#0F172A', marginTop: '0.25rem' }}>"{selectedSpeaker.topic}"</div>
-            </div>
-
-            <p style={{ color: '#475569', fontSize: '0.92rem', lineHeight: 1.65, marginBottom: '1.5rem' }}>
-              {selectedSpeaker.details}
-            </p>
-
-            <div style={{ textAlign: 'center' }}>
-              <button onClick={() => setSelectedSpeaker(null)} className="btn-navy" style={{ padding: '0.65rem 1.5rem', fontSize: '0.85rem' }}>
-                Close Speaker Profile
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
 
     </section>
   )

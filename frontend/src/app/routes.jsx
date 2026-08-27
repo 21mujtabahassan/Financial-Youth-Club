@@ -4,7 +4,6 @@ import HomePage from '../features/home/pages/HomePage'
 import AboutPage from '../features/about/pages/AboutPage'
 import FoundersPage from '../features/founders/pages/FoundersPage'
 import FinancialLiteracyPage from '../features/financial-literacy/pages/FinancialLiteracyPage'
-import SpeakersPage from '../features/speakers/pages/SpeakersPage'
 import ProgramsPage from '../features/programs/pages/ProgramsPage'
 import WebinarsPage from '../features/webinars/pages/WebinarsPage'
 import ParticipantsPage from '../features/participants/pages/ParticipantsPage'
@@ -21,7 +20,6 @@ const AppRoutes = () => {
       <Route path="/about" element={<AboutPage />} />
       <Route path="/founders" element={<FoundersPage />} />
       <Route path="/financial-literacy" element={<FinancialLiteracyPage />} />
-      <Route path="/speakers" element={<SpeakersPage />} />
       <Route path="/programs" element={<ProgramsPage />} />
       <Route path="/webinars" element={<WebinarsPage />} />
       <Route path="/participants" element={<ParticipantsPage />} />

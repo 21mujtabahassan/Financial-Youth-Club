@@ -155,7 +155,6 @@ const Footer = () => {
               <li><Link to="/founders" style={{ color: '#94A3B8', textDecoration: 'none', fontSize: '0.8rem', fontWeight: 400 }}>Founders & Vision</Link></li>
               <li><Link to="/programs" style={{ color: '#94A3B8', textDecoration: 'none', fontSize: '0.8rem', fontWeight: 400 }}>Summer Program 2026</Link></li>
               <li><Link to="/collaborations" style={{ color: '#94A3B8', textDecoration: 'none', fontSize: '0.8rem', fontWeight: 400 }}>Global Alliances</Link></li>
-              <li><Link to="/speakers" style={{ color: '#94A3B8', textDecoration: 'none', fontSize: '0.8rem', fontWeight: 400 }}>Guest Speakers</Link></li>
             </ul>
           </div>
 
