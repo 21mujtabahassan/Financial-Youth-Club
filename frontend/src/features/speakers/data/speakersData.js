@@ -54,5 +54,19 @@ export const guestSpeakers = [
       'Former Private Equity Analyst, Angel Investor & Board Director at Ottawa Real Estate Investors Organization.'
     ],
     bio: 'Jason Lum is the Founder & Managing Director of JHL Consulting Group Inc. Having worked as an Investment Banking (M&A) Summer Analyst at CIBC Capital Markets and Private Equity Analyst, he has mentored over 300+ students to land competitive offers at Morgan Stanley, Deloitte, McKinsey, and leading global financial institutions.'
+  },
+  {
+    id: 'megan-kong',
+    name: 'Megan Kong',
+    role: 'Incoming Forensic Consulting Associate at KPMG Hong Kong',
+    topic: 'The Internship Journey: Applications, Challenges & Lessons Learned',
+    image: '/images/speakers/megan-kong.png',
+    highlights: [
+      'MSc in Criminal Justice Policy at LSE (London School of Economics).',
+      'UCL Honours graduate in Politics & International Relations (K.K. Chu Memorial Prize winner).',
+      'Achieved multiple First-Class grades in data analysis, geopolitics, and international law.',
+      'Incoming Forensic Consulting Associate at KPMG Hong Kong.'
+    ],
+    bio: 'Megan Kong holds an MSc in Criminal Justice Policy from LSE and a Politics & International Relations Honours degree from UCL, where she was awarded the K.K. Chu Memorial Prize. With a background in data analysis, geopolitics, and international law, she is an Incoming Forensic Consulting Associate at KPMG Hong Kong sharing insights on navigating global corporate internship applications and challenges.'
   }
 ]
