@@ -68,5 +68,19 @@ export const guestSpeakers = [
       'Incoming Forensic Consulting Associate at KPMG Hong Kong.'
     ],
     bio: 'Megan Kong holds an MSc in Criminal Justice Policy from LSE and a Politics & International Relations Honours degree from UCL, where she was awarded the K.K. Chu Memorial Prize. With a background in data analysis, geopolitics, and international law, she is an Incoming Forensic Consulting Associate at KPMG Hong Kong sharing insights on navigating global corporate internship applications and challenges.'
+  },
+  {
+    id: 'ledi-maisuradze',
+    name: 'Ledi Maisuradze',
+    role: 'Senior Associate at Deloitte (M&A Transaction Services)',
+    topic: 'Mergers & Acquisitions Due Diligence & Building a Finance Career in the UK',
+    image: '/images/speakers/ledi-maisuradze.jpg',
+    highlights: [
+      'Senior Associate in M&A Transaction Services at Big 4 firm (Deloitte).',
+      'BSc Economic History from London School of Economics (LSE).',
+      'Expert in M&A due diligence, financial analysis & corporate valuation.',
+      'Guides students on choosing a career path and studying & working in the UK.'
+    ],
+    bio: 'Ledi Maisuradze is a Senior Associate in M&A Transaction Services at Deloitte and a BSc Economic History graduate from the London School of Economics (LSE). She specializes in M&A due diligence, financial advisory, and international career strategy, mentoring youth on navigating UK academic and professional opportunities.'
   }
 ]
