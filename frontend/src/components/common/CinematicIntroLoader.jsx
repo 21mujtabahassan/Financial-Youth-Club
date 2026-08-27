@@ -43,33 +43,45 @@ const CinematicIntroLoader = () => {
         pointerEvents: 'none'
       }}
     >
-      {/* Prominent Compact Golden Gradient Aura Trail */}
+      {/* Single Flex Container for Globe + Compact Aura + Crystal Glass Tag */}
       <div
         style={{
-          position: 'absolute',
-          width: '180px',
-          height: '180px',
-          borderRadius: '50%',
-          background: 'conic-gradient(from 0deg, #D97706, #F59E0B, #FBBF24, #FEF08A, #F59E0B, #D97706)',
-          filter: 'blur(16px)',
-          animation: 'fycGoldenSingleRoundAura 2.2s ease-in-out forwards',
-          pointerEvents: 'none'
-        }}
-      />
-
-      {/* Main Swirling FYC Logo (Only the logo spins) */}
-      <div
-        style={{
+          position: 'relative',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          animation: 'fycSingleRoundSwirl 2.2s cubic-bezier(0.25, 1, 0.4, 1) forwards',
-          transformOrigin: 'center center',
           zIndex: 5
         }}
       >
-        <div style={{ position: 'relative', width: '160px', height: '160px' }}>
+        {/* Compact Golden Gradient Aura (Stays tight behind the globe) */}
+        <div
+          style={{
+            position: 'absolute',
+            top: '40%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            width: '180px',
+            height: '180px',
+            borderRadius: '50%',
+            background: 'conic-gradient(from 0deg, #D97706, #F59E0B, #FBBF24, #FEF08A, #F59E0B, #D97706)',
+            filter: 'blur(16px)',
+            animation: 'fycGoldenSingleRoundAura 2.2s ease-in-out forwards',
+            pointerEvents: 'none'
+          }}
+        />
+
+        {/* Main Swirling FYC Logo */}
+        <div
+          style={{
+            position: 'relative',
+            width: '160px',
+            height: '160px',
+            animation: 'fycSingleRoundSwirl 2.2s cubic-bezier(0.25, 1, 0.4, 1) forwards',
+            transformOrigin: 'center center',
+            zIndex: 5
+          }}
+        >
           <img
             src="/images/fyc_official_logo.png"
             alt="Financial Youth Club Official Logo"
@@ -77,61 +89,39 @@ const CinematicIntroLoader = () => {
               width: '100%',
               height: '100%',
               objectFit: 'contain',
-              filter: 'drop-shadow(0 0 30px rgba(245, 158, 11, 0.95)) drop-shadow(0 0 60px rgba(217, 119, 6, 0.8))'
+              filter: 'drop-shadow(0 0 25px rgba(245, 158, 11, 0.95)) drop-shadow(0 0 50px rgba(217, 119, 6, 0.8))'
             }}
           />
         </div>
-      </div>
 
-      {/* STATIC Curved VorexCore Arc (Perfectly Centered Horizontally & Curved Underneath Globe) */}
-      <div
-        style={{
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          width: '380px',
-          height: '380px',
-          pointerEvents: 'none',
-          zIndex: 10,
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          animation: 'fycStaticArcFade 2.2s ease-in-out forwards'
-        }}
-      >
-        <svg width="380" height="380" viewBox="0 0 380 380" style={{ overflow: 'visible' }}>
-          <defs>
-            <linearGradient id="vorexStaticTextGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#38BDF8" />
-              <stop offset="50%" stopColor="#C084FC" />
-              <stop offset="100%" stopColor="#38BDF8" />
-            </linearGradient>
-
-            <filter id="vorexTextShadow" x="-20%" y="-20%" width="140%" height="140%">
-              <feDropShadow dx="0" dy="2" stdDeviation="3" floodColor="#000000" floodOpacity="0.95" />
-              <feDropShadow dx="0" dy="0" stdDeviation="6" floodColor="#0EA5E9" floodOpacity="0.8" />
-            </filter>
-
-            {/* Symmetrical Bottom Arc centered at (190, 190), Radius R=130 */}
-            <path id="vorexStaticArc" d="M 60,190 A 130,130 0 0,0 320,190" />
-          </defs>
-
-          {/* Large, High-Legibility Curved Text Path */}
-          <text
-            fill="url(#vorexStaticTextGrad)"
-            fontSize="15.5"
-            fontWeight="900"
-            letterSpacing="3.5"
-            textAnchor="middle"
-            filter="url(#vorexTextShadow)"
-            style={{ fontFamily: 'var(--font-heading), sans-serif' }}
-          >
-            <textPath href="#vorexStaticArc" startOffset="50%">
-              • POWERED BY VOREXCORE SOLUTIONS •
-            </textPath>
-          </text>
-        </svg>
+        {/* CRYSTAL GLASS VOREXCORE BADGE (Positioned Statically Beneath Globe, Clear of Gradient) */}
+        <div
+          style={{
+            marginTop: '2rem',
+            position: 'relative',
+            zIndex: 10,
+            display: 'flex',
+            alignItems: 'center',
+            gap: '0.65rem',
+            background: 'rgba(15, 23, 42, 0.85)',
+            border: '1px solid rgba(56, 189, 248, 0.5)',
+            backdropFilter: 'blur(14px)',
+            WebkitBackdropFilter: 'blur(14px)',
+            padding: '0.55rem 1.35rem',
+            borderRadius: '9999px',
+            boxShadow: '0 8px 32px rgba(0, 0, 0, 0.6), 0 0 20px rgba(56, 189, 248, 0.25)',
+            animation: 'fycCrystalGlassFade 2.2s ease-in-out forwards'
+          }}
+        >
+          <img
+            src="/images/vorexcore_logo.png"
+            alt="VorexCore Solutions"
+            style={{ width: '22px', height: '22px', borderRadius: '5px', objectFit: 'cover' }}
+          />
+          <span style={{ fontSize: '0.82rem', fontWeight: 900, color: '#94A3B8', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+            POWERED BY <strong style={{ background: 'linear-gradient(135deg, #38BDF8 0%, #C084FC 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>VOREXCORE SOLUTIONS</strong>
+          </span>
+        </div>
       </div>
 
       <style>{`
@@ -193,6 +183,25 @@ const CinematicIntroLoader = () => {
           100% {
             opacity: 0;
             transform: scale(1.05);
+          }
+        }
+
+        @keyframes fycCrystalGlassFade {
+          0% {
+            opacity: 0;
+            transform: translateY(12px) scale(0.92);
+          }
+          25% {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+          }
+          85% {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+          }
+          100% {
+            opacity: 0;
+            transform: translateY(-6px) scale(0.96);
           }
         }
 
