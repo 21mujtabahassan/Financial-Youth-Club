@@ -7,6 +7,7 @@ import GuestSpeakersSection from '../components/GuestSpeakersSection'
 import FoundersVision from '../components/FoundersVision'
 import CollaborationsMarquee from '../components/CollaborationsMarquee'
 import InstitutesTicker from '../components/InstitutesTicker'
+import VorexCorePartnershipSection from '../components/VorexCorePartnershipSection'
 import WorkHistoryTimeline from '../components/WorkHistoryTimeline'
 
 const HomePage = () => {
@@ -20,6 +21,7 @@ const HomePage = () => {
       <FoundersVision />
       <CollaborationsMarquee />
       <InstitutesTicker />
+      <VorexCorePartnershipSection />
       <WorkHistoryTimeline />
     </main>
   )

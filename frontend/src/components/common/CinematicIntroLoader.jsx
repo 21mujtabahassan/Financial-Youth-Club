@@ -68,7 +68,7 @@ const CinematicIntroLoader = () => {
           transformOrigin: 'center center'
         }}
       >
-        <div style={{ position: 'relative', width: '160px', height: '160px' }}>
+        <div style={{ position: 'relative', width: '160px', height: '160px', marginBottom: '1rem' }}>
           <img
             src="/images/fyc_official_logo.png"
             alt="Financial Youth Club Official Logo"
@@ -79,6 +79,23 @@ const CinematicIntroLoader = () => {
               filter: 'drop-shadow(0 0 30px rgba(245, 158, 11, 0.95)) drop-shadow(0 0 60px rgba(217, 119, 6, 0.8))'
             }}
           />
+        </div>
+
+        {/* Powered by VorexCore Solutions Tag */}
+        <div style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: '0.6rem',
+          background: 'rgba(15, 23, 42, 0.85)',
+          border: '1px solid rgba(56, 189, 248, 0.35)',
+          padding: '0.45rem 1rem',
+          borderRadius: '9999px',
+          boxShadow: '0 4px 20px rgba(0, 0, 0, 0.4)'
+        }}>
+          <img src="/images/vorexcore_logo.png" alt="VorexCore Solutions" style={{ width: '20px', height: '20px', borderRadius: '4px', objectFit: 'cover' }} />
+          <span style={{ fontSize: '0.78rem', fontWeight: 800, color: '#94A3B8', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+            POWERED BY <strong style={{ background: 'linear-gradient(135deg, #38BDF8 0%, #A855F7 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>VOREXCORE SOLUTIONS</strong>
+          </span>
         </div>
       </div>
 

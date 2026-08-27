@@ -206,18 +206,35 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div style={{
           borderTop: '1px solid rgba(255, 255, 255, 0.08)',
-          paddingTop: '1rem',
+          paddingTop: '1.25rem',
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
           flexWrap: 'wrap',
-          gap: '0.75rem',
+          gap: '1rem',
           color: '#64748B',
           fontSize: '0.78rem',
           fontWeight: 400
         }}>
           <div>
             &copy; {new Date().getFullYear()} <strong style={{ color: '#94A3B8', fontWeight: 600 }}>Financial Youth Club (FYC)</strong>. All rights reserved.
+          </div>
+
+          {/* VorexCore Watermark Badge */}
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '0.5rem',
+            background: 'rgba(15, 23, 42, 0.9)',
+            border: '1px solid rgba(56, 189, 248, 0.3)',
+            padding: '0.35rem 0.85rem',
+            borderRadius: '9999px',
+            boxShadow: '0 2px 10px rgba(0,0,0,0.3)'
+          }}>
+            <img src="/images/vorexcore_logo.png" alt="VorexCore Solutions" style={{ width: '16px', height: '16px', borderRadius: '3px', objectFit: 'cover' }} />
+            <span style={{ fontSize: '0.72rem', fontWeight: 700, color: '#94A3B8' }}>
+              Engineered by <strong style={{ background: 'linear-gradient(135deg, #38BDF8 0%, #A855F7 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontWeight: 900 }}>VOREXCORE SOLUTIONS</strong>
+            </span>
           </div>
 
           <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>

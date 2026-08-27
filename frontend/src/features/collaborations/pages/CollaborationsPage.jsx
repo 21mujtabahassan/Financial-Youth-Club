@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import PageLayout from '../../../components/layout/PageLayout'
 import { Globe, ArrowRight, X, Sparkles } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import VorexCorePartnershipSection from '../../home/components/VorexCorePartnershipSection'
 
 const partnersList = [
   {
@@ -577,6 +578,11 @@ const CollaborationsPage = () => {
           </div>
         )}
 
+      </div>
+
+      {/* VorexCore & Strategic Partnership Showcase Card */}
+      <div style={{ marginBottom: '3.5rem' }}>
+        <VorexCorePartnershipSection />
       </div>
 
       {/* Grid View Below */}
