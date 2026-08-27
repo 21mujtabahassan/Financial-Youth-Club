@@ -102,7 +102,11 @@ const BlogDetailPage = () => {
             lineHeight: 1.8,
             marginBottom: '3rem'
           }}
-          dangerouslySetInnerHTML={{ __html: blog.content.replace(/\n/g, '<br/>') }}
+          dangerouslySetInnerHTML={{
+            __html: blog.content.includes('<h2') || blog.content.includes('<p')
+              ? blog.content
+              : blog.content.replace(/^#+\s+/gm, '').replace(/\n/g, '<br/>')
+          }}
         />
 
         {/* Footer CTA */}

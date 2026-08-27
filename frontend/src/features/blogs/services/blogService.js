@@ -10,7 +10,13 @@ const getStoredBlogs = () => {
     return initialBlogs
   }
   try {
-    return JSON.parse(data)
+    const parsed = JSON.parse(data)
+    // Auto upgrade if stored blogs contain legacy markdown hashes
+    if (Array.isArray(parsed) && parsed.some(b => b.content && b.content.includes('###'))) {
+      localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(initialBlogs))
+      return initialBlogs
+    }
+    return parsed
   } catch (e) {
     return initialBlogs
   }
