@@ -50,7 +50,7 @@ const CinematicIntroLoader = () => {
           width: '280px',
           height: '280px',
           borderRadius: '50%',
-          background: 'conic-gradient(from 0deg, #F59E0B, #FBBF24, #FEF08A, #38BDF8, #F59E0B)',
+          background: 'conic-gradient(from 0deg, #D97706, #F59E0B, #FBBF24, #FEF08A, #F59E0B, #D97706)',
           filter: 'blur(30px)',
           animation: 'fycGoldenSingleRoundAura 2.2s ease-in-out forwards',
           pointerEvents: 'none'
@@ -76,7 +76,7 @@ const CinematicIntroLoader = () => {
               width: '100%',
               height: '100%',
               objectFit: 'contain',
-              filter: 'drop-shadow(0 0 25px rgba(245, 158, 11, 0.95)) drop-shadow(0 0 50px rgba(14, 165, 233, 0.7))'
+              filter: 'drop-shadow(0 0 30px rgba(245, 158, 11, 0.95)) drop-shadow(0 0 60px rgba(217, 119, 6, 0.8))'
             }}
           />
         </div>
