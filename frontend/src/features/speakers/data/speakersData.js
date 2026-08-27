@@ -26,5 +26,19 @@ export const guestSpeakers = [
       'Investment Research Intern at Stewarding Water.'
     ],
     bio: 'Sabrina Manero is a Neuroscience & Economics student at Duke University and an Incoming Analyst at Goldman Sachs. With experience as a Private Equity Intern at OMERS and Investment Research Intern at Stewarding Water, she shares key strategies on securing investment banking internships and excelling in the recruitment process.'
+  },
+  {
+    id: 'wardah-muzammil',
+    name: 'Wardah Muzammil',
+    role: 'LinkedIn Business Coach',
+    topic: 'Personal Branding, Lead Generation & Client Acquisition on LinkedIn',
+    image: '/images/speakers/wardah-muzammil.jpg',
+    highlights: [
+      'BSc Economics from NUST & MBA Marketing from Bahria University.',
+      'Build a powerful personal brand & optimize your profile to position as an expert.',
+      'Proven strategies to find freelance clients, generate leads & grow income on LinkedIn.',
+      'Practical outreach techniques to land high-ticket clients consistently.'
+    ],
+    bio: 'Wardah Muzammil holds a BSc in Economics from NUST and an MBA in Marketing from Bahria University. As a LinkedIn Business Coach, she teaches students, freelancers, and professionals how to build a powerful personal brand, optimize profiles, execute practical cold outreach, and land freelance clients consistently.'
   }
 ]
