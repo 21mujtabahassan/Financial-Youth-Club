@@ -43,15 +43,15 @@ const CinematicIntroLoader = () => {
         pointerEvents: 'none'
       }}
     >
-      {/* Prominent Bright Golden Gradient Aura Trail */}
+      {/* Prominent Compact Golden Gradient Aura Trail */}
       <div
         style={{
           position: 'absolute',
-          width: '280px',
-          height: '280px',
+          width: '180px',
+          height: '180px',
           borderRadius: '50%',
           background: 'conic-gradient(from 0deg, #D97706, #F59E0B, #FBBF24, #FEF08A, #F59E0B, #D97706)',
-          filter: 'blur(30px)',
+          filter: 'blur(16px)',
           animation: 'fycGoldenSingleRoundAura 2.2s ease-in-out forwards',
           pointerEvents: 'none'
         }}
@@ -83,15 +83,15 @@ const CinematicIntroLoader = () => {
         </div>
       </div>
 
-      {/* STATIC Curved VorexCore Arc (Positioned Lower, Completely Clear of Golden Aura) */}
+      {/* STATIC Curved VorexCore Arc (Perfectly Centered Horizontally & Curved Underneath Globe) */}
       <div
         style={{
           position: 'absolute',
-          top: 'calc(50% + 75px)',
+          top: '50%',
           left: '50%',
           transform: 'translate(-50%, -50%)',
-          width: '500px',
-          height: '240px',
+          width: '380px',
+          height: '380px',
           pointerEvents: 'none',
           zIndex: 10,
           display: 'flex',
@@ -100,7 +100,7 @@ const CinematicIntroLoader = () => {
           animation: 'fycStaticArcFade 2.2s ease-in-out forwards'
         }}
       >
-        <svg width="500" height="240" viewBox="0 0 500 240" style={{ overflow: 'visible' }}>
+        <svg width="380" height="380" viewBox="0 0 380 380" style={{ overflow: 'visible' }}>
           <defs>
             <linearGradient id="vorexStaticTextGrad" x1="0%" y1="0%" x2="100%" y2="0%">
               <stop offset="0%" stopColor="#38BDF8" />
@@ -109,20 +109,20 @@ const CinematicIntroLoader = () => {
             </linearGradient>
 
             <filter id="vorexTextShadow" x="-20%" y="-20%" width="140%" height="140%">
-              <feDropShadow dx="0" dy="2" stdDeviation="4" floodColor="#000000" floodOpacity="0.9" />
-              <feDropShadow dx="0" dy="0" stdDeviation="8" floodColor="#0EA5E9" floodOpacity="0.7" />
+              <feDropShadow dx="0" dy="2" stdDeviation="3" floodColor="#000000" floodOpacity="0.95" />
+              <feDropShadow dx="0" dy="0" stdDeviation="6" floodColor="#0EA5E9" floodOpacity="0.8" />
             </filter>
 
-            {/* Downward Arc Path Below Globe */}
-            <path id="vorexStaticArc" d="M 40,40 Q 250,180 460,40" />
+            {/* Symmetrical Bottom Arc centered at (190, 190), Radius R=130 */}
+            <path id="vorexStaticArc" d="M 60,190 A 130,130 0 0,0 320,190" />
           </defs>
 
           {/* Large, High-Legibility Curved Text Path */}
           <text
             fill="url(#vorexStaticTextGrad)"
-            fontSize="18"
+            fontSize="15.5"
             fontWeight="900"
-            letterSpacing="4"
+            letterSpacing="3.5"
             textAnchor="middle"
             filter="url(#vorexTextShadow)"
             style={{ fontFamily: 'var(--font-heading), sans-serif' }}
@@ -164,16 +164,16 @@ const CinematicIntroLoader = () => {
             transform: rotate(0deg) scale(0.1);
           }
           20% {
-            opacity: 0.9;
-            transform: rotate(70deg) scale(0.3);
+            opacity: 0.95;
+            transform: rotate(70deg) scale(0.4);
           }
           80% {
             opacity: 0.95;
-            transform: rotate(360deg) scale(1.4);
+            transform: rotate(360deg) scale(1.15);
           }
           100% {
             opacity: 0;
-            transform: rotate(360deg) scale(1.5);
+            transform: rotate(360deg) scale(1.2);
           }
         }
 
