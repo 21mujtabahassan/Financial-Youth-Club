@@ -83,12 +83,12 @@ const CinematicIntroLoader = () => {
         </div>
       </div>
 
-      {/* STATIC Curved VorexCore Arc (Fixed & Non-Moving around the Globe) */}
+      {/* STATIC Curved VorexCore Arc (Fixed & Non-Moving, Large & Well-Spaced Outside the Aura) */}
       <div
         style={{
           position: 'absolute',
-          width: '360px',
-          height: '360px',
+          width: '460px',
+          height: '460px',
           pointerEvents: 'none',
           zIndex: 10,
           display: 'flex',
@@ -97,18 +97,32 @@ const CinematicIntroLoader = () => {
           animation: 'fycStaticArcFade 2.2s ease-in-out forwards'
         }}
       >
-        <svg width="360" height="360" viewBox="0 0 360 360" style={{ overflow: 'visible' }}>
+        <svg width="460" height="460" viewBox="0 0 460 460" style={{ overflow: 'visible' }}>
           <defs>
             <linearGradient id="vorexStaticTextGrad" x1="0%" y1="0%" x2="100%" y2="0%">
               <stop offset="0%" stopColor="#38BDF8" />
-              <stop offset="50%" stopColor="#A855F7" />
+              <stop offset="50%" stopColor="#C084FC" />
               <stop offset="100%" stopColor="#38BDF8" />
             </linearGradient>
-            <path id="vorexStaticArc" d="M 60,180 A 120,120 0 0,0 300,180" />
+
+            <filter id="vorexTextShadow" x="-20%" y="-20%" width="140%" height="140%">
+              <feDropShadow dx="0" dy="2" stdDeviation="3" floodColor="#000000" floodOpacity="0.9" />
+              <feDropShadow dx="0" dy="0" stdDeviation="6" floodColor="#0EA5E9" floodOpacity="0.6" />
+            </filter>
+
+            <path id="vorexStaticArc" d="M 45,230 A 185,185 0 0,0 415,230" />
           </defs>
 
-          {/* Curved Text Path */}
-          <text fill="url(#vorexStaticTextGrad)" fontSize="11" fontWeight="900" letterSpacing="3" textAnchor="middle">
+          {/* Large, High-Legibility Curved Text Path */}
+          <text
+            fill="url(#vorexStaticTextGrad)"
+            fontSize="16.5"
+            fontWeight="900"
+            letterSpacing="3.5"
+            textAnchor="middle"
+            filter="url(#vorexTextShadow)"
+            style={{ fontFamily: 'var(--font-heading), sans-serif' }}
+          >
             <textPath href="#vorexStaticArc" startOffset="50%">
               • POWERED BY VOREXCORE SOLUTIONS •
             </textPath>
