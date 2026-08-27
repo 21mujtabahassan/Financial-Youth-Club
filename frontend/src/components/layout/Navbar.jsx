@@ -11,7 +11,8 @@ const Navbar = () => {
     { name: 'Programs', to: '/programs' },
     { name: 'About', to: '/about' },
     { name: 'Impact', to: '/financial-literacy' },
-    { name: 'Collaborations', to: '/collaborations' }
+    { name: 'Collaborations', to: '/collaborations' },
+    { name: 'Blog', to: '/blog' }
   ]
 
   return (

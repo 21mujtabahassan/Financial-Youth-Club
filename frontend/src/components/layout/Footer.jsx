@@ -155,6 +155,7 @@ const Footer = () => {
               <li><Link to="/founders" style={{ color: '#94A3B8', textDecoration: 'none', fontSize: '0.8rem', fontWeight: 400 }}>Founders & Vision</Link></li>
               <li><Link to="/programs" style={{ color: '#94A3B8', textDecoration: 'none', fontSize: '0.8rem', fontWeight: 400 }}>Summer Program 2026</Link></li>
               <li><Link to="/collaborations" style={{ color: '#94A3B8', textDecoration: 'none', fontSize: '0.8rem', fontWeight: 400 }}>Global Alliances</Link></li>
+              <li><Link to="/blog" style={{ color: '#94A3B8', textDecoration: 'none', fontSize: '0.8rem', fontWeight: 400 }}>FYC Blog & Insights</Link></li>
             </ul>
           </div>
 
@@ -224,6 +225,10 @@ const Footer = () => {
             <span>•</span>
             <Link to="/terms" style={{ color: '#94A3B8', textDecoration: 'none', fontWeight: 500 }}>
               Terms of Service
+            </Link>
+            <span>•</span>
+            <Link to="/admin/login" style={{ color: '#94A3B8', textDecoration: 'none', fontWeight: 500 }}>
+              Admin Portal
             </Link>
           </div>
         </div>

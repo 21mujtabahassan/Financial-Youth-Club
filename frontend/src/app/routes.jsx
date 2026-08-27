@@ -12,6 +12,10 @@ import CampaignsPage from '../features/campaigns/pages/CampaignsPage'
 import CollaborationsPage from '../features/collaborations/pages/CollaborationsPage'
 import PrivacyPolicyPage from '../features/legal/pages/PrivacyPolicyPage'
 import TermsPage from '../features/legal/pages/TermsPage'
+import BlogHubPage from '../features/blogs/pages/BlogHubPage'
+import BlogDetailPage from '../features/blogs/pages/BlogDetailPage'
+import AdminLoginPage from '../features/admin/pages/AdminLoginPage'
+import AdminBlogManagerPage from '../features/admin/pages/AdminBlogManagerPage'
 
 const AppRoutes = () => {
   return (
@@ -26,6 +30,11 @@ const AppRoutes = () => {
       <Route path="/activities" element={<ActivitiesPage />} />
       <Route path="/campaigns" element={<CampaignsPage />} />
       <Route path="/collaborations" element={<CollaborationsPage />} />
+      <Route path="/blog" element={<BlogHubPage />} />
+      <Route path="/blog/:slug" element={<BlogDetailPage />} />
+      <Route path="/admin" element={<AdminLoginPage />} />
+      <Route path="/admin/login" element={<AdminLoginPage />} />
+      <Route path="/admin/blogs" element={<AdminBlogManagerPage />} />
       <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
       <Route path="/terms" element={<TermsPage />} />
     </Routes>
