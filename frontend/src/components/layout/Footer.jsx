@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Globe, Mail, MapPin, Send, Instagram, Linkedin, Youtube, CheckCircle2 } from 'lucide-react'
+import { newsletterService } from '../../features/newsletter/services/newsletterService'
 
 const Footer = () => {
   const [emailInput, setEmailInput] = useState('')
@@ -9,6 +10,7 @@ const Footer = () => {
   const handleSubscribe = (e) => {
     e.preventDefault()
     if (emailInput.trim()) {
+      newsletterService.addSubscriber(emailInput.trim())
       setIsSubscribed(true)
       setEmailInput('')
       setTimeout(() => setIsSubscribed(false), 5000)

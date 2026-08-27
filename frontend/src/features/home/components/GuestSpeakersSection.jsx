@@ -1,9 +1,14 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Sparkles, CheckCircle2, ArrowRight, Mic, Award, Users, Globe, X } from 'lucide-react'
-import { guestSpeakers } from '../../speakers/data/speakersData'
+import { speakerService } from '../../speakers/services/speakerService'
 
 const GuestSpeakersSection = () => {
+  const [speakers, setSpeakers] = useState([])
   const [selectedSpeaker, setSelectedSpeaker] = useState(null)
+
+  useEffect(() => {
+    setSpeakers(speakerService.getSpeakers())
+  }, [])
 
   return (
     <section style={{ padding: '5rem 0', background: '#F8FAFC', borderTop: '1px solid #E2E8F0', borderBottom: '1px solid #E2E8F0' }}>
@@ -49,12 +54,12 @@ const GuestSpeakersSection = () => {
         {/* Guest Speakers Grid */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: guestSpeakers.length === 1 ? 'minmax(320px, 680px)' : 'repeat(auto-fit, minmax(320px, 1fr))',
+          gridTemplateColumns: speakers.length === 1 ? 'minmax(320px, 680px)' : 'repeat(auto-fit, minmax(320px, 1fr))',
           justifyContent: 'center',
           gap: '2rem',
           margin: '0 auto'
         }}>
-          {guestSpeakers.map((speaker) => (
+          {speakers.map((speaker) => (
             <div
               key={speaker.id}
               className="pop-card"
