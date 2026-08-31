@@ -112,47 +112,57 @@ const FoundersVision = () => {
           </p>
         </div>
 
-        {/* Featured Founder Card - ADAN SHAHZAD (EXACT MATCHING DESIGN) */}
-        <div style={{ maxWidth: '820px', margin: '0 auto 3.5rem auto' }}>
+        {/* Featured Founder Card - ADAN SHAHZAD (3D POP-OUT PORTRAIT DESIGN) */}
+        <div style={{ maxWidth: '840px', margin: '1.5rem auto 3.5rem auto' }}>
           
           <div
             className="pop-card founder-adan-card"
             style={{
               position: 'relative',
-              padding: '2.75rem 3rem',
+              padding: '2.5rem 3rem 2.5rem 2.5rem',
               borderRadius: '24px',
-              border: '1px solid rgba(79, 195, 232, 0.25)',
-              boxShadow: '0 20px 50px rgba(5, 15, 31, 0.4)',
+              border: '1px solid rgba(79, 195, 232, 0.3)',
+              boxShadow: '0 25px 60px rgba(5, 15, 31, 0.45)',
               display: 'flex',
               alignItems: 'center',
               gap: '2.5rem',
               background: 'linear-gradient(180deg, #123A5E 0%, #0A2647 35%, #071B33 70%, #050F1F 100%)',
               color: '#FFFFFF',
-              overflow: 'hidden'
+              overflow: 'visible'
             }}
           >
             {/* Embedded Night Sky Starfield Texture */}
             <StarfieldBackground opacity={0.85} />
 
-            {/* Left Side: Circular Avatar Frame */}
-            <div style={{
-              width: '135px',
-              height: '135px',
-              borderRadius: '50%',
-              background: 'linear-gradient(135deg, #4FC3E8 0%, #2FA8D8 100%)',
-              padding: '4px',
-              boxShadow: '0 0 25px rgba(79, 195, 232, 0.5)',
-              flexShrink: 0,
-              position: 'relative',
-              zIndex: 2
-            }}>
-              <div style={{ width: '100%', height: '100%', borderRadius: '50%', background: '#0A2647', overflow: 'hidden' }}>
-                <img
-                  src={adanData.image}
-                  alt={adanData.name}
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                />
-              </div>
+            {/* Left Side: 3D Popping Out Portrait Photo Card (NO RING DESIGN) */}
+            <div
+              className="founder-adan-portrait"
+              style={{
+                width: '185px',
+                height: '235px',
+                borderRadius: '20px',
+                border: '1.5px solid rgba(79, 195, 232, 0.45)',
+                boxShadow: '0 20px 45px rgba(0, 0, 0, 0.65), 0 0 35px rgba(79, 195, 232, 0.35)',
+                flexShrink: 0,
+                position: 'relative',
+                zIndex: 3,
+                transform: 'translateY(-18px)',
+                overflow: 'hidden',
+                background: '#071B33',
+                transition: 'all 0.3s ease'
+              }}
+            >
+              <img
+                src={adanData.image}
+                alt={adanData.name}
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  objectPosition: 'top center',
+                  display: 'block'
+                }}
+              />
             </div>
 
             {/* Right Side: Content & Action */}
@@ -343,6 +353,13 @@ const FoundersVision = () => {
             text-align: center !important;
             padding: 2rem 1.25rem !important;
             gap: 1.5rem !important;
+            overflow: hidden !important;
+          }
+          .founder-adan-portrait {
+            transform: none !important;
+            width: 160px !important;
+            height: 200px !important;
+            margin: 0 auto !important;
           }
           .founder-card-body { padding: 1.5rem 1rem 1.75rem 1rem !important; }
           .founder-modal-header { flex-direction: column !important; text-align: center !important; }
