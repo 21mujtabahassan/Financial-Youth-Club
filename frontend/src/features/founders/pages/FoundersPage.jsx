@@ -86,18 +86,18 @@ const FoundersPage = () => {
             padding: '0',
             overflow: 'hidden',
             borderRadius: '24px',
-            border: '1px solid rgba(255, 255, 255, 0.15)',
-            boxShadow: '0 15px 40px rgba(15, 23, 42, 0.25)',
+            border: '1px solid rgba(79, 195, 232, 0.25)',
+            boxShadow: '0 15px 40px rgba(7, 27, 51, 0.25)',
             display: 'flex',
             flexDirection: 'column',
-            background: 'linear-gradient(180deg, #1E293B 0%, #0F172A 100%)',
+            background: 'linear-gradient(135deg, #0A2647 0%, #071B33 100%)',
             color: '#FFFFFF'
           }}
         >
           {/* Dark Polygonal Textured Header Banner */}
           <div style={{
             height: '220px',
-            background: 'linear-gradient(135deg, #1E293B 0%, #334155 100%)',
+            background: 'linear-gradient(135deg, #0A2647 0%, #071B33 100%)',
             position: 'relative',
             display: 'flex',
             alignItems: 'center',
@@ -106,24 +106,24 @@ const FoundersPage = () => {
           }}>
             {/* Triangular SVG Mesh Overlay */}
             <svg style={{ position: 'absolute', width: '100%', height: '100%', opacity: 0.18 }} viewBox="0 0 400 220" preserveAspectRatio="none">
-              <polygon points="0,0 200,220 400,0" fill="#38BDF8" />
-              <polygon points="0,220 200,0 400,220" fill="#0EA5E9" />
+              <polygon points="0,0 200,220 400,0" fill="#4FC3E8" />
+              <polygon points="0,220 200,0 400,220" fill="#2FA8D8" />
               <line x1="0" y1="0" x2="400" y2="220" stroke="#FFFFFF" strokeWidth="1" />
               <line x1="400" y1="0" x2="0" y2="220" stroke="#FFFFFF" strokeWidth="1" />
             </svg>
 
-            {/* Glowing Gold Halo Circular Frame */}
+            {/* Glowing Sky Halo Circular Frame */}
             <div style={{
               width: '145px',
               height: '145px',
               borderRadius: '50%',
-              background: 'linear-gradient(135deg, #F59E0B, #D97706)',
+              background: 'linear-gradient(135deg, #4FC3E8, #2FA8D8)',
               padding: '4px',
-              boxShadow: '0 0 25px rgba(245, 158, 11, 0.5)',
+              boxShadow: '0 0 25px rgba(79, 195, 232, 0.5)',
               position: 'relative',
               zIndex: 2
             }}>
-              <div style={{ width: '100%', height: '100%', borderRadius: '50%', background: '#0F172A', overflow: 'hidden' }}>
+              <div style={{ width: '100%', height: '100%', borderRadius: '50%', background: '#0A2647', overflow: 'hidden' }}>
                 <img
                   src={adanData.image}
                   alt={adanData.name}
@@ -136,51 +136,51 @@ const FoundersPage = () => {
           {/* Card Body */}
           <div style={{ padding: '1.75rem', display: 'flex', flexDirection: 'column', flex: 1, gap: '1rem' }}>
             <div>
-              <div style={{ color: '#F59E0B', fontSize: '0.78rem', fontWeight: 800, letterSpacing: '0.04em' }}>
+              <div style={{ color: '#4FC3E8', fontSize: '0.78rem', fontWeight: 800, letterSpacing: '0.04em' }}>
                 {adanData.roleTag}
               </div>
-              <h3 style={{ fontFamily: 'var(--font-heading)', color: '#F59E0B', fontSize: '1.75rem', fontWeight: 900, marginTop: '0.15rem' }}>
+              <h3 style={{ fontFamily: 'var(--font-heading)', color: '#FFFFFF', fontSize: '1.75rem', fontWeight: 900, marginTop: '0.15rem' }}>
                 {adanData.name}
               </h3>
-              <div style={{ color: '#FFFFFF', fontSize: '0.92rem', fontWeight: 700 }}>
+              <div style={{ color: '#EAF7FD', opacity: 0.9, fontSize: '0.92rem', fontWeight: 700 }}>
                 {adanData.subTitle}
               </div>
             </div>
 
             {/* Italic Quote */}
-            <p style={{ color: '#CBD5E1', fontSize: '0.88rem', lineHeight: 1.5, fontStyle: 'italic', margin: 0 }}>
+            <p style={{ color: '#EAF7FD', opacity: 0.85, fontSize: '0.88rem', lineHeight: 1.5, fontStyle: 'italic', margin: 0 }}>
               "{adanData.quote}"
             </p>
 
             {/* Bullet Checklist with Pill Badges */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem', marginTop: '0.2rem' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.82rem', color: '#E2E8F0' }}>
-                <div style={{ width: '18px', height: '18px', borderRadius: '50%', border: '1.5px solid #F59E0B', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                  <CheckCircle2 size={12} color="#F59E0B" />
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.82rem', color: '#EAF7FD' }}>
+                <div style={{ width: '18px', height: '18px', borderRadius: '50%', border: '1.5px solid #4FC3E8', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                  <CheckCircle2 size={12} color="#4FC3E8" />
                 </div>
                 <span>Featured on</span>
-                <span style={{ background: '#0F172A', border: '1px solid #475569', color: '#FFF', fontWeight: 800, fontSize: '0.75rem', padding: '0.15rem 0.55rem', borderRadius: '9999px' }}>
+                <span style={{ background: 'rgba(79, 195, 232, 0.15)', border: '1px solid rgba(79, 195, 232, 0.4)', color: '#4FC3E8', fontWeight: 800, fontSize: '0.75rem', padding: '0.15rem 0.55rem', borderRadius: '9999px' }}>
                   The World in Us
                 </span>
                 <span>Podcast</span>
               </div>
 
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.82rem', color: '#E2E8F0' }}>
-                <div style={{ width: '18px', height: '18px', borderRadius: '50%', border: '1.5px solid #F59E0B', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                  <CheckCircle2 size={12} color="#F59E0B" />
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.82rem', color: '#EAF7FD' }}>
+                <div style={{ width: '18px', height: '18px', borderRadius: '50%', border: '1.5px solid #4FC3E8', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                  <CheckCircle2 size={12} color="#4FC3E8" />
                 </div>
                 <span>Keynote Speaker on</span>
-                <span style={{ background: '#0F172A', border: '1px solid #475569', color: '#FFF', fontWeight: 800, fontSize: '0.75rem', padding: '0.15rem 0.55rem', borderRadius: '9999px' }}>
+                <span style={{ background: 'rgba(79, 195, 232, 0.15)', border: '1px solid rgba(79, 195, 232, 0.4)', color: '#4FC3E8', fontWeight: 800, fontSize: '0.75rem', padding: '0.15rem 0.55rem', borderRadius: '9999px' }}>
                   The Capstone Program
                 </span>
               </div>
 
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.82rem', color: '#E2E8F0' }}>
-                <div style={{ width: '18px', height: '18px', borderRadius: '50%', border: '1.5px solid #F59E0B', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                  <CheckCircle2 size={12} color="#F59E0B" />
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.82rem', color: '#EAF7FD' }}>
+                <div style={{ width: '18px', height: '18px', borderRadius: '50%', border: '1.5px solid #4FC3E8', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                  <CheckCircle2 size={12} color="#4FC3E8" />
                 </div>
                 <span>Partnered with</span>
-                <span style={{ background: '#0F172A', border: '1px solid #475569', color: '#FFF', fontWeight: 800, fontSize: '0.75rem', padding: '0.15rem 0.55rem', borderRadius: '9999px' }}>
+                <span style={{ background: 'rgba(79, 195, 232, 0.15)', border: '1px solid rgba(79, 195, 232, 0.4)', color: '#4FC3E8', fontWeight: 800, fontSize: '0.75rem', padding: '0.15rem 0.55rem', borderRadius: '9999px' }}>
                   USA Economics Olympiad (USAEO)
                 </span>
               </div>
@@ -193,13 +193,13 @@ const FoundersPage = () => {
                 marginTop: 'auto',
                 padding: '0.85rem 1.5rem',
                 borderRadius: '12px',
-                background: '#0F172A',
-                color: '#FFFFFF',
-                border: '1.5px solid #F59E0B',
+                background: 'linear-gradient(135deg, #4FC3E8 0%, #2FA8D8 100%)',
+                color: '#071B33',
+                border: 'none',
                 fontWeight: 900,
                 fontSize: '0.88rem',
                 cursor: 'pointer',
-                boxShadow: '0 4px 15px rgba(245, 158, 11, 0.25)',
+                boxShadow: '0 4px 20px rgba(79, 195, 232, 0.25)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -215,52 +215,49 @@ const FoundersPage = () => {
 
       </div>
 
-
-
-
       {/* Sleek Live Impact Metrics Glassmorphism Bar */}
       <div style={{
-        background: '#F8FAFC',
-        border: '1px solid #E2E8F0',
+        background: '#FFFFFF',
+        border: '1px solid rgba(79, 195, 232, 0.3)',
         borderRadius: '9999px',
         padding: '1.25rem 2.5rem',
-        boxShadow: '0 4px 20px rgba(15, 23, 42, 0.05)',
+        boxShadow: '0 4px 20px rgba(10, 38, 71, 0.05)',
         display: 'flex',
-        justify: 'space-around',
+        justifyContent: 'space-around',
         alignItems: 'center',
         flexWrap: 'wrap',
         gap: '1.5rem',
         marginBottom: '2rem'
       }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-          <Globe color="#0EA5E9" size={22} />
+          <Globe color="#2FA8D8" size={22} />
           <div>
-            <div style={{ fontWeight: 900, fontSize: '1.15rem', color: '#0F172A' }}>35+ Countries</div>
-            <div style={{ fontSize: '0.72rem', color: '#64748B', fontWeight: 700, textTransform: 'uppercase' }}>Reached</div>
+            <div style={{ fontWeight: 900, fontSize: '1.15rem', color: '#0A2647' }}>35+ Countries</div>
+            <div style={{ fontSize: '0.72rem', color: '#475569', fontWeight: 700, textTransform: 'uppercase' }}>Reached</div>
           </div>
         </div>
 
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-          <Users color="#D97706" size={22} />
+          <Users color="#4FC3E8" size={22} />
           <div>
-            <div style={{ fontWeight: 900, fontSize: '1.15rem', color: '#0F172A' }}>12,000+ Youth</div>
-            <div style={{ fontSize: '0.72rem', color: '#64748B', fontWeight: 700, textTransform: 'uppercase' }}>Empowered</div>
+            <div style={{ fontWeight: 900, fontSize: '1.15rem', color: '#0A2647' }}>12,000+ Youth</div>
+            <div style={{ fontSize: '0.72rem', color: '#475569', fontWeight: 700, textTransform: 'uppercase' }}>Empowered</div>
           </div>
         </div>
 
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-          <GraduationCap color="#7C3AED" size={22} />
+          <GraduationCap color="#2FA8D8" size={22} />
           <div>
-            <div style={{ fontWeight: 900, fontSize: '1.15rem', color: '#0F172A' }}>90+ Workshops</div>
-            <div style={{ fontSize: '0.72rem', color: '#64748B', fontWeight: 700, textTransform: 'uppercase' }}>Delivered</div>
+            <div style={{ fontWeight: 900, fontSize: '1.15rem', color: '#0A2647' }}>90+ Workshops</div>
+            <div style={{ fontSize: '0.72rem', color: '#475569', fontWeight: 700, textTransform: 'uppercase' }}>Delivered</div>
           </div>
         </div>
 
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-          <Building2 color="#10B981" size={22} />
+          <Building2 color="#0A2647" size={22} />
           <div>
-            <div style={{ fontWeight: 900, fontSize: '1.15rem', color: '#0F172A' }}>21+ Alliances</div>
-            <div style={{ fontSize: '0.72rem', color: '#64748B', fontWeight: 700, textTransform: 'uppercase' }}>NGO Partners</div>
+            <div style={{ fontWeight: 900, fontSize: '1.15rem', color: '#0A2647' }}>21+ Alliances</div>
+            <div style={{ fontSize: '0.72rem', color: '#475569', fontWeight: 700, textTransform: 'uppercase' }}>NGO Partners</div>
           </div>
         </div>
       </div>

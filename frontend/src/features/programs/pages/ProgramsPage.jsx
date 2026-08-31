@@ -159,15 +159,15 @@ const ProgramsPage = () => {
             key={tab.key}
             onClick={() => setActiveRegion(tab.key)}
             style={{
-              background: activeRegion === tab.key ? '#0F172A' : '#FFFFFF',
-              color: activeRegion === tab.key ? '#FFFFFF' : '#0F172A',
-              border: activeRegion === tab.key ? '1px solid #0F172A' : '1px solid #CBD5E1',
+              background: activeRegion === tab.key ? 'linear-gradient(135deg, #0A2647 0%, #071B33 100%)' : '#FFFFFF',
+              color: activeRegion === tab.key ? '#FFFFFF' : '#0A2647',
+              border: activeRegion === tab.key ? '1px solid #0A2647' : '1px solid #CBD5E1',
               padding: '0.6rem 1.4rem',
               borderRadius: '9999px',
               fontSize: '0.88rem',
               fontWeight: 800,
               cursor: 'pointer',
-              boxShadow: activeRegion === tab.key ? '0 4px 14px rgba(15,23,42,0.2)' : '0 2px 8px rgba(0,0,0,0.03)',
+              boxShadow: activeRegion === tab.key ? '0 4px 14px rgba(10, 38, 71, 0.25)' : '0 2px 8px rgba(0,0,0,0.03)',
               transition: 'all 0.25s ease'
             }}
           >
@@ -193,7 +193,7 @@ const ProgramsPage = () => {
             }}
           >
             {/* Image Banner */}
-            <div style={{ height: '200px', position: 'relative', overflow: 'hidden', background: '#F8FAFC' }}>
+            <div style={{ height: '200px', position: 'relative', overflow: 'hidden', background: '#EAF7FD' }}>
               <img
                 src={prog.image}
                 alt={prog.title}
@@ -201,12 +201,12 @@ const ProgramsPage = () => {
               />
               <div style={{
                 position: 'absolute', top: 0, left: 0, right: 0, bottom: 0,
-                background: 'linear-gradient(to top, rgba(15,23,42,0.85) 0%, rgba(15,23,42,0.2) 60%)'
+                background: 'linear-gradient(to top, rgba(7, 27, 51, 0.9) 0%, rgba(10, 38, 71, 0.2) 60%)'
               }} />
               <div style={{ position: 'absolute', top: '1rem', left: '1rem' }}>
                 <span style={{
-                  background: '#0EA5E9',
-                  color: '#FFFFFF',
+                  background: 'linear-gradient(135deg, #4FC3E8 0%, #2FA8D8 100%)',
+                  color: '#071B33',
                   fontSize: '0.72rem',
                   fontWeight: 800,
                   padding: '0.25rem 0.75rem',
@@ -229,17 +229,17 @@ const ProgramsPage = () => {
                 {prog.shortDesc}
               </p>
 
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem', fontSize: '0.82rem', color: '#64748B', borderTop: '1px solid #E2E8F0', paddingTop: '0.85rem' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem', fontSize: '0.82rem', color: '#475569', borderTop: '1px solid #E2E8F0', paddingTop: '0.85rem' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                  <Clock size={15} color="#0EA5E9" /> <strong style={{ color: '#0F172A' }}>Duration:</strong> {prog.duration}
+                  <Clock size={15} color="#2FA8D8" /> <strong style={{ color: '#0A2647' }}>Duration:</strong> {prog.duration}
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                  <Award size={15} color="#D97706" /> <strong style={{ color: '#0F172A' }}>Mentors:</strong> {prog.mentors}
+                  <Award size={15} color="#4FC3E8" /> <strong style={{ color: '#0A2647' }}>Mentors:</strong> {prog.mentors}
                 </div>
               </div>
 
               {/* Action Link */}
-              <div style={{ marginTop: 'auto', paddingTop: '0.5rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', color: '#0EA5E9', fontWeight: 800, fontSize: '0.88rem' }}>
+              <div style={{ marginTop: 'auto', paddingTop: '0.5rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', color: '#2FA8D8', fontWeight: 800, fontSize: '0.88rem' }}>
                 <span>Read Full Program Blog & Curriculum</span>
                 <ArrowRight size={18} />
               </div>
@@ -261,7 +261,7 @@ const ProgramsPage = () => {
                 position: 'absolute',
                 top: '1.25rem',
                 right: '1.25rem',
-                background: '#F1F5F9',
+                background: '#EAF7FD',
                 border: 'none',
                 borderRadius: '50%',
                 width: '36px',
@@ -270,7 +270,7 @@ const ProgramsPage = () => {
                 alignItems: 'center',
                 justifyContent: 'center',
                 cursor: 'pointer',
-                color: '#0F172A'
+                color: '#0A2647'
               }}
             >
               <X size={20} />
@@ -278,8 +278,8 @@ const ProgramsPage = () => {
 
             {/* Category Tag */}
             <span style={{
-              background: '#0EA5E9',
-              color: '#FFFFFF',
+              background: 'linear-gradient(135deg, #4FC3E8 0%, #2FA8D8 100%)',
+              color: '#071B33',
               fontSize: '0.75rem',
               fontWeight: 800,
               padding: '0.3rem 0.85rem',
@@ -291,12 +291,12 @@ const ProgramsPage = () => {
             </span>
 
             {/* Blog Title */}
-            <h2 style={{ fontFamily: 'var(--font-heading)', color: '#0F172A', fontSize: '1.8rem', fontWeight: 900, lineHeight: 1.25, marginBottom: '0.75rem' }}>
+            <h2 style={{ fontFamily: 'var(--font-heading)', color: '#0A2647', fontSize: '1.8rem', fontWeight: 900, lineHeight: 1.25, marginBottom: '0.75rem' }}>
               {selectedProgram.blogTitle}
             </h2>
 
             {/* Meta info */}
-            <div style={{ display: 'flex', gap: '1.25rem', color: '#64748B', fontSize: '0.85rem', marginBottom: '1.5rem', borderBottom: '1px solid #E2E8F0', paddingBottom: '1rem' }}>
+            <div style={{ display: 'flex', gap: '1.25rem', color: '#475569', fontSize: '0.85rem', marginBottom: '1.5rem', borderBottom: '1px solid #E2E8F0', paddingBottom: '1rem' }}>
               <div>✍️ By <strong>{selectedProgram.blogAuthor}</strong></div>
               <div>📅 Published: <strong>{selectedProgram.blogDate}</strong></div>
               <div>🏛️ Mentorship Track</div>
@@ -314,27 +314,27 @@ const ProgramsPage = () => {
             {/* Stats Chips */}
             <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', marginBottom: '1.5rem' }}>
               {selectedProgram.stats.map((st, i) => (
-                <div key={i} style={{ background: '#F0F9FF', border: '1px solid #BAE6FD', color: '#0284C7', padding: '0.4rem 0.85rem', borderRadius: '8px', fontSize: '0.82rem', fontWeight: 800, display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-                  <CheckCircle2 size={15} color="#0EA5E9" /> {st}
+                <div key={i} style={{ background: '#EAF7FD', border: '1px solid rgba(79, 195, 232, 0.4)', color: '#0A2647', padding: '0.4rem 0.85rem', borderRadius: '8px', fontSize: '0.82rem', fontWeight: 800, display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                  <CheckCircle2 size={15} color="#2FA8D8" /> {st}
                 </div>
               ))}
             </div>
 
             {/* Blog Article Content */}
-            <div style={{ color: '#334155', fontSize: '0.98rem', lineHeight: 1.75, whiteSpace: 'pre-line', marginBottom: '2rem' }}>
+            <div style={{ color: '#0F1B2B', fontSize: '0.98rem', lineHeight: 1.75, whiteSpace: 'pre-line', marginBottom: '2rem' }}>
               {selectedProgram.blogContent}
             </div>
 
             {/* Registration CTA */}
-            <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: '14px', padding: '1.5rem', textAlign: 'center' }}>
-              <h4 style={{ fontFamily: 'var(--font-heading)', color: '#0F172A', fontSize: '1.2rem', fontWeight: 800, marginBottom: '0.5rem' }}>
+            <div style={{ background: '#EAF7FD', border: '1px solid rgba(79, 195, 232, 0.3)', borderRadius: '14px', padding: '1.5rem', textAlign: 'center' }}>
+              <h4 style={{ fontFamily: 'var(--font-heading)', color: '#0A2647', fontSize: '1.2rem', fontWeight: 800, marginBottom: '0.5rem' }}>
                 Interested in Joining This Program?
               </h4>
-              <p style={{ color: '#64748B', fontSize: '0.88rem', marginBottom: '1rem' }}>
+              <p style={{ color: '#475569', fontSize: '0.88rem', marginBottom: '1rem' }}>
                 All FYC workshops, mentorship sessions, and Summer Program tracks are 100% free of cost.
               </p>
               <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', flexWrap: 'wrap' }}>
-                <a href="mailto:financialyouthclub@gmail.com" className="btn-gold" style={{ padding: '0.75rem 1.75rem', fontSize: '0.88rem' }}>
+                <a href="mailto:financialyouthclub@gmail.com" className="btn-gold" style={{ background: 'linear-gradient(135deg, #4FC3E8 0%, #2FA8D8 100%)', color: '#071B33', padding: '0.75rem 1.75rem', fontSize: '0.88rem', fontWeight: 800 }}>
                   Apply for Admission <ArrowRight size={16} />
                 </a>
                 <button onClick={() => setSelectedProgram(null)} className="btn-navy" style={{ padding: '0.75rem 1.75rem', fontSize: '0.88rem' }}>

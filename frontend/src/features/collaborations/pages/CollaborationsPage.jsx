@@ -242,15 +242,15 @@ const CollaborationsPage = () => {
               setHoveredPartner(null)
             }}
             style={{
-              background: selectedCategory === cat.key ? '#0F172A' : '#FFFFFF',
-              color: selectedCategory === cat.key ? '#FFFFFF' : '#0F172A',
-              border: selectedCategory === cat.key ? '1px solid #0F172A' : '1px solid #CBD5E1',
+              background: selectedCategory === cat.key ? 'linear-gradient(135deg, #0A2647 0%, #071B33 100%)' : '#FFFFFF',
+              color: selectedCategory === cat.key ? '#FFFFFF' : '#0A2647',
+              border: selectedCategory === cat.key ? '1px solid #0A2647' : '1px solid #CBD5E1',
               padding: '0.6rem 1.4rem',
               borderRadius: '9999px',
               fontSize: '0.88rem',
               fontWeight: 800,
               cursor: 'pointer',
-              boxShadow: selectedCategory === cat.key ? '0 4px 14px rgba(15,23,42,0.2)' : '0 2px 8px rgba(0,0,0,0.03)',
+              boxShadow: selectedCategory === cat.key ? '0 4px 14px rgba(10, 38, 71, 0.25)' : '0 2px 8px rgba(0,0,0,0.03)',
               transition: 'all 0.25s ease'
             }}
           >
@@ -286,15 +286,13 @@ const CollaborationsPage = () => {
           }}
         >
 
-
-
           {/* Glowing Textured Ambient Outer Ring */}
           <div style={{
             position: 'absolute',
             width: `${radius * 2 + 20}px`,
             height: `${radius * 2 + 20}px`,
             borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(56, 189, 248, 0.06) 0%, rgba(255, 255, 255, 0) 70%)',
+            background: 'radial-gradient(circle, rgba(79, 195, 232, 0.1) 0%, rgba(255, 255, 255, 0) 70%)',
             pointerEvents: 'none'
           }} />
 
@@ -306,7 +304,7 @@ const CollaborationsPage = () => {
             borderRadius: '50%',
             border: '2px dashed #94A3B8',
             pointerEvents: 'none',
-            boxShadow: '0 0 30px rgba(14, 165, 233, 0.1)'
+            boxShadow: '0 0 30px rgba(79, 195, 232, 0.15)'
           }} />
 
           {/* CENTRAL CORE HUB WITH MULTI-RING TEXTURE */}
@@ -314,7 +312,7 @@ const CollaborationsPage = () => {
             width: '170px',
             height: '170px',
             borderRadius: '50%',
-            background: 'linear-gradient(135deg, #0F172A 0%, #1E293B 100%)',
+            background: 'linear-gradient(135deg, #0A2647 0%, #071B33 100%)',
             color: '#FFFFFF',
             display: 'flex',
             flexDirection: 'column',
@@ -322,16 +320,16 @@ const CollaborationsPage = () => {
             justifyContent: 'center',
             textAlign: 'center',
             padding: '1.25rem',
-            boxShadow: '0 10px 35px rgba(15, 23, 42, 0.25), 0 0 20px rgba(56, 189, 248, 0.3)',
+            boxShadow: '0 10px 35px rgba(7, 27, 51, 0.3), 0 0 20px rgba(79, 195, 232, 0.4)',
             zIndex: 3,
             position: 'relative',
-            border: '4px solid #38BDF8'
+            border: '4px solid #4FC3E8'
           }}>
-            <Globe color="#38BDF8" size={34} style={{ marginBottom: '0.25rem' }} />
+            <Globe color="#4FC3E8" size={34} style={{ marginBottom: '0.25rem' }} />
             <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 900, fontSize: '0.98rem', lineHeight: 1.25 }}>
               GLOBAL NGO ALLIANCES
             </div>
-            <div style={{ fontSize: '0.7rem', color: '#38BDF8', fontWeight: 800, marginTop: '0.25rem', letterSpacing: '0.05em' }}>
+            <div style={{ fontSize: '0.7rem', color: '#4FC3E8', fontWeight: 800, marginTop: '0.25rem', letterSpacing: '0.05em' }}>
               21+ PARTNERS
             </div>
           </div>

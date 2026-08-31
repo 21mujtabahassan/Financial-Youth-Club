@@ -1,21 +1,23 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Quote, Sparkles, Award, Globe, Heart, ArrowRight, X, Radio, ShieldCheck, CheckCircle2, Zap, Users, GraduationCap, Building2 } from 'lucide-react'
+import StarfieldBackground from '../../../components/common/StarfieldBackground'
 
 const FoundersVision = () => {
   const [selectedFounder, setSelectedFounder] = useState(null)
 
   const adanData = {
-    name: "ADAN SHAHZAD",
+    name: "Adan Shahzad — Founder & Executive Director",
+    displayName: "ADAN SHAHZAD",
     roleTag: "FOUNDER & EXECUTIVE DIRECTOR:",
     subTitle: "Founder, Financial Youth Club",
     badge: "GLOBAL FINANCIAL DEMOCRATIZATION",
     image: "/images/founders/adan_shahzad.jpg",
-    accentColor: "#0EA5E9",
-    btnColor: "linear-gradient(135deg, #0F172A 0%, #1E293B 100%)",
-    btnGlow: "rgba(14, 165, 233, 0.3)",
-    bgLight: "#F0F9FF",
-    borderLight: "#BAE6FD",
+    accentColor: "#4FC3E8",
+    btnColor: "#4FC3E8",
+    btnGlow: "rgba(79, 195, 232, 0.3)",
+    bgLight: "#EAF7FD",
+    borderLight: "rgba(79, 195, 232, 0.3)",
     quote: "Our mission at Financial Youth Club is to eliminate economic education barriers for students globally by connecting them directly with Wall Street partners and Ivy League mentors.",
     checkPoints: [
       "Featured on The World in Us Podcast",
@@ -43,11 +45,11 @@ const FoundersVision = () => {
     subTitle: "Co-Founder, FYC & Audit Associate",
     badge: "FINANCIAL AUTONOMY & AUDIT ADVOCACY",
     image: "/images/founders/hooria_riasat.jpg",
-    accentColor: "#DB2777",
-    btnColor: "linear-gradient(135deg, #DB2777 0%, #BE185D 100%)",
-    btnGlow: "rgba(219, 39, 119, 0.4)",
-    bgLight: "#FFF1F2",
-    borderLight: "#FECDD3",
+    accentColor: "#4FC3E8",
+    btnColor: "#4FC3E8",
+    btnGlow: "rgba(79, 195, 232, 0.4)",
+    bgLight: "#EAF7FD",
+    borderLight: "rgba(79, 195, 232, 0.3)",
     quote: "Financial inclusion requires economic price transparency and giving stay-at-home mothers practical tools to achieve financial autonomy.",
     checkPoints: [
       "Economic Price Transparency",
@@ -70,7 +72,7 @@ const FoundersVision = () => {
   }
 
   return (
-    <section style={{ padding: '5rem 0', background: '#FFFFFF', borderTop: '1px solid #E2E8F0', borderBottom: '1px solid #E2E8F0' }}>
+    <section style={{ padding: '5rem 0', background: 'linear-gradient(180deg, #FFFFFF 0%, #EAF7FD 100%)', borderTop: '1px solid #E2E8F0', borderBottom: '1px solid #E2E8F0' }}>
       <div className="container">
         
         {/* Header */}
@@ -79,8 +81,8 @@ const FoundersVision = () => {
             display: 'inline-flex',
             alignItems: 'center',
             gap: '0.4rem',
-            background: '#F1F5F9',
-            color: '#0F172A',
+            background: '#FFFFFF',
+            color: '#0A2647',
             padding: '0.4rem 1.1rem',
             borderRadius: '9999px',
             fontSize: '0.82rem',
@@ -88,14 +90,15 @@ const FoundersVision = () => {
             marginBottom: '0.85rem',
             textTransform: 'uppercase',
             letterSpacing: '0.05em',
-            border: '1px solid #E2E8F0'
+            border: '1px solid rgba(79, 195, 232, 0.4)',
+            boxShadow: '0 2px 10px rgba(79, 195, 232, 0.1)'
           }}>
-            <Sparkles size={14} color="#0EA5E9" /> Leadership & Legacy
+            <Sparkles size={14} color="#2FA8D8" /> Leadership & Legacy
           </span>
           
           <h2 style={{
             fontFamily: 'var(--font-heading)',
-            color: '#0F172A',
+            color: '#0A2647',
             fontSize: '2.5rem',
             fontWeight: 900,
             letterSpacing: '-0.02em',
@@ -104,160 +107,111 @@ const FoundersVision = () => {
           }}>
             MEET THE VISIONARIES
           </h2>
-          <p style={{ color: '#64748B', fontSize: '1.05rem', maxWidth: '640px', margin: '0.5rem auto 0 auto' }}>
+          <p style={{ color: '#475569', fontSize: '1.05rem', maxWidth: '640px', margin: '0.5rem auto 0 auto' }}>
             Youth-Led. Purpose-Driven. Impact-Focused. Building a world where financial literacy is accessible to all.
           </p>
         </div>
 
-        {/* Featured Founder Card - ADAN SHAHZAD */}
-        <div style={{ maxWidth: '650px', margin: '0 auto 3.5rem auto' }}>
+        {/* Featured Founder Card - ADAN SHAHZAD (EXACT MATCHING DESIGN) */}
+        <div style={{ maxWidth: '820px', margin: '0 auto 3.5rem auto' }}>
           
-          {/* ADAN SHAHZAD CARD - EXACT PHOTO DESIGN */}
           <div
-            className="white-card pop-card"
+            className="pop-card founder-adan-card"
             style={{
-              padding: '0',
-              overflow: 'hidden',
-              borderRadius: '24px',
-              border: '1px solid rgba(255, 255, 255, 0.15)',
-              boxShadow: '0 15px 40px rgba(15, 23, 42, 0.25)',
-              display: 'flex',
-              flexDirection: 'column',
-              background: 'linear-gradient(180deg, #1E293B 0%, #0F172A 100%)',
-              color: '#FFFFFF'
-            }}
-          >
-            {/* Dark Polygonal Textured Header Banner */}
-            <div style={{
-              height: '220px',
-              background: 'linear-gradient(135deg, #1E293B 0%, #334155 100%)',
               position: 'relative',
+              padding: '2.75rem 3rem',
+              borderRadius: '24px',
+              border: '1px solid rgba(79, 195, 232, 0.25)',
+              boxShadow: '0 20px 50px rgba(5, 15, 31, 0.4)',
               display: 'flex',
               alignItems: 'center',
-              justifyContent: 'center',
+              gap: '2.5rem',
+              background: 'linear-gradient(180deg, #123A5E 0%, #0A2647 35%, #071B33 70%, #050F1F 100%)',
+              color: '#FFFFFF',
               overflow: 'hidden'
-            }}>
-              {/* Triangular SVG Mesh Overlay */}
-              <svg style={{ position: 'absolute', width: '100%', height: '100%', opacity: 0.18 }} viewBox="0 0 400 220" preserveAspectRatio="none">
-                <polygon points="0,0 200,220 400,0" fill="#38BDF8" />
-                <polygon points="0,220 200,0 400,220" fill="#0EA5E9" />
-                <line x1="0" y1="0" x2="400" y2="220" stroke="#FFFFFF" strokeWidth="1" />
-                <line x1="400" y1="0" x2="0" y2="220" stroke="#FFFFFF" strokeWidth="1" />
-              </svg>
+            }}
+          >
+            {/* Embedded Night Sky Starfield Texture */}
+            <StarfieldBackground opacity={0.85} />
 
-              {/* Glowing Gold Halo Circular Frame */}
-              <div style={{
-                width: '145px',
-                height: '145px',
-                borderRadius: '50%',
-                background: 'linear-gradient(135deg, #F59E0B, #D97706)',
-                padding: '4px',
-                boxShadow: '0 0 25px rgba(245, 158, 11, 0.5)',
-                position: 'relative',
-                zIndex: 2
-              }}>
-                <div style={{ width: '100%', height: '100%', borderRadius: '50%', background: '#0F172A', overflow: 'hidden' }}>
-                  <img
-                    src={adanData.image}
-                    alt={adanData.name}
-                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                  />
-                </div>
+            {/* Left Side: Circular Avatar Frame */}
+            <div style={{
+              width: '135px',
+              height: '135px',
+              borderRadius: '50%',
+              background: 'linear-gradient(135deg, #4FC3E8 0%, #2FA8D8 100%)',
+              padding: '4px',
+              boxShadow: '0 0 25px rgba(79, 195, 232, 0.5)',
+              flexShrink: 0,
+              position: 'relative',
+              zIndex: 2
+            }}>
+              <div style={{ width: '100%', height: '100%', borderRadius: '50%', background: '#0A2647', overflow: 'hidden' }}>
+                <img
+                  src={adanData.image}
+                  alt={adanData.name}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                />
               </div>
             </div>
 
-            {/* Card Body */}
-            <div style={{ padding: '1.75rem', display: 'flex', flexDirection: 'column', flex: 1, gap: '1rem' }}>
-              <div>
-                <div style={{ color: '#F59E0B', fontSize: '0.78rem', fontWeight: 800, letterSpacing: '0.04em' }}>
-                  {adanData.roleTag}
-                </div>
-                <h3 style={{ fontFamily: 'var(--font-heading)', color: '#F59E0B', fontSize: '1.75rem', fontWeight: 900, marginTop: '0.15rem' }}>
-                  {adanData.name}
-                </h3>
-                <div style={{ color: '#FFFFFF', fontSize: '0.92rem', fontWeight: 700 }}>
-                  {adanData.subTitle}
-                </div>
-              </div>
+            {/* Right Side: Content & Action */}
+            <div style={{ flex: 1, position: 'relative', zIndex: 2 }}>
+              <h3 style={{
+                fontFamily: 'var(--font-heading)',
+                color: '#FFFFFF',
+                fontSize: '1.65rem',
+                fontWeight: 800,
+                lineHeight: 1.25,
+                margin: '0 0 0.85rem 0',
+                letterSpacing: '-0.01em'
+              }}>
+                Adan Shahzad — Founder & Executive Director
+              </h3>
 
-              {/* Italic Quote */}
-              <p style={{ color: '#CBD5E1', fontSize: '0.88rem', lineHeight: 1.5, fontStyle: 'italic', margin: 0 }}>
+              <p style={{
+                color: '#EAF7FD',
+                opacity: 0.9,
+                fontSize: '1.02rem',
+                lineHeight: 1.6,
+                margin: '0 0 1.5rem 0',
+                fontWeight: 400
+              }}>
                 "{adanData.quote}"
               </p>
 
-              {/* Bullet Checklist with Pill Badges */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem', marginTop: '0.2rem' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.82rem', color: '#E2E8F0' }}>
-                  <div style={{ width: '18px', height: '18px', borderRadius: '50%', border: '1.5px solid #F59E0B', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                    <CheckCircle2 size={12} color="#F59E0B" />
-                  </div>
-                  <span>Featured on</span>
-                  <span style={{ background: '#0F172A', border: '1px solid #475569', color: '#FFF', fontWeight: 800, fontSize: '0.75rem', padding: '0.15rem 0.55rem', borderRadius: '9999px' }}>
-                    The World in Us
-                  </span>
-                  <span>Podcast</span>
-                </div>
-
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.82rem', color: '#E2E8F0' }}>
-                  <div style={{ width: '18px', height: '18px', borderRadius: '50%', border: '1.5px solid #F59E0B', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                    <CheckCircle2 size={12} color="#F59E0B" />
-                  </div>
-                  <span>Keynote Speaker on</span>
-                  <span style={{ background: '#0F172A', border: '1px solid #475569', color: '#FFF', fontWeight: 800, fontSize: '0.75rem', padding: '0.15rem 0.55rem', borderRadius: '9999px' }}>
-                    The Capstone Program
-                  </span>
-                </div>
-
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.82rem', color: '#E2E8F0' }}>
-                  <div style={{ width: '18px', height: '18px', borderRadius: '50%', border: '1.5px solid #F59E0B', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                    <CheckCircle2 size={12} color="#F59E0B" />
-                  </div>
-                  <span>Partnered with</span>
-                  <span style={{ background: '#0F172A', border: '1px solid #475569', color: '#FFF', fontWeight: 800, fontSize: '0.75rem', padding: '0.15rem 0.55rem', borderRadius: '9999px' }}>
-                    USA Economics Olympiad (USAEO)
-                  </span>
-                </div>
-              </div>
-
-              {/* Action Button */}
               <button
                 onClick={() => setSelectedFounder(adanData)}
                 style={{
-                  marginTop: 'auto',
-                  padding: '0.85rem 1.5rem',
+                  background: 'linear-gradient(135deg, #4FC3E8 0%, #2FA8D8 100%)',
+                  color: '#071B33',
+                  border: 'none',
+                  padding: '0.75rem 1.6rem',
                   borderRadius: '12px',
-                  background: '#0F172A',
-                  color: '#FFFFFF',
-                  border: '1.5px solid #F59E0B',
-                  fontWeight: 900,
-                  fontSize: '0.88rem',
+                  fontWeight: 800,
+                  fontSize: '0.92rem',
                   cursor: 'pointer',
-                  boxShadow: '0 4px 15px rgba(245, 158, 11, 0.25)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  gap: '0.5rem',
+                  boxShadow: '0 4px 20px rgba(79, 195, 232, 0.3)',
                   transition: 'all 0.25s ease',
-                  width: '100%'
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.4rem'
                 }}
               >
-                READ ADAN'S FULL STORY →
+                Read Adan's full story
               </button>
             </div>
           </div>
 
         </div>
 
-
-
-
         {/* Sleek Live Impact Metrics Glassmorphism Bar */}
         <div style={{
-          background: '#F8FAFC',
-          border: '1px solid #E2E8F0',
+          background: '#FFFFFF',
+          border: '1px solid rgba(79, 195, 232, 0.3)',
           borderRadius: '9999px',
           padding: '1.25rem 2.5rem',
-          boxShadow: '0 4px 20px rgba(15, 23, 42, 0.05)',
+          boxShadow: '0 4px 20px rgba(10, 38, 71, 0.05)',
           display: 'flex',
           justifyContent: 'space-around',
           alignItems: 'center',
@@ -265,34 +219,34 @@ const FoundersVision = () => {
           gap: '1.5rem'
         }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-            <Globe color="#0EA5E9" size={22} />
+            <Globe color="#2FA8D8" size={22} />
             <div>
-              <div style={{ fontWeight: 900, fontSize: '1.15rem', color: '#0F172A' }}>35+ Countries</div>
-              <div style={{ fontSize: '0.72rem', color: '#64748B', fontWeight: 700, textTransform: 'uppercase' }}>Reached</div>
+              <div style={{ fontWeight: 900, fontSize: '1.15rem', color: '#0A2647' }}>35+ Countries</div>
+              <div style={{ fontSize: '0.72rem', color: '#475569', fontWeight: 700, textTransform: 'uppercase' }}>Reached</div>
             </div>
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-            <Users color="#D97706" size={22} />
+            <Users color="#4FC3E8" size={22} />
             <div>
-              <div style={{ fontWeight: 900, fontSize: '1.15rem', color: '#0F172A' }}>12,000+ Youth</div>
-              <div style={{ fontSize: '0.72rem', color: '#64748B', fontWeight: 700, textTransform: 'uppercase' }}>Empowered</div>
+              <div style={{ fontWeight: 900, fontSize: '1.15rem', color: '#0A2647' }}>12,000+ Youth</div>
+              <div style={{ fontSize: '0.72rem', color: '#475569', fontWeight: 700, textTransform: 'uppercase' }}>Empowered</div>
             </div>
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-            <GraduationCap color="#7C3AED" size={22} />
+            <GraduationCap color="#2FA8D8" size={22} />
             <div>
-              <div style={{ fontWeight: 900, fontSize: '1.15rem', color: '#0F172A' }}>90+ Workshops</div>
-              <div style={{ fontSize: '0.72rem', color: '#64748B', fontWeight: 700, textTransform: 'uppercase' }}>Delivered</div>
+              <div style={{ fontWeight: 900, fontSize: '1.15rem', color: '#0A2647' }}>90+ Workshops</div>
+              <div style={{ fontSize: '0.72rem', color: '#475569', fontWeight: 700, textTransform: 'uppercase' }}>Delivered</div>
             </div>
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-            <Building2 color="#10B981" size={22} />
+            <Building2 color="#0A2647" size={22} />
             <div>
-              <div style={{ fontWeight: 900, fontSize: '1.15rem', color: '#0F172A' }}>21+ Alliances</div>
-              <div style={{ fontSize: '0.72rem', color: '#64748B', fontWeight: 700, textTransform: 'uppercase' }}>NGO Partners</div>
+              <div style={{ fontWeight: 900, fontSize: '1.15rem', color: '#0A2647' }}>21+ Alliances</div>
+              <div style={{ fontSize: '0.72rem', color: '#475569', fontWeight: 700, textTransform: 'uppercase' }}>NGO Partners</div>
             </div>
           </div>
         </div>
@@ -384,6 +338,12 @@ const FoundersVision = () => {
       <style>{`
         @media (max-width: 640px) {
           .founders-title { font-size: 1.75rem !important; }
+          .founder-adan-card {
+            flex-direction: column !important;
+            text-align: center !important;
+            padding: 2rem 1.25rem !important;
+            gap: 1.5rem !important;
+          }
           .founder-card-body { padding: 1.5rem 1rem 1.75rem 1rem !important; }
           .founder-modal-header { flex-direction: column !important; text-align: center !important; }
           .founder-modal-img { margin: 0 auto 0.75rem auto !important; }

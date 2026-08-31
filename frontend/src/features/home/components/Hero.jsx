@@ -1,17 +1,48 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Globe, ArrowRight } from 'lucide-react'
+import StarfieldBackground from '../../../components/common/StarfieldBackground'
 
 const Hero = () => {
   return (
     <section className="hero-section" style={{
       position: 'relative',
-      background: 'linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%)',
-      color: '#0F172A',
+      background: 'linear-gradient(180deg, #123A5E 0%, #0A2647 35%, #071B33 70%, #050F1F 100%)',
+      color: '#FFFFFF',
       padding: '4rem 0 4.5rem 0',
       overflow: 'hidden'
     }}>
-      <div className="container">
+      {/* Refined Rich Night-Sky Starfield Layer */}
+      <StarfieldBackground opacity={0.85} />
+
+      {/* Soft Radial Glow behind Headline / Hero Image */}
+      <div style={{
+        position: 'absolute',
+        top: '-10%',
+        left: '20%',
+        width: '600px',
+        height: '600px',
+        background: 'radial-gradient(circle, rgba(79, 195, 232, 0.10) 0%, transparent 70%)',
+        pointerEvents: 'none',
+        zIndex: 1
+      }} />
+
+      {/* Decorative Logo Circle Motif Ring */}
+      <div style={{
+        position: 'absolute',
+        top: '50%',
+        right: '-5%',
+        transform: 'translateY(-50%)',
+        width: '500px',
+        height: '500px',
+        borderRadius: '50%',
+        border: '1px solid rgba(79, 195, 232, 0.12)',
+        background: 'radial-gradient(circle, rgba(79, 195, 232, 0.05) 0%, transparent 65%)',
+        pointerEvents: 'none',
+        zIndex: 1
+      }} />
+
+      <div className="container" style={{ position: 'relative', zIndex: 2 }}>
         
         {/* 2-Column Split Hero Layout */}
         <div style={{
@@ -29,17 +60,18 @@ const Hero = () => {
               display: 'inline-flex',
               alignItems: 'center',
               gap: '0.45rem',
-              background: '#E0F2FE',
-              border: '1px solid #93C5FD',
-              color: '#0284C7',
+              background: '#EAF7FD',
+              border: '1px solid rgba(79, 195, 232, 0.4)',
+              color: '#071B33',
               padding: '0.4rem 1.1rem',
               borderRadius: '9999px',
               fontSize: '0.8rem',
               fontWeight: 800,
               marginBottom: '1.25rem',
-              letterSpacing: '0.03em'
+              letterSpacing: '0.03em',
+              boxShadow: '0 2px 10px rgba(79, 195, 232, 0.15)'
             }}>
-              <Globe size={15} color="#0284C7" /> REGISTERED NGO • 35+ COUNTRIES WORLDWIDE
+              <Globe size={15} color="#2FA8D8" /> REGISTERED NGO • 35+ COUNTRIES WORLDWIDE
             </div>
 
             {/* Headline */}
@@ -47,7 +79,7 @@ const Hero = () => {
               fontFamily: 'var(--font-heading)',
               fontSize: '3rem',
               fontWeight: 900,
-              color: '#0F172A',
+              color: '#FFFFFF',
               margin: '0 0 1.25rem 0',
               lineHeight: 1.15,
               letterSpacing: '-0.03em'
@@ -57,14 +89,15 @@ const Hero = () => {
 
             {/* Subheadline */}
             <p className="hero-sub" style={{
-              color: '#475569',
+              color: '#EAF7FD',
+              opacity: 0.88,
               fontSize: '1.1rem',
               lineHeight: 1.65,
               margin: '0 0 2rem 0',
               maxWidth: '560px',
               fontWeight: 400
             }}>
-              Connecting students with world-class mentors from <strong>J.P. Morgan, Goldman Sachs, Harvard, and LSE</strong>.
+              Connecting students with world-class mentors from <strong style={{ color: '#FFFFFF', fontWeight: 700 }}>J.P. Morgan, Goldman Sachs, Harvard, and LSE</strong>.
             </p>
 
             {/* Action Buttons */}
@@ -75,8 +108,8 @@ const Hero = () => {
                 rel="noreferrer"
                 className="mobile-full-btn"
                 style={{
-                  background: '#D97706',
-                  color: '#FFFFFF',
+                  background: 'linear-gradient(135deg, #4FC3E8 0%, #2FA8D8 100%)',
+                  color: '#071B33',
                   padding: '0.9rem 1.6rem',
                   borderRadius: '10px',
                   fontWeight: 800,
@@ -86,7 +119,7 @@ const Hero = () => {
                   alignItems: 'center',
                   justifyContent: 'center',
                   gap: '0.5rem',
-                  boxShadow: '0 4px 18px rgba(217, 119, 6, 0.25)',
+                  boxShadow: '0 4px 20px rgba(79, 195, 232, 0.25)',
                   transition: 'all 0.25s ease'
                 }}
               >
@@ -97,9 +130,9 @@ const Hero = () => {
                 to="/founders"
                 className="mobile-full-btn"
                 style={{
-                  background: '#FFFFFF',
-                  color: '#0F172A',
-                  border: '1.5px solid #0F172A',
+                  background: 'rgba(255, 255, 255, 0.06)',
+                  color: '#EAF7FD',
+                  border: '1.5px solid rgba(79, 195, 232, 0.4)',
                   padding: '0.9rem 1.6rem',
                   borderRadius: '10px',
                   fontWeight: 800,
@@ -108,6 +141,7 @@ const Hero = () => {
                   display: 'inline-flex',
                   alignItems: 'center',
                   justifyContent: 'center',
+                  backdropFilter: 'blur(4px)',
                   transition: 'all 0.25s ease'
                 }}
               >
@@ -124,8 +158,8 @@ const Hero = () => {
               height: '440px',
               borderRadius: '16px',
               overflow: 'hidden',
-              border: '1px solid #E2E8F0',
-              boxShadow: '0 16px 36px rgba(15, 23, 42, 0.08)'
+              border: '1px solid rgba(79, 195, 232, 0.25)',
+              boxShadow: '0 20px 40px rgba(7, 27, 51, 0.4)'
             }}>
               <img
                 src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80"

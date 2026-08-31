@@ -55,29 +55,29 @@ const BlogDetailPage = () => {
         
         {/* Navigation & Metadata Header */}
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem', flexWrap: 'wrap', gap: '1rem' }}>
-          <Link to="/blog" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', color: '#0EA5E9', fontWeight: 800, fontSize: '0.88rem', textDecoration: 'none' }}>
+          <Link to="/blog" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', color: '#2FA8D8', fontWeight: 800, fontSize: '0.88rem', textDecoration: 'none' }}>
             <ArrowLeft size={16} /> Back to All Articles
           </Link>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem', color: '#64748B', fontSize: '0.82rem' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem', color: '#475569', fontSize: '0.82rem' }}>
             <span style={{ display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
-              <Calendar size={14} color="#94A3B8" /> {blog.date}
+              <Calendar size={14} color="#2FA8D8" /> {blog.date}
             </span>
             <span style={{ display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
-              <Clock size={14} color="#94A3B8" /> {blog.readTime}
+              <Clock size={14} color="#2FA8D8" /> {blog.readTime}
             </span>
           </div>
         </div>
 
         {/* Cover Image */}
-        <div style={{ width: '100%', height: '380px', borderRadius: '18px', overflow: 'hidden', marginBottom: '2rem', boxShadow: '0 8px 24px rgba(15, 23, 42, 0.08)' }}>
+        <div style={{ width: '100%', height: '380px', borderRadius: '18px', overflow: 'hidden', marginBottom: '2rem', boxShadow: '0 8px 24px rgba(10, 38, 71, 0.08)' }}>
           <img src={blog.coverImage} alt={blog.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
         </div>
 
         {/* Author Info Bar */}
         <div style={{
-          background: '#F8FAFC',
-          border: '1px solid #E2E8F0',
+          background: '#EAF7FD',
+          border: '1px solid rgba(79, 195, 232, 0.3)',
           borderRadius: '12px',
           padding: '1rem 1.25rem',
           display: 'flex',
@@ -85,19 +85,19 @@ const BlogDetailPage = () => {
           gap: '0.85rem',
           marginBottom: '2rem'
         }}>
-          <div style={{ width: '44px', height: '44px', borderRadius: '50%', background: '#0EA5E9', color: '#FFFFFF', fontWeight: 900, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.1rem' }}>
+          <div style={{ width: '44px', height: '44px', borderRadius: '50%', background: 'linear-gradient(135deg, #4FC3E8 0%, #2FA8D8 100%)', color: '#071B33', fontWeight: 900, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.1rem' }}>
             {blog.author.charAt(0)}
           </div>
           <div>
-            <div style={{ fontWeight: 800, color: '#0F172A', fontSize: '0.95rem' }}>Written by {blog.author}</div>
-            <div style={{ color: '#64748B', fontSize: '0.8rem' }}>{blog.authorRole || 'FYC Contributor'}</div>
+            <div style={{ fontWeight: 800, color: '#0A2647', fontSize: '0.95rem' }}>Written by {blog.author}</div>
+            <div style={{ color: '#475569', fontSize: '0.8rem' }}>{blog.authorRole || 'FYC Contributor'}</div>
           </div>
         </div>
 
         {/* Article Body Content */}
         <div
           style={{
-            color: '#334155',
+            color: '#0F1B2B',
             fontSize: '1.05rem',
             lineHeight: 1.8,
             marginBottom: '3rem'
@@ -111,17 +111,18 @@ const BlogDetailPage = () => {
 
         {/* Footer CTA */}
         <div style={{
-          background: 'linear-gradient(135deg, #0F172A 0%, #1E293B 100%)',
+          background: 'linear-gradient(135deg, #0A2647 0%, #071B33 100%)',
           color: '#FFFFFF',
           padding: '2.5rem',
           borderRadius: '18px',
           textAlign: 'center',
-          marginTop: '4rem'
+          marginTop: '4rem',
+          border: '1px solid rgba(79, 195, 232, 0.25)'
         }}>
-          <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem', fontWeight: 900, marginBottom: '0.5rem' }}>
+          <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem', fontWeight: 900, marginBottom: '0.5rem', color: '#FFFFFF' }}>
             Join the Financial Youth Club Community
           </h3>
-          <p style={{ color: '#94A3B8', fontSize: '0.92rem', maxWidth: '540px', margin: '0 auto 1.5rem auto' }}>
+          <p style={{ color: '#EAF7FD', opacity: 0.85, fontSize: '0.92rem', maxWidth: '540px', margin: '0 auto 1.5rem auto' }}>
             Get direct access to free financial literacy workshops, case study bootcamps, and bulge-bracket mentorship.
           </p>
           <a
@@ -129,7 +130,7 @@ const BlogDetailPage = () => {
             target="_blank"
             rel="noreferrer"
             className="btn-gold"
-            style={{ padding: '0.75rem 1.8rem', fontSize: '0.9rem' }}
+            style={{ background: 'linear-gradient(135deg, #4FC3E8 0%, #2FA8D8 100%)', color: '#071B33', padding: '0.75rem 1.8rem', fontSize: '0.9rem', fontWeight: 800 }}
           >
             Join WhatsApp Community
           </a>

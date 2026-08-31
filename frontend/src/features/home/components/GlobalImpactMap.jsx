@@ -14,78 +14,79 @@ const GlobalImpactMap = () => {
 
           <div style={{
             position: 'relative',
-            background: '#F8FAFC',
-            border: '1px solid var(--border-light)',
+            background: 'linear-gradient(135deg, #0A2647 0%, #071B33 100%)',
+            border: '1px solid rgba(79, 195, 232, 0.3)',
             borderRadius: '16px',
             padding: '2rem 1.5rem',
-            textAlign: 'center'
+            textAlign: 'center',
+            boxShadow: '0 8px 30px rgba(7, 27, 51, 0.2)'
           }}>
             {/* World Map Vector Illustration */}
             <svg viewBox="0 0 1000 500" style={{ width: '100%', height: 'auto', display: 'block' }}>
               {/* Simplified Continents SVG paths */}
-              <path d="M150,150 Q200,100 280,120 T320,250 T200,300 Z" fill="#CBD5E1" opacity="0.5" />
-              <path d="M450,120 Q520,80 600,120 T620,240 T500,280 Z" fill="#CBD5E1" opacity="0.5" />
-              <path d="M650,100 Q780,80 850,150 T800,280 Z" fill="#CBD5E1" opacity="0.5" />
-              <path d="M280,320 Q350,300 380,420 T290,450 Z" fill="#CBD5E1" opacity="0.4" />
-              <path d="M750,340 Q850,330 880,420 T780,440 Z" fill="#CBD5E1" opacity="0.4" />
+              <path d="M150,150 Q200,100 280,120 T320,250 T200,300 Z" fill="#2FA8D8" opacity="0.25" />
+              <path d="M450,120 Q520,80 600,120 T620,240 T500,280 Z" fill="#2FA8D8" opacity="0.25" />
+              <path d="M650,100 Q780,80 850,150 T800,280 Z" fill="#2FA8D8" opacity="0.25" />
+              <path d="M280,320 Q350,300 380,420 T290,450 Z" fill="#2FA8D8" opacity="0.2" />
+              <path d="M750,340 Q850,330 880,420 T780,440 Z" fill="#2FA8D8" opacity="0.2" />
 
               {/* Pulsing Pin Markers */}
               {/* USA */}
-              <circle cx="220" cy="160" r="8" fill="#0EA5E9" className="map-pin" />
-              <circle cx="220" cy="160" r="4" fill="#0F172A" />
+              <circle cx="220" cy="160" r="8" fill="#4FC3E8" className="map-pin" />
+              <circle cx="220" cy="160" r="4" fill="#071B33" />
 
               {/* UK & Europe */}
-              <circle cx="490" cy="140" r="8" fill="#0EA5E9" className="map-pin" />
-              <circle cx="490" cy="140" r="4" fill="#0F172A" />
+              <circle cx="490" cy="140" r="8" fill="#4FC3E8" className="map-pin" />
+              <circle cx="490" cy="140" r="4" fill="#071B33" />
 
               {/* UAE / Middle East */}
-              <circle cx="590" cy="220" r="8" fill="#D97706" className="map-pin" />
-              <circle cx="590" cy="220" r="4" fill="#0F172A" />
+              <circle cx="590" cy="220" r="8" fill="#2FA8D8" className="map-pin" />
+              <circle cx="590" cy="220" r="4" fill="#071B33" />
 
               {/* Pakistan / South Asia */}
-              <circle cx="660" cy="210" r="8" fill="#0EA5E9" className="map-pin" />
-              <circle cx="660" cy="210" r="4" fill="#0F172A" />
+              <circle cx="660" cy="210" r="8" fill="#4FC3E8" className="map-pin" />
+              <circle cx="660" cy="210" r="4" fill="#071B33" />
 
               {/* East Asia */}
-              <circle cx="780" cy="220" r="8" fill="#0EA5E9" className="map-pin" />
-              <circle cx="780" cy="220" r="4" fill="#0F172A" />
+              <circle cx="780" cy="220" r="8" fill="#4FC3E8" className="map-pin" />
+              <circle cx="780" cy="220" r="4" fill="#071B33" />
 
               {/* Australia */}
-              <circle cx="820" cy="380" r="8" fill="#0EA5E9" className="map-pin" />
-              <circle cx="820" cy="380" r="4" fill="#0F172A" />
+              <circle cx="820" cy="380" r="8" fill="#4FC3E8" className="map-pin" />
+              <circle cx="820" cy="380" r="4" fill="#071B33" />
             </svg>
           </div>
         </div>
 
         {/* Right Side: Impact Counters matching screenshot */}
         <div>
-          <h2 style={{ fontFamily: 'var(--font-heading)', color: 'var(--text-navy)', fontSize: '1.5rem', fontWeight: 800, marginBottom: '1.5rem', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+          <h2 style={{ fontFamily: 'var(--font-heading)', color: '#0A2647', fontSize: '1.5rem', fontWeight: 800, marginBottom: '1.5rem', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
             IMPACT COUNTERS
           </h2>
 
           <div className="impact-counters-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1rem', marginBottom: '1.75rem' }}>
             <div>
-              <div style={{ fontFamily: 'var(--font-heading)', fontSize: '2.2rem', fontWeight: 800, color: 'var(--text-navy)', lineHeight: 1 }}>20+</div>
-              <div style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--text-navy)', marginTop: '0.35rem', textTransform: 'uppercase' }}>COUNTRIES</div>
+              <div style={{ fontFamily: 'var(--font-heading)', fontSize: '2.2rem', fontWeight: 800, color: '#0A2647', lineHeight: 1 }}>20+</div>
+              <div style={{ fontSize: '0.75rem', fontWeight: 700, color: '#0A2647', marginTop: '0.35rem', textTransform: 'uppercase' }}>COUNTRIES</div>
             </div>
 
             <div>
-              <div style={{ fontFamily: 'var(--font-heading)', fontSize: '2.2rem', fontWeight: 800, color: 'var(--text-navy)', lineHeight: 1 }}>150K+</div>
-              <div style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--text-navy)', marginTop: '0.35rem', textTransform: 'uppercase' }}>YOUTH SERVED</div>
+              <div style={{ fontFamily: 'var(--font-heading)', fontSize: '2.2rem', fontWeight: 800, color: '#2FA8D8', lineHeight: 1 }}>150K+</div>
+              <div style={{ fontSize: '0.75rem', fontWeight: 700, color: '#0A2647', marginTop: '0.35rem', textTransform: 'uppercase' }}>YOUTH SERVED</div>
             </div>
 
             <div>
-              <div style={{ fontFamily: 'var(--font-heading)', fontSize: '2.2rem', fontWeight: 800, color: 'var(--text-navy)', lineHeight: 1 }}>500+</div>
-              <div style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--text-navy)', marginTop: '0.35rem', textTransform: 'uppercase' }}>MENTORS</div>
+              <div style={{ fontFamily: 'var(--font-heading)', fontSize: '2.2rem', fontWeight: 800, color: '#4FC3E8', lineHeight: 1 }}>500+</div>
+              <div style={{ fontSize: '0.75rem', fontWeight: 700, color: '#0A2647', marginTop: '0.35rem', textTransform: 'uppercase' }}>MENTORS</div>
             </div>
 
             <div>
-              <div style={{ fontFamily: 'var(--font-heading)', fontSize: '2.2rem', fontWeight: 800, color: 'var(--text-navy)', lineHeight: 1 }}>1200+</div>
-              <div style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--text-navy)', marginTop: '0.35rem', textTransform: 'uppercase' }}>WORKSHOPS</div>
+              <div style={{ fontFamily: 'var(--font-heading)', fontSize: '2.2rem', fontWeight: 800, color: '#071B33', lineHeight: 1 }}>1200+</div>
+              <div style={{ fontSize: '0.75rem', fontWeight: 700, color: '#0A2647', marginTop: '0.35rem', textTransform: 'uppercase' }}>WORKSHOPS</div>
             </div>
           </div>
 
-          <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', marginBottom: '2rem', lineHeight: 1.6 }}>
+          <p style={{ color: '#475569', fontSize: '0.95rem', marginBottom: '2rem', lineHeight: 1.6 }}>
             Access free, impactful financial education and mentorship across borders. Join our growing global network today.
           </p>
 

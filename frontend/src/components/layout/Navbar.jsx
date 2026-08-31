@@ -46,7 +46,7 @@ const Navbar = () => {
               style={{
                 fontFamily: 'var(--font-heading)',
                 fontWeight: 900,
-                color: '#0F172A',
+                color: '#0A2647',
                 fontSize: '1.2rem',
                 letterSpacing: '-0.02em',
                 lineHeight: 1.15,
@@ -69,7 +69,7 @@ const Navbar = () => {
                 key={link.name}
                 to={link.to}
                 style={{
-                  color: isActive ? '#0EA5E9' : '#334155',
+                  color: isActive ? '#2FA8D8' : '#0F1B2B',
                   textDecoration: 'none',
                   fontSize: '0.92rem',
                   fontWeight: isActive ? 800 : 600,
@@ -85,8 +85,8 @@ const Navbar = () => {
                     bottom: 0,
                     left: 0,
                     right: 0,
-                    height: '2px',
-                    background: '#0EA5E9',
+                    height: '2.5px',
+                    background: 'linear-gradient(135deg, #4FC3E8 0%, #2FA8D8 100%)',
                     borderRadius: '2px'
                   }} />
                 )}
@@ -102,8 +102,8 @@ const Navbar = () => {
             target="_blank"
             rel="noreferrer"
             style={{
-              background: '#0F172A',
-              color: '#FFFFFF',
+              background: 'linear-gradient(135deg, #4FC3E8 0%, #2FA8D8 100%)',
+              color: '#071B33',
               padding: '0.6rem 1.4rem',
               borderRadius: '8px',
               fontWeight: 800,
@@ -111,7 +111,7 @@ const Navbar = () => {
               textDecoration: 'none',
               letterSpacing: '0.03em',
               transition: 'all 0.25s ease',
-              boxShadow: '0 4px 12px rgba(15, 23, 42, 0.15)'
+              boxShadow: '0 4px 20px rgba(79, 195, 232, 0.25)'
             }}
           >
             JOIN US
@@ -125,7 +125,7 @@ const Navbar = () => {
             display: 'none',
             background: 'transparent',
             border: 'none',
-            color: '#0F172A',
+            color: '#0A2647',
             cursor: 'pointer',
             padding: '0.5rem',
             borderRadius: '6px'
@@ -142,12 +142,12 @@ const Navbar = () => {
       {mobileOpen && (
         <div style={{
           background: '#FFFFFF',
-          borderTop: '1px solid #E2E8F0',
+          borderTop: '1px solid #EAF7FD',
           padding: '1.25rem 1.5rem',
           display: 'flex',
           flexDirection: 'column',
           gap: '1rem',
-          boxShadow: '0 10px 25px rgba(0,0,0,0.08)',
+          boxShadow: '0 10px 25px rgba(10, 38, 71, 0.08)',
           animation: 'fadeIn 0.2s ease-out'
         }}>
           {navLinks.map((link) => {
@@ -158,12 +158,12 @@ const Navbar = () => {
                 to={link.to}
                 onClick={() => setMobileOpen(false)}
                 style={{
-                  color: isActive ? '#0EA5E9' : '#0F172A',
+                  color: isActive ? '#2FA8D8' : '#0A2647',
                   textDecoration: 'none',
                   fontSize: '1rem',
                   fontWeight: isActive ? 800 : 700,
                   padding: '0.4rem 0',
-                  borderBottom: '1px solid #F1F5F9'
+                  borderBottom: '1px solid #EAF7FD'
                 }}
               >
                 {link.name}
@@ -179,14 +179,14 @@ const Navbar = () => {
               style={{
                 display: 'block',
                 textAlign: 'center',
-                background: '#0F172A',
-                color: '#FFFFFF',
+                background: 'linear-gradient(135deg, #4FC3E8 0%, #2FA8D8 100%)',
+                color: '#071B33',
                 padding: '0.75rem',
                 borderRadius: '8px',
                 fontWeight: 800,
                 fontSize: '0.9rem',
                 textDecoration: 'none',
-                boxShadow: '0 4px 14px rgba(15,23,42,0.2)'
+                boxShadow: '0 4px 20px rgba(79, 195, 232, 0.25)'
               }}
             >
               JOIN US

@@ -194,7 +194,7 @@ const InstitutesTicker = () => {
   return (
     <section style={{ padding: '3rem 0', background: 'var(--bg-light)', borderBottom: '1px solid var(--border-light)', overflow: 'hidden' }}>
       <div className="container" style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
-        <h3 className="ticker-heading" style={{ fontFamily: 'var(--font-heading)', color: 'var(--text-muted)', fontSize: '0.88rem', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+        <h3 className="ticker-heading" style={{ fontFamily: 'var(--font-heading)', color: '#0A2647', fontSize: '0.88rem', letterSpacing: '0.08em', textTransform: 'uppercase', opacity: 0.85 }}>
           Mentors Representing Leading Global Organizations & Universities
         </h3>
       </div>

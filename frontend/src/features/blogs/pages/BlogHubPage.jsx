@@ -71,13 +71,13 @@ const BlogHubPage = () => {
               key={cat}
               onClick={() => setSelectedCategory(cat)}
               style={{
-                background: selectedCategory === cat ? '#0F172A' : '#F8FAFC',
-                color: selectedCategory === cat ? '#FFFFFF' : '#475569',
-                border: selectedCategory === cat ? '1px solid #0F172A' : '1px solid #CBD5E1',
+                background: selectedCategory === cat ? 'linear-gradient(135deg, #0A2647 0%, #071B33 100%)' : '#EAF7FD',
+                color: selectedCategory === cat ? '#FFFFFF' : '#0A2647',
+                border: selectedCategory === cat ? '1px solid #0A2647' : '1px solid rgba(79, 195, 232, 0.4)',
                 padding: '0.45rem 1rem',
                 borderRadius: '9999px',
                 fontSize: '0.82rem',
-                fontWeight: 700,
+                fontWeight: 800,
                 cursor: 'pointer',
                 transition: 'all 0.2s ease'
               }}
@@ -89,7 +89,7 @@ const BlogHubPage = () => {
 
         {/* Search Input */}
         <div style={{ position: 'relative', minWidth: '260px', flex: 1, maxWidth: '380px' }}>
-          <Search size={16} color="#94A3B8" style={{ position: 'absolute', left: '0.85rem', top: '50%', transform: 'translateY(-50%)' }} />
+          <Search size={16} color="#475569" style={{ position: 'absolute', left: '0.85rem', top: '50%', transform: 'translateY(-50%)' }} />
           <input
             type="text"
             placeholder="Search articles & topics..."
@@ -100,7 +100,7 @@ const BlogHubPage = () => {
               padding: '0.55rem 0.85rem 0.55rem 2.35rem',
               borderRadius: '10px',
               border: '1px solid #CBD5E1',
-              background: '#F8FAFC',
+              background: '#FFFFFF',
               fontSize: '0.85rem',
               outline: 'none'
             }}
@@ -111,8 +111,8 @@ const BlogHubPage = () => {
       {/* Featured Article Card */}
       {featuredBlog && selectedCategory === 'All' && !searchQuery && (
         <div style={{ marginBottom: '3rem' }}>
-          <div style={{ fontSize: '0.78rem', fontWeight: 800, color: '#D97706', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '0.65rem', display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
-            <Sparkles size={14} color="#D97706" /> FEATURED ARTICLE
+          <div style={{ fontSize: '0.78rem', fontWeight: 800, color: '#2FA8D8', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '0.65rem', display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
+            <Sparkles size={14} color="#2FA8D8" /> FEATURED ARTICLE
           </div>
 
           <Link
@@ -127,7 +127,7 @@ const BlogHubPage = () => {
               borderRadius: '18px',
               overflow: 'hidden',
               textDecoration: 'none',
-              boxShadow: '0 6px 24px rgba(15, 23, 42, 0.06)'
+              boxShadow: '0 6px 24px rgba(10, 38, 71, 0.06)'
             }}
           >
             <div style={{ height: '320px', overflow: 'hidden', position: 'relative' }}>
@@ -139,21 +139,22 @@ const BlogHubPage = () => {
             </div>
             <div style={{ padding: '2rem 2rem 2rem 0', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
               <span style={{
-                background: '#E0F2FE',
-                color: '#0284C7',
+                background: '#EAF7FD',
+                color: '#0A2647',
                 fontSize: '0.72rem',
                 fontWeight: 800,
                 padding: '0.25rem 0.75rem',
                 borderRadius: '9999px',
                 width: 'fit-content',
-                marginBottom: '0.75rem'
+                marginBottom: '0.75rem',
+                border: '1px solid rgba(79, 195, 232, 0.4)'
               }}>
                 {featuredBlog.category}
               </span>
 
               <h2 style={{
                 fontFamily: 'var(--font-heading)',
-                color: '#0F172A',
+                color: '#0A2647',
                 fontSize: '1.75rem',
                 fontWeight: 900,
                 lineHeight: 1.25,
@@ -166,11 +167,11 @@ const BlogHubPage = () => {
                 {featuredBlog.excerpt}
               </p>
 
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', color: '#64748B', fontSize: '0.8rem', borderTop: '1px solid #F1F5F9', paddingTop: '1rem' }}>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', color: '#475569', fontSize: '0.8rem', borderTop: '1px solid #F1F5F9', paddingTop: '1rem' }}>
                 <div>
-                  <strong style={{ color: '#0F172A' }}>{featuredBlog.author}</strong> • {featuredBlog.date}
+                  <strong style={{ color: '#0A2647' }}>{featuredBlog.author}</strong> • {featuredBlog.date}
                 </div>
-                <div style={{ color: '#0EA5E9', fontWeight: 800, display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
+                <div style={{ color: '#2FA8D8', fontWeight: 800, display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
                   Read Full Article <ArrowRight size={15} />
                 </div>
               </div>
@@ -181,10 +182,10 @@ const BlogHubPage = () => {
 
       {/* Articles Grid */}
       {filteredBlogs.length === 0 ? (
-        <div style={{ textAlign: 'center', padding: '4rem 1rem', background: '#F8FAFC', borderRadius: '16px', border: '1px solid #E2E8F0' }}>
-          <BookOpen size={36} color="#94A3B8" style={{ marginBottom: '0.75rem' }} />
-          <h3 style={{ color: '#0F172A', fontSize: '1.2rem', fontWeight: 800 }}>No articles found</h3>
-          <p style={{ color: '#64748B', fontSize: '0.9rem' }}>Try searching with a different keyword or category.</p>
+        <div style={{ textAlign: 'center', padding: '4rem 1rem', background: '#EAF7FD', borderRadius: '16px', border: '1px solid rgba(79, 195, 232, 0.3)' }}>
+          <BookOpen size={36} color="#2FA8D8" style={{ marginBottom: '0.75rem' }} />
+          <h3 style={{ color: '#0A2647', fontSize: '1.2rem', fontWeight: 800 }}>No articles found</h3>
+          <p style={{ color: '#475569', fontSize: '0.9rem' }}>Try searching with a different keyword or category.</p>
         </div>
       ) : (
         <div className="grid-3" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(310px, 1fr))', gap: '1.5rem' }}>
@@ -201,7 +202,7 @@ const BlogHubPage = () => {
                 textDecoration: 'none',
                 display: 'flex',
                 flexDirection: 'column',
-                boxShadow: '0 4px 14px rgba(15, 23, 42, 0.05)'
+                boxShadow: '0 4px 14px rgba(10, 38, 71, 0.05)'
               }}
             >
               <div style={{ height: '190px', width: '100%', overflow: 'hidden', position: 'relative' }}>
@@ -214,7 +215,7 @@ const BlogHubPage = () => {
                   position: 'absolute',
                   top: '0.75rem',
                   left: '0.75rem',
-                  background: 'rgba(15, 23, 42, 0.85)',
+                  background: 'linear-gradient(135deg, #0A2647 0%, #071B33 100%)',
                   backdropFilter: 'blur(4px)',
                   color: '#FFFFFF',
                   fontSize: '0.68rem',
@@ -227,13 +228,13 @@ const BlogHubPage = () => {
               </div>
 
               <div style={{ padding: '1.25rem', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', color: '#64748B', fontSize: '0.75rem', marginBottom: '0.5rem' }}>
-                  <Clock size={13} color="#94A3B8" /> {blog.readTime} • {blog.date}
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', color: '#475569', fontSize: '0.75rem', marginBottom: '0.5rem' }}>
+                  <Clock size={13} color="#2FA8D8" /> {blog.readTime} • {blog.date}
                 </div>
 
                 <h3 style={{
                   fontFamily: 'var(--font-heading)',
-                  color: '#0F172A',
+                  color: '#0A2647',
                   fontSize: '1.15rem',
                   fontWeight: 800,
                   lineHeight: 1.35,
@@ -247,8 +248,8 @@ const BlogHubPage = () => {
                 </p>
 
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderTop: '1px solid #F1F5F9', paddingTop: '0.75rem', marginTop: 'auto' }}>
-                  <span style={{ fontSize: '0.78rem', fontWeight: 700, color: '#334155' }}>By {blog.author}</span>
-                  <span style={{ fontSize: '0.78rem', fontWeight: 800, color: '#0EA5E9' }}>Read Post →</span>
+                  <span style={{ fontSize: '0.78rem', fontWeight: 700, color: '#0A2647' }}>By {blog.author}</span>
+                  <span style={{ fontSize: '0.78rem', fontWeight: 800, color: '#2FA8D8' }}>Read Post →</span>
                 </div>
               </div>
             </Link>

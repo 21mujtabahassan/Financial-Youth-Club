@@ -27,28 +27,28 @@ const VorexCorePartnershipSection = () => {
             left: 0,
             right: 0,
             height: '4px',
-            background: 'linear-gradient(90deg, #0EA5E9 0%, #38BDF8 50%, #A855F7 100%)'
+            background: 'linear-gradient(90deg, #4FC3E8 0%, #2FA8D8 50%, #0A2647 100%)'
           }} />
 
           {/* Subtitle Badge */}
           <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.85rem' }}>
-            <span style={{ height: '1px', width: '28px', background: '#94A3B8' }} />
+            <span style={{ height: '1px', width: '28px', background: '#2FA8D8' }} />
             <span style={{
               fontSize: '0.78rem',
               fontWeight: 800,
-              color: '#64748B',
+              color: '#0A2647',
               letterSpacing: '0.12em',
               textTransform: 'uppercase'
             }}>
               IN PARTNERSHIP WITH
             </span>
-            <span style={{ height: '1px', width: '28px', background: '#94A3B8' }} />
+            <span style={{ height: '1px', width: '28px', background: '#2FA8D8' }} />
           </div>
 
           {/* Main Headline */}
           <h2 className="partnership-headline" style={{
             fontFamily: 'var(--font-heading)',
-            color: '#0F172A',
+            color: '#0A2647',
             fontSize: '2rem',
             fontWeight: 900,
             letterSpacing: '-0.02em',
@@ -70,14 +70,14 @@ const VorexCorePartnershipSection = () => {
 
             {/* VOREXCORE SOLUTIONS - HIGHLIGHTED PRIMARY TECH PARTNER */}
             <div style={{
-              background: 'linear-gradient(135deg, #0F172A 0%, #1E293B 100%)',
-              border: '2px solid #38BDF8',
+              background: 'linear-gradient(135deg, #0A2647 0%, #071B33 100%)',
+              border: '2px solid #4FC3E8',
               borderRadius: '18px',
               padding: '1.75rem 1.25rem',
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
-              boxShadow: '0 12px 30px rgba(56, 189, 248, 0.2)',
+              boxShadow: '0 12px 30px rgba(79, 195, 232, 0.25)',
               position: 'relative',
               overflow: 'hidden'
             }} className="pop-card">
@@ -86,8 +86,8 @@ const VorexCorePartnershipSection = () => {
                 position: 'absolute',
                 top: '0.75rem',
                 right: '0.75rem',
-                background: 'linear-gradient(135deg, #38BDF8, #A855F7)',
-                color: '#FFFFFF',
+                background: 'linear-gradient(135deg, #4FC3E8, #2FA8D8)',
+                color: '#071B33',
                 fontSize: '0.62rem',
                 fontWeight: 900,
                 padding: '0.2rem 0.55rem',
@@ -106,7 +106,7 @@ const VorexCorePartnershipSection = () => {
                 overflow: 'hidden',
                 marginBottom: '1rem',
                 background: '#000000',
-                border: '2px solid rgba(56, 189, 248, 0.5)',
+                border: '2px solid rgba(79, 195, 232, 0.5)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -133,7 +133,7 @@ const VorexCorePartnershipSection = () => {
 
               {/* Role */}
               <div style={{
-                color: '#38BDF8',
+                color: '#4FC3E8',
                 fontSize: '0.75rem',
                 fontWeight: 800,
                 letterSpacing: '0.08em',
@@ -145,7 +145,8 @@ const VorexCorePartnershipSection = () => {
 
               {/* Description */}
               <p style={{
-                color: '#94A3B8',
+                color: '#EAF7FD',
+                opacity: 0.85,
                 fontSize: '0.82rem',
                 lineHeight: 1.5,
                 marginBottom: '1rem'
@@ -162,14 +163,14 @@ const VorexCorePartnershipSection = () => {
                   display: 'inline-flex',
                   alignItems: 'center',
                   gap: '0.4rem',
-                  background: 'linear-gradient(135deg, #0EA5E9, #8B5CF6)',
-                  color: '#FFFFFF',
+                  background: 'linear-gradient(135deg, #4FC3E8, #2FA8D8)',
+                  color: '#071B33',
                   padding: '0.4rem 0.85rem',
                   borderRadius: '9999px',
                   fontSize: '0.75rem',
                   fontWeight: 800,
                   textDecoration: 'none',
-                  boxShadow: '0 4px 12px rgba(14, 165, 233, 0.35)'
+                  boxShadow: '0 4px 14px rgba(79, 195, 232, 0.3)'
                 }}
               >
                 Visit Instagram <ExternalLink size={12} />
@@ -178,8 +179,8 @@ const VorexCorePartnershipSection = () => {
 
             {/* KPMG & DELOITTE */}
             <div style={{
-              background: '#F8FAFC',
-              border: '1px solid #E2E8F0',
+              background: '#EAF7FD',
+              border: '1px solid rgba(79, 195, 232, 0.3)',
               borderRadius: '18px',
               padding: '1.75rem 1.25rem',
               display: 'flex',
@@ -190,18 +191,19 @@ const VorexCorePartnershipSection = () => {
                 width: '56px',
                 height: '56px',
                 borderRadius: '14px',
-                background: '#E0F2FE',
+                background: '#FFFFFF',
+                border: '1px solid rgba(79, 195, 232, 0.3)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 marginBottom: '1rem'
               }}>
-                <Shield size={28} color="#0EA5E9" />
+                <Shield size={28} color="#2FA8D8" />
               </div>
 
               <h3 style={{
                 fontFamily: 'var(--font-heading)',
-                color: '#0F172A',
+                color: '#0A2647',
                 fontSize: '1.15rem',
                 fontWeight: 900,
                 letterSpacing: '0.02em',
@@ -211,7 +213,7 @@ const VorexCorePartnershipSection = () => {
               </h3>
 
               <div style={{
-                color: '#64748B',
+                color: '#475569',
                 fontSize: '0.75rem',
                 fontWeight: 800,
                 letterSpacing: '0.08em',
@@ -233,8 +235,8 @@ const VorexCorePartnershipSection = () => {
 
             {/* USA ECONOMICS OLYMPIAD */}
             <div style={{
-              background: '#F8FAFC',
-              border: '1px solid #E2E8F0',
+              background: '#EAF7FD',
+              border: '1px solid rgba(79, 195, 232, 0.3)',
               borderRadius: '18px',
               padding: '1.75rem 1.25rem',
               display: 'flex',
@@ -245,18 +247,19 @@ const VorexCorePartnershipSection = () => {
                 width: '56px',
                 height: '56px',
                 borderRadius: '14px',
-                background: '#FEF3C7',
+                background: '#FFFFFF',
+                border: '1px solid rgba(79, 195, 232, 0.3)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 marginBottom: '1rem'
               }}>
-                <Sparkles size={28} color="#D97706" />
+                <Sparkles size={28} color="#4FC3E8" />
               </div>
 
               <h3 style={{
                 fontFamily: 'var(--font-heading)',
-                color: '#0F172A',
+                color: '#0A2647',
                 fontSize: '1.15rem',
                 fontWeight: 900,
                 letterSpacing: '0.02em',
@@ -266,7 +269,7 @@ const VorexCorePartnershipSection = () => {
               </h3>
 
               <div style={{
-                color: '#64748B',
+                color: '#475569',
                 fontSize: '0.75rem',
                 fontWeight: 800,
                 letterSpacing: '0.08em',

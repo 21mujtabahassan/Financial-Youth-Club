@@ -41,13 +41,13 @@ const AdminLoginPage = () => {
           boxShadow: '0 8px 24px rgba(15, 23, 42, 0.06)'
         }}>
           <div style={{ textAlign: 'center', marginBottom: '1.75rem' }}>
-            <div style={{ width: '54px', height: '54px', borderRadius: '50%', background: '#F0F9FF', border: '1px solid #0EA5E9', color: '#0EA5E9', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 0.75rem auto' }}>
+            <div style={{ width: '54px', height: '54px', borderRadius: '50%', background: '#EAF7FD', border: '1px solid #4FC3E8', color: '#0A2647', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 0.75rem auto' }}>
               <Lock size={26} />
             </div>
-            <h2 style={{ fontFamily: 'var(--font-heading)', color: '#0F172A', fontSize: '1.4rem', fontWeight: 900, margin: 0 }}>
+            <h2 style={{ fontFamily: 'var(--font-heading)', color: '#0A2647', fontSize: '1.4rem', fontWeight: 900, margin: 0 }}>
               Admin Sign In
             </h2>
-            <p style={{ color: '#64748B', fontSize: '0.82rem', marginTop: '0.25rem' }}>
+            <p style={{ color: '#475569', fontSize: '0.82rem', marginTop: '0.25rem' }}>
               Manage blogs, articles, and portal content
             </p>
           </div>
@@ -60,7 +60,7 @@ const AdminLoginPage = () => {
 
           <form onSubmit={handleLogin} style={{ display: 'flex', flexDirection: 'column', gap: '1.15rem' }}>
             <div>
-              <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 800, color: '#0F172A', marginBottom: '0.35rem' }}>
+              <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 800, color: '#0A2647', marginBottom: '0.35rem' }}>
                 Admin Email
               </label>
               <input
@@ -74,7 +74,7 @@ const AdminLoginPage = () => {
                   padding: '0.65rem 0.85rem',
                   borderRadius: '8px',
                   border: '1px solid #CBD5E1',
-                  background: '#F8FAFC',
+                  background: '#FFFFFF',
                   fontSize: '0.88rem',
                   outline: 'none'
                 }}
@@ -82,7 +82,7 @@ const AdminLoginPage = () => {
             </div>
 
             <div>
-              <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 800, color: '#0F172A', marginBottom: '0.35rem' }}>
+              <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 800, color: '#0A2647', marginBottom: '0.35rem' }}>
                 Admin Passcode
               </label>
               <input
@@ -96,7 +96,7 @@ const AdminLoginPage = () => {
                   padding: '0.65rem 0.85rem',
                   borderRadius: '8px',
                   border: '1px solid #CBD5E1',
-                  background: '#F8FAFC',
+                  background: '#FFFFFF',
                   fontSize: '0.88rem',
                   outline: 'none'
                 }}
@@ -105,8 +105,8 @@ const AdminLoginPage = () => {
 
             <button
               type="submit"
-              className="btn-navy"
-              style={{ padding: '0.75rem', fontSize: '0.9rem', width: '100%', marginTop: '0.5rem', borderRadius: '8px', cursor: 'pointer' }}
+              className="btn-gold"
+              style={{ background: 'linear-gradient(135deg, #4FC3E8 0%, #2FA8D8 100%)', color: '#071B33', fontWeight: 900, padding: '0.75rem', fontSize: '0.9rem', width: '100%', marginTop: '0.5rem', borderRadius: '8px', cursor: 'pointer' }}
             >
               Sign In to Admin Portal →
             </button>

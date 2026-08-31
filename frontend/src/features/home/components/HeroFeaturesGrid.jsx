@@ -4,38 +4,50 @@ import { GraduationCap, Heart, Building2, Award } from 'lucide-react'
 const HeroFeaturesGrid = () => {
   const features = [
     {
-      icon: <GraduationCap color="#0EA5E9" size={28} />,
+      icon: <GraduationCap color="#2FA8D8" size={28} />,
       title: 'Free Financial Education',
       description: 'Delivering 90+ workshops & Summer Program 2026 across 35+ countries.',
-      bg: '#F0F9FF',
-      borderColor: '#BAE6FD'
+      cardBg: '#EAF7FD',
+      borderColor: 'rgba(79, 195, 232, 0.4)',
+      iconBg: '#FFFFFF',
+      titleColor: '#0A2647',
+      descColor: '#0F1B2B'
     },
     {
-      icon: <Heart color="#EC4899" size={28} />,
+      icon: <Heart color="#071B33" size={28} />,
       title: 'Financial Inclusion',
       description: 'Budgeting & financial independence drives for stay-at-home mothers & youth.',
-      bg: '#FDF2F8',
-      borderColor: '#FBCFE8'
+      cardBg: 'linear-gradient(135deg, #4FC3E8 0%, #2FA8D8 100%)',
+      borderColor: 'rgba(79, 195, 232, 0.5)',
+      iconBg: 'rgba(255, 255, 255, 0.4)',
+      titleColor: '#071B33',
+      descColor: '#071B33'
     },
     {
-      icon: <Building2 color="#D97706" size={28} />,
+      icon: <Building2 color="#4FC3E8" size={28} />,
       title: 'Global Mentors',
       description: '35+ mentors from J.P. Morgan, Goldman Sachs & Ivy League.',
-      bg: '#FFFBEB',
-      borderColor: '#FDE68A'
+      cardBg: 'linear-gradient(135deg, #0A2647 0%, #071B33 100%)',
+      borderColor: 'rgba(79, 195, 232, 0.3)',
+      iconBg: 'rgba(79, 195, 232, 0.15)',
+      titleColor: '#FFFFFF',
+      descColor: '#EAF7FD'
     },
     {
-      icon: <Award color="#7C3AED" size={28} />,
+      icon: <Award color="#2FA8D8" size={28} />,
       title: '100,000+ Reach',
       description: 'Empowering youth across 35+ countries & 4 continents.',
-      bg: '#F5F3FF',
-      borderColor: '#DDD6FE'
+      cardBg: '#FFFFFF',
+      borderColor: '#E2E8F0',
+      iconBg: '#EAF7FD',
+      titleColor: '#0A2647',
+      descColor: '#475569'
     }
   ]
 
   return (
     <section style={{
-      background: '#F8FAFC',
+      background: '#FFFFFF',
       borderTop: '1px solid #E2E8F0',
       borderBottom: '1px solid #E2E8F0',
       padding: '3rem 0'
@@ -47,21 +59,21 @@ const HeroFeaturesGrid = () => {
               key={idx}
               className="pop-card"
               style={{
-                background: '#FFFFFF',
+                background: item.cardBg,
                 border: `1px solid ${item.borderColor}`,
                 borderRadius: '16px',
                 padding: '1.5rem',
                 display: 'flex',
                 flexDirection: 'column',
                 gap: '0.75rem',
-                boxShadow: '0 4px 16px rgba(15, 23, 42, 0.03)'
+                boxShadow: '0 4px 16px rgba(30, 42, 74, 0.05)'
               }}
             >
               <div style={{
                 width: '52px',
                 height: '52px',
                 borderRadius: '12px',
-                background: item.bg,
+                background: item.iconBg,
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -72,7 +84,7 @@ const HeroFeaturesGrid = () => {
               <div>
                 <h4 style={{
                   fontFamily: 'var(--font-heading)',
-                  color: '#0F172A',
+                  color: item.titleColor,
                   fontSize: '1.1rem',
                   fontWeight: 800,
                   marginBottom: '0.35rem'
@@ -80,7 +92,7 @@ const HeroFeaturesGrid = () => {
                   {item.title}
                 </h4>
                 <p style={{
-                  color: '#64748B',
+                  color: item.descColor,
                   fontSize: '0.88rem',
                   lineHeight: 1.55,
                   margin: 0,

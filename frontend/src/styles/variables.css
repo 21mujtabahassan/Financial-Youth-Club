@@ -1,19 +1,24 @@
 :root {
   --bg-white: #FFFFFF;
-  --bg-light: #F8FAFC;
-  --bg-subtle: #F1F5F9;
-  --text-navy: #0F172A;
-  --text-body: #334155;
-  --text-muted: #64748B;
-  --brand-navy: #0F172A;
-  --brand-navy-card: #1E293B;
-  --brand-gold: #D97706;
-  --brand-gold-hover: #B45309;
-  --brand-cyan: #0EA5E9;
-  --brand-cyan-light: #38BDF8;
+  --bg-light: #EAF7FD;
+  --bg-subtle: #F0F9FD;
+  --bg-secondary-card: #EAF7FD;
+  --text-navy: #0A2647;
+  --text-navy-dark: #071B33;
+  --text-body: #0F1B2B;
+  --text-muted: #475569;
+  --brand-navy: #0A2647;
+  --brand-navy-dark: #071B33;
+  --brand-navy-gradient: linear-gradient(135deg, #0A2647 0%, #071B33 100%);
+  --brand-sky: #4FC3E8;
+  --brand-sky-dark: #2FA8D8;
+  --brand-sky-gradient: linear-gradient(135deg, #4FC3E8 0%, #2FA8D8 100%);
+  --brand-cyan: #4FC3E8;
+  --brand-cyan-light: #EAF7FD;
   --border-light: #E2E8F0;
   --font-heading: 'Inter', system-ui, -apple-system, sans-serif;
   --font-body: 'Inter', system-ui, -apple-system, sans-serif;
-  --shadow-card: 0 4px 20px -2px rgba(15, 23, 42, 0.06);
-  --shadow-card-hover: 0 16px 36px -4px rgba(15, 23, 42, 0.14);
+  --shadow-card: 0 4px 20px -2px rgba(10, 38, 71, 0.06);
+  --shadow-card-hover: 0 16px 36px -4px rgba(10, 38, 71, 0.14);
+  --shadow-sky-glow: 0 4px 20px rgba(79, 195, 232, 0.25);
 }
