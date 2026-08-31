@@ -112,60 +112,58 @@ const FoundersVision = () => {
           </p>
         </div>
 
-        {/* Featured Founder Card - ADAN SHAHZAD (3D POP-OUT PORTRAIT DESIGN) */}
-        <div style={{ maxWidth: '840px', margin: '1.5rem auto 3.5rem auto' }}>
+        {/* Featured Founder Card - ADAN SHAHZAD (3D POP-OUT CUTOUT DESIGN) */}
+        <div style={{ maxWidth: '860px', margin: '2.5rem auto 3.5rem auto', position: 'relative' }}>
           
           <div
             className="pop-card founder-adan-card"
             style={{
               position: 'relative',
-              padding: '2.5rem 3rem 2.5rem 2.5rem',
+              padding: '2.75rem 3rem 2.75rem 230px',
               borderRadius: '24px',
               border: '1px solid rgba(79, 195, 232, 0.3)',
               boxShadow: '0 25px 60px rgba(5, 15, 31, 0.45)',
               display: 'flex',
               alignItems: 'center',
-              gap: '2.5rem',
               background: 'linear-gradient(180deg, #123A5E 0%, #0A2647 35%, #071B33 70%, #050F1F 100%)',
               color: '#FFFFFF',
-              overflow: 'visible'
+              overflow: 'visible',
+              minHeight: '220px'
             }}
           >
             {/* Embedded Night Sky Starfield Texture */}
             <StarfieldBackground opacity={0.85} />
 
-            {/* Left Side: 3D Popping Out Portrait Photo Card (NO RING DESIGN) */}
+            {/* Left Side: 3D Transparent PNG Cutout Popping Right Out of Card */}
             <div
-              className="founder-adan-portrait"
+              className="founder-adan-cutout-container"
               style={{
-                width: '185px',
-                height: '235px',
-                borderRadius: '20px',
-                border: '1.5px solid rgba(79, 195, 232, 0.45)',
-                boxShadow: '0 20px 45px rgba(0, 0, 0, 0.65), 0 0 35px rgba(79, 195, 232, 0.35)',
-                flexShrink: 0,
-                position: 'relative',
+                position: 'absolute',
+                left: '15px',
+                bottom: '0px',
+                height: 'calc(100% + 45px)',
+                maxHeight: '290px',
                 zIndex: 3,
-                transform: 'translateY(-18px)',
-                overflow: 'hidden',
-                background: '#071B33',
-                transition: 'all 0.3s ease'
+                pointerEvents: 'none',
+                display: 'flex',
+                alignItems: 'flex-end'
               }}
             >
               <img
-                src={adanData.image}
+                src="/images/founders/adan_shahzad_cutout.png"
                 alt={adanData.name}
                 style={{
-                  width: '100%',
                   height: '100%',
-                  objectFit: 'cover',
-                  objectPosition: 'top center',
+                  width: 'auto',
+                  objectFit: 'contain',
+                  objectPosition: 'bottom left',
+                  filter: 'drop-shadow(0 15px 30px rgba(0, 0, 0, 0.75)) drop-shadow(0 0 20px rgba(79, 195, 232, 0.35))',
                   display: 'block'
                 }}
               />
             </div>
 
-            {/* Right Side: Content & Action */}
+            {/* Right Side: Text & Action (Reflowed cleanly beside 3D Cutout) */}
             <div style={{ flex: 1, position: 'relative', zIndex: 2 }}>
               <h3 style={{
                 fontFamily: 'var(--font-heading)',
@@ -205,7 +203,8 @@ const FoundersVision = () => {
                   transition: 'all 0.25s ease',
                   display: 'inline-flex',
                   alignItems: 'center',
-                  gap: '0.4rem'
+                  gap: '0.4rem',
+                  pointerEvents: 'auto'
                 }}
               >
                 Read Adan's full story
@@ -349,17 +348,21 @@ const FoundersVision = () => {
         @media (max-width: 640px) {
           .founders-title { font-size: 1.75rem !important; }
           .founder-adan-card {
+            padding: 1.75rem 1.25rem !important;
             flex-direction: column !important;
             text-align: center !important;
-            padding: 2rem 1.25rem !important;
-            gap: 1.5rem !important;
-            overflow: hidden !important;
+            overflow: visible !important;
           }
-          .founder-adan-portrait {
-            transform: none !important;
-            width: 160px !important;
-            height: 200px !important;
-            margin: 0 auto !important;
+          .founder-adan-cutout-container {
+            position: relative !important;
+            left: auto !important;
+            bottom: auto !important;
+            height: 220px !important;
+            margin: -25px auto 1rem auto !important;
+            align-items: center !important;
+          }
+          .founder-adan-cutout-container img {
+            object-position: center !important;
           }
           .founder-card-body { padding: 1.5rem 1rem 1.75rem 1rem !important; }
           .founder-modal-header { flex-direction: column !important; text-align: center !important; }
