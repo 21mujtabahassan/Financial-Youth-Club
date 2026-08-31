@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Globe, Mail, MapPin, Send, Instagram, Linkedin, Youtube, CheckCircle2 } from 'lucide-react'
+import { Globe, Mail, MapPin, Send, Instagram, Linkedin, CheckCircle2 } from 'lucide-react'
 import { newsletterService } from '../../features/newsletter/services/newsletterService'
 import StarfieldBackground from '../common/StarfieldBackground'
 
@@ -144,13 +144,9 @@ const Footer = () => {
                  style={{ width: '30px', height: '30px', borderRadius: '6px', background: 'rgba(79, 195, 232, 0.1)', border: '1px solid rgba(79, 195, 232, 0.25)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#4FC3E8' }}>
                 <Instagram size={15} />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="footer-social-icon"
+              <a href="https://www.linkedin.com/company/financial-youth-club-adanshahzad/" target="_blank" rel="noreferrer" className="footer-social-icon"
                  style={{ width: '30px', height: '30px', borderRadius: '6px', background: 'rgba(79, 195, 232, 0.1)', border: '1px solid rgba(79, 195, 232, 0.25)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#4FC3E8' }}>
                 <Linkedin size={15} />
-              </a>
-              <a href="https://youtube.com" target="_blank" rel="noreferrer" className="footer-social-icon"
-                 style={{ width: '30px', height: '30px', borderRadius: '6px', background: 'rgba(79, 195, 232, 0.1)', border: '1px solid rgba(79, 195, 232, 0.25)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#4FC3E8' }}>
-                <Youtube size={15} />
               </a>
             </div>
           </div>
